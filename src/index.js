@@ -3,12 +3,14 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import routes from './routes.js';
 import { auth } from './middlewares/authMiddleware.js';
+import dotenv from 'dotenv'
 
 const app = express();
+dotenv.config();
 
 try {
-    const uri = 'mongodb://127.0.0.1:27017/furnitures'
-    await mongoose.connect(uri);
+    
+    await mongoose.connect(process.env.MONGODB_URI);
 
     console.log('DB connected successfully! ');
 } catch (err) {
@@ -28,4 +30,4 @@ app.use(auth);
 
 app.use(routes);
 
-app.listen(5000, () => console.log('RESTful server is running on http://localhost:3030...'))
+app.listen(5000, () => console.log('RESTful server is running...'))
