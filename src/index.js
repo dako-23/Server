@@ -7,7 +7,7 @@ import { auth } from './middlewares/authMiddleware.js';
 const app = express();
 
 try {
-    const uri = 'mongodb://localhost:27017/furnitures'
+    const uri = 'mongodb://127.0.0.1:27017:27017/furnitures'
     await mongoose.connect(uri);
 
     console.log('DB connected successfully! ');
