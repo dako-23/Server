@@ -9,7 +9,7 @@ const app = express();
 dotenv.config();
 
 try {
-    
+
     await mongoose.connect(process.env.MONGODB_URI);
 
     console.log('DB connected successfully! ');
@@ -25,7 +25,10 @@ try {
 //     next();
 // });
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5174',
+    credentials: true
+}));
 app.use(auth);
 
 app.use(routes);
