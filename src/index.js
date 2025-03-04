@@ -4,6 +4,7 @@ import cors from 'cors';
 import routes from './routes.js';
 import { auth } from './middlewares/authMiddleware.js';
 import dotenv from 'dotenv'
+import cookieParser from 'cookie-parser';
 
 const app = express();
 dotenv.config();
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
     next();
 });
 app.use(express.json());
+app.use(cookieParser())
 app.use(cors({
     origin: 'http://localhost:5174',
     credentials: true
