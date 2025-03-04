@@ -12,7 +12,6 @@ userController.post('/register', async (req, res) => {
 
     res.cookie(JWT_AUTH_NAME, token, {
         httpOnly: true,
-        maxAge: 2 * 60 * 60 * 1000,
     });
 
     res.json({
@@ -29,7 +28,6 @@ userController.post('/login', async (req, res) => {
 
     res.cookie(JWT_AUTH_NAME, token, {
         httpOnly: true,
-        maxAge: 2 * 60 * 60 * 1000,
     });
 
     res.json({
