@@ -16,6 +16,9 @@ const groupSchema = new Schema({
         type: String,
         // minLength: 10,
     },
+    category: {
+        type: String,
+    },
     imageUrl: {
         type: String,
         // required: true,
