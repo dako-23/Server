@@ -1,23 +1,19 @@
-import Group from "../models/Group.js";
+import Group from "../models/Group.js"
 
 export default {
     getAll(filter = {}) {
-        return Group.find(filter);
+        return Group.find({})
     },
     // getOne(furnitureId) {
     //     return Group.findById(furnitureId);
     // },
-    create(groupData, userId) {
-    return Group.create({ ...groupData, _ownerId: userId })
-        .then(group => {
-            console.log('Group created successfully:', group); // Логиране на създадената група
-            return group;
+    create(newGroupData, creatorId) {
+        const result = Group.create({
+            ...newGroupData,
+            _ownerId: creatorId
         })
-        .catch(error => {
-            console.error('Database error:', error); // Логиране на грешката
-            throw error;
-        });
-}
+        return result
+    }
     // update(furnitureId, furnitureData) {
     //     return Group.findByIdAndUpdate(furnitureId, furnitureData);
     // },

@@ -35,27 +35,13 @@ groupController.get('/', async (req, res) => {
 
 // Create
 groupController.post('/', isAuth, async (req, res) => {
-    try {
-        const groupData = req.body;
-        const userId = req.user.id;
+    const newGroup = req.body;
+    const creatorId = req.user?.id
 
-        console.log('Received group data:', groupData); // Логиране на получените данни
-        console.log('User ID:', userId); // Логиране на потребителското ID
+    const createdGroup = await groupService.create(newGroup, creatorId);
 
-        // Проверка за липсващи полета
-        if (!groupData.groupName || !groupData.imageUrl) {
-            return res.status(400).json({ error: 'Missing required fields' });
-        }
+    res.json(createdGroup)
 
-        const newGroup = await groupService.create(groupData, userId);
-
-        console.log('Created group:', newGroup); // Логиране на създадената група
-
-        res.json(newGroup); // Връщане на създадената група
-    } catch (error) {
-        console.error('Error creating group:', error); // Логиране на грешката
-        res.status(500).json({ error: 'Internal server error', details: error.message });
-    }
 });
 
 // // Update

@@ -3,25 +3,21 @@ import { model, Schema, Types } from "mongoose";
 const groupSchema = new Schema({
     groupName: {
         type: String,
-        // minLength: 4,
     },
     location: {
         type: String,
-        // minLength: 4,
     },
     rules: {
         type: String,
     },
     description: {
         type: String,
-        // minLength: 10,
     },
     category: {
         type: String,
     },
     imageUrl: {
         type: String,
-        // required: true,
     },
     joinedGroup: [{
         type: Types.ObjectId,
@@ -35,4 +31,4 @@ const groupSchema = new Schema({
 
 const Group = model('Group', groupSchema);
 
-export default Group;
+export default Group
