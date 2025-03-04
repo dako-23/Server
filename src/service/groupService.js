@@ -1,9 +1,9 @@
 import Group from "../models/Group.js";
 
 export default {
-    // getAll(filter = {}) {
-    //     return Group.find(filter);
-    // },
+    getAll(filter = {}) {
+        return Group.find(filter);
+    },
     // getOne(furnitureId) {
     //     return Group.findById(furnitureId);
     // },

@@ -17,14 +17,14 @@ const groupController = Router();
 // };
 
 // Get all
-// groupController.get('/', async (req, res) => {
-//     // buildFilter({ where: '_ownerId="67ace2aed1eaa48b16b4b2eb"&email="ivo@abv.bg"', sortBy: 'createdAt="desc"' });
-//     const filter = buildFilter(req.query);
+groupController.get('/', async (req, res) => {
+    // buildFilter({ where: '_ownerId="67ace2aed1eaa48b16b4b2eb"&email="ivo@abv.bg"', sortBy: 'createdAt="desc"' });
+    // const filter = buildFilter(req.query);
     
-//     const furnitures = await groupService.getAll(filter);
+    const groups = await groupService.getAll();
 
-//     res.json(furnitures);
-// });
+    res.json(groups);
+});
 
 // Get one
 // groupController.get('/:furnitureId', async (req, res) => {
