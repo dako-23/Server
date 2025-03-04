@@ -36,7 +36,7 @@ groupController.get('/', async (req, res) => {
 // Create
 groupController.post('/', isAuth, async (req, res) => {
     const groupData = req.body;
-    const userId = req.user.id;
+    const userId = req.user?.id;
 
     console.log(req.body);
     
