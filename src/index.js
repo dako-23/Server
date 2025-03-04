@@ -19,11 +19,11 @@ try {
 }
 
 // Setup CORS
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', '*');
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
 
-//     next();
-// });
+    next();
+});
 app.use(express.json());
 app.use(cors({
     origin: 'http://localhost:5174',
