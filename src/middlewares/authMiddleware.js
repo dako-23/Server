@@ -3,7 +3,7 @@ import { JWT_SECRET, JWT_AUTH_NAME } from "../config.js";
 import InvalidToken from "../models/InvalidToken.js";
 
 export const auth = async (req, res, next) => {
-    const token = req.cookies[JWT_AUTH_NAME];
+    const token = req.cookies[JWT_AUTH_NAME]
 
     if (!token) {
         return next();
