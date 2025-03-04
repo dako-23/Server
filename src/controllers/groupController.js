@@ -38,7 +38,13 @@ groupController.post('/', isAuth, async (req, res) => {
     const groupData = req.body;
     const userId = req.user.id;
 
+    console.log(req.body);
+    
+
     const newGroup = await groupService.create(groupData, userId);
+
+    console.log(newGroup);
+    
 
     res.json(newGroup);
 });
