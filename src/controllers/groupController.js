@@ -17,7 +17,7 @@ const groupController = Router();
 // };
 
 // Get all
-groupController.get('/', async (req, res) => {
+groupController.get('/groups', async (req, res) => {
     // buildFilter({ where: '_ownerId="67ace2aed1eaa48b16b4b2eb"&email="ivo@abv.bg"', sortBy: 'createdAt="desc"' });
     // const filter = buildFilter(req.query);
 
@@ -34,7 +34,7 @@ groupController.get('/', async (req, res) => {
 // });
 
 // Create
-groupController.post('/', isAuth, async (req, res) => {
+groupController.post('/groups', async (req, res) => {
     const newGroup = req.body;
     const creatorId = req.user?.id
 

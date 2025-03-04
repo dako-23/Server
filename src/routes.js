@@ -6,6 +6,6 @@ import groupController from "./controllers/groupController.js";
 const routes = Router();
 
 routes.use('/users', userController);
-routes.use('/groups', groupController);
+routes.use(groupController);
 
 export default routes;
