@@ -34,7 +34,7 @@ groupController.get('/groups', async (req, res) => {
 // });
 
 // Create
-groupController.post('/groups', async (req, res) => {
+groupController.post('/groups',isAuth, async (req, res) => {
     const newGroup = req.body;
     const creatorId = req.user?.id
 
