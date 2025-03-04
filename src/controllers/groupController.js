@@ -23,7 +23,7 @@ groupController.get('/', async (req, res) => {
 
     const groups = await groupService.getAll();
 
-    res.json(groups);
+    return res.json(groups);
 });
 
 // Get one
@@ -40,7 +40,7 @@ groupController.post('/', isAuth, async (req, res) => {
 
     const createdGroup = await groupService.create(newGroup, creatorId);
 
-    res.json(createdGroup)
+    return res.status(201).json(createdGroup);
 
 });
 
