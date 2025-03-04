@@ -20,17 +20,17 @@ try {
 }
 
 // Setup CORS
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*', cors({ credentials: true }));
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*', cors({ credentials: true }));
 
-    next();
-});
+//     next();
+// });
 app.use(express.json());
 app.use(cookieParser())
-// app.use(cors({
-//     origin: ['http://localhost:5173', 'http://localhost:5174','https://dako23.web.app'],
-//     credentials: true
-// }));
+app.use(cors({
+    origin: ['http://localhost:5173', 'http://localhost:5174','https://dako23.web.app'],
+    credentials: true
+}));
 app.use(auth);
 
 app.use(routes);
