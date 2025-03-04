@@ -9,7 +9,7 @@ const groupController = Router();
 //         const filterParamValue = query[filterParam].replaceAll('"', '');
 
 //         const searchParams = new URLSearchParams(filterParamValue);
-        
+
 //         return { ...filter, ...Object.fromEntries(searchParams.entries()) };
 //     }, {})
 
@@ -20,7 +20,7 @@ const groupController = Router();
 groupController.get('/', async (req, res) => {
     // buildFilter({ where: '_ownerId="67ace2aed1eaa48b16b4b2eb"&email="ivo@abv.bg"', sortBy: 'createdAt="desc"' });
     // const filter = buildFilter(req.query);
-    
+
     const groups = await groupService.getAll();
 
     res.json(groups);
@@ -35,18 +35,27 @@ groupController.get('/', async (req, res) => {
 
 // Create
 groupController.post('/', isAuth, async (req, res) => {
-    const groupData = req.body;
-    const userId = req.user?.id;
+    try {
+        const groupData = req.body;
+        const userId = req.user.id;
 
-    console.log(req.body);
-    
+        console.log('Received group data:', groupData); // Логиране на получените данни
+        console.log('User ID:', userId); // Логиране на потребителското ID
 
-    const newGroup = await groupService.create(groupData, userId);
+        // Проверка за липсващи полета
+        if (!groupData.groupName || !groupData.imageUrl) {
+            return res.status(400).json({ error: 'Missing required fields' });
+        }
 
-    console.log(newGroup);
-    
+        const newGroup = await groupService.create(groupData, userId);
 
-    res.json(newGroup);
+        console.log('Created group:', newGroup); // Логиране на създадената група
+
+        res.json(newGroup); // Връщане на създадената група
+    } catch (error) {
+        console.error('Error creating group:', error); // Логиране на грешката
+        res.status(500).json({ error: 'Internal server error', details: error.message });
+    }
 });
 
 // // Update

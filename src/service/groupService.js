@@ -8,8 +8,16 @@ export default {
     //     return Group.findById(furnitureId);
     // },
     create(groupData, userId) {
-        return Group.create({ ...groupData, _ownerId: userId });
-    },
+    return Group.create({ ...groupData, _ownerId: userId })
+        .then(group => {
+            console.log('Group created successfully:', group); // Логиране на създадената група
+            return group;
+        })
+        .catch(error => {
+            console.error('Database error:', error); // Логиране на грешката
+            throw error;
+        });
+}
     // update(furnitureId, furnitureData) {
     //     return Group.findByIdAndUpdate(furnitureId, furnitureData);
     // },
