@@ -1,6 +1,9 @@
 import jsonwebtoken from "jsonwebtoken";
-import { JWT_SECRET, JWT_AUTH_NAME } from "../config.js";
+import { JWT_AUTH_NAME } from "../config.js";
 import InvalidToken from "../models/InvalidToken.js";
+
+const JWT_SECRET = 'aoijhd2398jfd928jhf423hfi234ufhsdakjhfkh';
+
 
 export const auth = async (req, res, next) => {
     const token = req.cookies[JWT_AUTH_NAME]
@@ -17,11 +20,11 @@ export const auth = async (req, res, next) => {
     try {
         const decodedToken = jsonwebtoken.verify(token, JWT_SECRET);
         console.log(decodedToken);
-        
+
         req.user = decodedToken;
 
     } catch (err) {
-        res.clearCookie(JWT_AUTH_NAME);
+        // res.clearCookie(JWT_AUTH_NAME);
         res.json({ error: 'Invalid token!' });
     }
 
