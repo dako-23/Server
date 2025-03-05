@@ -1,24 +1,11 @@
-import { Router } from "express";
-import groupService from "../service/groupService.js";
-import { isAuth } from "../middlewares/authMiddleware.js";
+import { Router } from 'express';
+import groupService from '../service/groupService.js';
+import { isAuth } from '../middlewares/authMiddleware.js';
 
 const groupController = Router();
 
-// function buildFilter(query) {
-//     const filterResult = Object.keys(query).reduce((filter, filterParam) => {
-//         const filterParamValue = query[filterParam].replaceAll('"', '');
 
-//         const searchParams = new URLSearchParams(filterParamValue);
-
-//         return { ...filter, ...Object.fromEntries(searchParams.entries()) };
-//     }, {})
-
-//     return filterResult
-// };
-
-// Get all
-groupController.get('/groups', async (req, res) => {
-    // buildFilter({ where: '_ownerId="67ace2aed1eaa48b16b4b2eb"&email="ivo@abv.bg"', sortBy: 'createdAt="desc"' });
+groupController.get('/', async (req, res) => {
     // const filter = buildFilter(req.query);
 
     const groups = await groupService.getAll();
@@ -34,7 +21,7 @@ groupController.get('/groups', async (req, res) => {
 // });
 
 // Create
-groupController.post('/groups', async (req, res) => {
+groupController.post('/', isAuth, async (req, res) => {
     const newGroup = req.body;
     const creatorId = req.user._id
 

@@ -1,7 +1,7 @@
-import { Router } from "express";
-import { JWT_AUTH_NAME } from "../config.js";
+import { Router } from 'express';
+import { JWT_AUTH_NAME } from '../config.js';
 
-import userService from "../service/userService.js";
+import userService from '../service/userService.js';
 
 const userController = Router();
 
@@ -12,7 +12,7 @@ userController.post('/register', async (req, res) => {
 
     res.cookie(JWT_AUTH_NAME, token, {
         httpOnly: true,
-        sameSite: "None", 
+        sameSite: 'None', 
         secure: true,
         maxAge: 2 * 60 * 60 * 1000
     });
@@ -31,7 +31,7 @@ userController.post('/login', async (req, res) => {
 
     res.cookie(JWT_AUTH_NAME, token, {
         httpOnly: true,
-        sameSite: "None",
+        sameSite: 'None',
         secure: true,
         maxAge: 2 * 60 * 60 * 1000
     });
