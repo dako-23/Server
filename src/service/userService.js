@@ -1,19 +1,21 @@
-import bcrypt from 'bcrypt';
-
 import User from "../models/User.js"
+import bcrypt from 'bcrypt';
 import { generateToken } from '../utils/tokenUtils.js';
+
 import InvalidToken from '../models/InvalidToken.js';
 
 export default {
     async register(userData) {
+
         const user = await User.create(userData)
 
         const token = generateToken(user);
 
-        return { user, token };
+        return { user, token }
     },
     async login(email, password) {
         const user = await User.findOne({ email });
+
         if (!user) {
             throw new Error('Email or password are incorrect!');
         }
@@ -25,9 +27,9 @@ export default {
 
         const token = generateToken(user);
 
-        return { user, token };
+        return { user, token }
     },
     invalidateToken(token) {
-        return InvalidToken.create({token});
+        return InvalidToken.create({ token });
     }
 }
