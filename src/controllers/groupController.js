@@ -36,7 +36,7 @@ groupController.get('/groups', async (req, res) => {
 // Create
 groupController.post('/groups', async (req, res) => {
     const newGroup = req.body;
-    const creatorId = req.user?.id
+    const creatorId = req.user._id
 
     const createdGroup = await groupService.create(newGroup, creatorId);
 
