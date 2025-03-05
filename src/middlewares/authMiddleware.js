@@ -17,7 +17,7 @@ export const auth = async (req, res, next) => {
     try {
         const decodedToken = jsonwebtoken.verify(token, JWT_SECRET);
         console.log(decodedToken);
-        
+
         req.user = decodedToken;
 
     } catch (err) {
@@ -30,7 +30,8 @@ export const auth = async (req, res, next) => {
 
 export const isAuth = (req, res, next) => {
     if (!req.user) {
-        return res.json({ error: 'You are not authorize' });
+        return res.status(401).send("Unauthorized: No user found.");
+
     }
 
     next();

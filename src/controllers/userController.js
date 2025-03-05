@@ -12,12 +12,12 @@ userController.post('/register', async (req, res) => {
 
     res.cookie(JWT_AUTH_NAME, token, {
         httpOnly: true,
-        sameSite: 'None', 
+        sameSite: 'None',
         secure: true,
         maxAge: 2 * 60 * 60 * 1000
     });
 
-    return res.json({
+    res.json({
         _id: user._id,
         accessToken: token,
         email: user.email,
@@ -36,7 +36,7 @@ userController.post('/login', async (req, res) => {
         maxAge: 2 * 60 * 60 * 1000
     });
 
-    return res.json({
+    res.json({
         _id: user._id,
         accessToken: token,
         email: user.email,
