@@ -4,7 +4,7 @@ import { JWT_SECRET } from '../config.js';
 
 export const generateToken = (user) => {
         const payload = {
-            id: user.id,
+            _id: user._id,
             email: user.email,
         };
         const token = jsonwebtoken.sign(payload, JWT_SECRET, {expiresIn: '2h'});
