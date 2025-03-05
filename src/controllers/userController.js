@@ -12,6 +12,8 @@ userController.post('/register', async (req, res) => {
 
     res.cookie(JWT_AUTH_NAME, token, {
         httpOnly: true,
+        sameSite: "Lax",
+        maxAge: 2 * 60 * 60 * 1000
     });
 
     res.json({
@@ -28,6 +30,8 @@ userController.post('/login', async (req, res) => {
 
     res.cookie(JWT_AUTH_NAME, token, {
         httpOnly: true,
+        sameSite: "Lax",
+        maxAge: 2 * 60 * 60 * 1000
     });
 
     res.json({
@@ -37,13 +41,13 @@ userController.post('/login', async (req, res) => {
     });
 });
 
-userController.get('/logout', async (req, res) => {
-    const token = req.headers['x-authorization'];
-    res.clearCookie(JWT_AUTH_NAME);
+// userController.get('/logout', async (req, res) => {
+//     const token = req.headers['x-authorization'];
+//     res.clearCookie(JWT_AUTH_NAME);
 
-    await userService.invalidateToken(token);
+//     await userService.invalidateToken(token);
 
-    res.json({});
-});
+//     res.json({});
+// });
 
 export default userController;
