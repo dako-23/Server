@@ -30,7 +30,7 @@ export const auth = async (req, res, next) => {
 
 export const isAuth = (req, res, next) => {
     if (!req.user) {
-        return res.end();
+        return res.json({ error: 'You are not authorize' });
     }
 
     next();
