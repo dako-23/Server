@@ -16,11 +16,13 @@ export const auth = async (req, res, next) => {
 
     try {
         const decodedToken = jsonwebtoken.verify(token, JWT_SECRET);
-
+        console.log(decodedToken);
+        
         req.user = decodedToken;
+
     } catch (err) {
         res.clearCookie(JWT_AUTH_NAME);
-        return res.json({ error: 'Invalid token!' });
+        res.json({ error: 'Invalid token!' });
     }
 
     next();
