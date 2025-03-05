@@ -34,15 +34,32 @@ groupController.get('/groups', async (req, res) => {
 // });
 
 // Create
+// groupController.post('/groups', async (req, res) => {
+//     const newGroup = req.body;
+//     const creatorId = req.user?.id
+
+//     const createdGroup = await groupService.create(newGroup, creatorId);
+
+//     return res.status(201).json(createdGroup);
+
+// });
+
 groupController.post('/groups', async (req, res) => {
+    if (!req.user) {
+        return res.status(401).json({ error: "Unauthorized: No user data found" });
+    }
+
     const newGroup = req.body;
-    const creatorId = req.user?.id
+    const creatorId = req.user.id; // 🔹 Очакваме тук да има ID
 
-    const createdGroup = await groupService.create(newGroup, creatorId);
-
-    return res.status(201).json(createdGroup);
-
+    try {
+        // 🔹 ВРЕМЕННО ВРЪЩАМЕ req.user, за да видиш в Postman/React дали съдържа ID
+        return res.json({ message: "Checking req.user", user: req.user });
+    } catch (err) {
+        return res.status(500).json({ error: "Failed to fetch user data" });
+    }
 });
+
 
 // // Update
 // groupController.put('/:furnitureId', async (req, res) => {
