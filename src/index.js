@@ -14,11 +14,11 @@ const app = express();
 dotenv.config();
 
 const server = http.createServer(app);
+
 const io = new Server(server, {
     cors: {
-        origin: "*",
+        origin: ["http://localhost:5173", "https://dako23.web.app"],
         methods: ["GET", "POST"],
-        allowedHeaders: ["Authorization"],
         credentials: true
     }
 });
