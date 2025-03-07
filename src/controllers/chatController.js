@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import messageService from '../services/messageService.js';
+import socketService from '../service/socketService.js';
 
 const chatController = Router();
 
 chatController.get('/:groupId', async (req, res) => {
     try {
-        const messages = await messageService.getMessages(req.params.groupId);
+        const messages = await socketService.getMessages(req.params.groupId);
         res.json(messages);
     } catch (err) {
         res.status(500).json({ error: 'Failed to load chat history' });
