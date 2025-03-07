@@ -33,7 +33,7 @@ groupController.post('/', isAuth, async (req, res) => {
 
 groupController.post('/:id/join', isAuth, async (req, res) => {
     const groupId = req.params.id
-    const userId = req.user?.id
+    const userId = req.user?._id
 
     try {
         await groupService.joinGroup(groupId, userId);
