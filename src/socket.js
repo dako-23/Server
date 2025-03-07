@@ -16,7 +16,8 @@ export default function initSocket(io) {
                 const newMessage = await socketService.saveMessage(groupId, senderId, message);
 
                 // 📌 Изпрати съобщението на всички в групата
-                io.to(groupId).emit('receiveMessage', newMessage);
+                // io.to(groupId).emit('receiveMessage', newMessage);
+                socket.broadcast.to(groupId).emit('receiveMessage', newMessage);
             } catch (err) {
                 console.error('❌ Error saving message:', err);
             }
