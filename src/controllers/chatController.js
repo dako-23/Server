@@ -12,4 +12,14 @@ chatController.get('/:groupId', async (req, res) => {
     }
 });
 
+chatController.post('/:groupId/send', async (req, res) => {
+    const { senderId, message } = req.body;
+    try {
+        const savedMessage = await socketService.saveMessage(req.params.groupId, senderId, message);
+        res.status(201).json(savedMessage);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to send message' });
+    }
+});
+
 export default chatController;
