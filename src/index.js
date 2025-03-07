@@ -5,9 +5,21 @@ import routes from './routes.js';
 import { auth } from './middlewares/authMiddleware.js';
 import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser';
+import { Server } from 'socket.io';
+// import { initSocket } from './service/socketService.js';
 
 const app = express();
 dotenv.config();
+
+const server = http.createServer(app);
+const io = new Server(server, {
+    cors: {
+        origin: ['http://localhost:5173', 'http://localhost:5174', 'https://dako23.web.app'],
+        credentials: true,
+    }
+});
+
+initSocket(io);
 
 try {
 
@@ -28,7 +40,7 @@ try {
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174','https://dako23.web.app'],
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://dako23.web.app'],
     credentials: true
 }));
 app.use(auth);
