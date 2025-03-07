@@ -10,6 +10,7 @@ export default {
     create(newGroupData, creatorId) {
         const result = Group.create({
             ...newGroupData,
+            joinedGroup: [creatorId],
             _ownerId: creatorId
         })
         return result
