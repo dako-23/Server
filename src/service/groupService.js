@@ -23,7 +23,9 @@ export default {
 
         group.joinedGroup.push(userId);
 
-        return group.save();
+        await group.save();
+
+        return group
     }
     // update(furnitureId, furnitureData) {
     //     return Group.findByIdAndUpdate(furnitureId, furnitureData);
