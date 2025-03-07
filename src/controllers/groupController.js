@@ -43,6 +43,17 @@ groupController.post('/:id/join', isAuth, async (req, res) => {
     return res.status(201).json({ groupId, userId });
 });
 
+groupController.post('/:id/leave', isAuth, async (req, res) => {
+    const groupId = req.params.id
+    const userId = req.user?._id
+
+    try {
+        await groupService.leaveGroup(groupId, userId);
+    } catch (err) {
+        console.log(err);
+    }
+    return res.status(201).json({ groupId, userId });
+});
 // // Update
 // groupController.put('/:furnitureId', async (req, res) => {
 //     const furnitureId = req.params.furnitureId;

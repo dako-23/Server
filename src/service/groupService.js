@@ -26,7 +26,20 @@ export default {
         await group.save();
 
         return group
+    },
+    async leaveGroup(groupId, userId) {
+
+        if (!group.joinedGroup.includes(userId)) {
+            throw new Error('You are not in this group!')
+        };
+
+        const group = await Group.findByIdAndUpdate(groupId,
+            { $pull: { joinedGroup: userId } }
+        );
+
+        return group.save();
     }
+
     // update(furnitureId, furnitureData) {
     //     return Group.findByIdAndUpdate(furnitureId, furnitureData);
     // },
