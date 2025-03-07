@@ -29,10 +29,6 @@ export default {
     },
     async leaveGroup(groupId, userId) {
 
-        if (!group.joinedGroup.includes(userId)) {
-            throw new Error('You are not in this group!')
-        };
-
         const group = await Group.findByIdAndUpdate(groupId,
             { $pull: { joinedGroup: userId } }
         );
