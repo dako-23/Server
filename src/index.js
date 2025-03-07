@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 import { Server } from 'socket.io';
 import http from 'http';
 // import { initSocket } from './service/socketService.js';
+import initSocket from './socket.js';
 
 const app = express();
 dotenv.config();
