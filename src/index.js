@@ -6,6 +6,7 @@ import { auth } from './middlewares/authMiddleware.js';
 import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser';
 import { Server } from 'socket.io';
+import http from 'http';
 // import { initSocket } from './service/socketService.js';
 
 const app = express();
