@@ -52,4 +52,4 @@ app.use(auth);
 
 app.use(routes);
 
-server.listen(5000, () => console.log('RESTful server is running...'))
+app.listen(5000, () => console.log('RESTful server is running...'))
