@@ -17,6 +17,7 @@ chatController.post('/:groupId/send', async (req, res) => {
     try {
         const { senderId, message } = req.body;
         const newMessage = await chatService.saveMessage(req.params.groupId, senderId, message);
+        
         res.status(201).json(newMessage);
     } catch (err) {
         res.status(500).json({ error: 'Failed to send message' });

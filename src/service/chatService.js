@@ -2,7 +2,8 @@ import Message from "../models/Message.js";
 
 export default {
     async saveMessage(groupId, senderId, message) {
-        return await Message.create({ groupId, senderId, message });
+        const newMessage = await Message.create({ groupId, senderId, message })
+        return await newMessage.populate('username')
     },
 
     async getMessages(groupId) {
