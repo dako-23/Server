@@ -21,6 +21,7 @@ userController.post('/register', async (req, res) => {
         _id: user._id,
         accessToken: token,
         email: user.email,
+        username: user.username
     });
 });
 
@@ -40,6 +41,7 @@ userController.post('/login', async (req, res) => {
         _id: user._id,
         accessToken: token,
         email: user.email,
+        username: user.username
     });
 });
 
