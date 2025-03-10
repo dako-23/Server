@@ -1,28 +1,15 @@
 import { Router } from "express";
-import socketService from "../service/socketService.js";
+import chatService from "../service/chatService.js";
 
 const chatController = Router();
 
-chatController.post("/:groupId/send", async (req, res) => {
+// 📌 Връща историята на чата за дадена група
+chatController.get("/:groupId", async (req, res) => {
     try {
-        const { senderId, message } = req.body;
-        const { groupId } = req.params;
-
-        // **🔹 Проверка дали вече е записано**
-        const existingMessage = await socketService.getLastMessage(groupId, senderId, message);
-        if (existingMessage) {
-            return res.status(400).json({ error: "Duplicate message detected." });
-        }
-
-        // **📌 Запис в базата**
-        const newMessage = await socketService.saveMessage(groupId, senderId, message);
-
-        // **📌 Изпращане до групата**
-        req.io.to(groupId).emit("receiveMessage", newMessage);
-
-        res.status(201).json(newMessage);
+        const messages = await chatService.getMessages(req.params.groupId);
+        res.json(messages);
     } catch (err) {
-        res.status(500).json({ error: "Failed to send message." });
+        res.status(500).json({ error: "Failed to load chat history" });
     }
 });
 

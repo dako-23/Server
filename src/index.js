@@ -6,23 +6,19 @@ import { auth } from './middlewares/authMiddleware.js';
 import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser';
 import { Server } from 'socket.io';
-import http from 'http';
-// import { initSocket } from './service/socketService.js';
-import initSocket from './socket.js';
+import http from 'http'
 
-const app = express();
 dotenv.config();
-
+const app = express();
 const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
         origin: ["http://localhost:5173", "https://dako23.web.app"],
         methods: ["GET", "POST"],
-        credentials: true
+        credentials: true,
     }
 });
-
 
 initSocket(io);
 

@@ -1,27 +1,22 @@
-import socketService from "./service/socketService.js";
+import chatService from "./service/chatService.js";
 
 export default function initSocket(io) {
     io.on("connection", (socket) => {
         console.log("🔹 User connected:", socket.id);
 
+        // 🔹 Потребителят влиза в група
         socket.on("joinGroup", (groupId) => {
             socket.join(groupId);
             console.log(`🔹 User joined group: ${groupId}`);
         });
 
+        // 🔹 Изпращане на съобщение
         socket.on("sendMessage", async ({ groupId, senderId, message }) => {
             try {
-                // **🔹 Проверка дали вече е записано**
-                const existingMessage = await socketService.getLastMessage(groupId, senderId, message);
-                if (existingMessage) {
-                    console.log("⚠️ Duplicate message detected, skipping save.");
-                    return;
-                }
+                // 📌 Запазване на съобщението в базата
+                const newMessage = await chatService.saveMessage(groupId, senderId, message);
 
-                // **📌 Запис в базата**
-                const newMessage = await socketService.saveMessage(groupId, senderId, message);
-
-                // **📌 Изпращане на съобщението до групата**
+                // 📌 Изпращане на съобщението на всички в групата
                 io.to(groupId).emit("receiveMessage", newMessage);
             } catch (err) {
                 console.error("❌ Error saving message:", err);
