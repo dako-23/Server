@@ -1,8 +1,10 @@
 import Message from "../models/Message.js";
+import User from "../models/User.js";
 
 export default {
-    async saveMessage(groupId, senderId, message) {
-        return await Message.create({ groupId, senderId, message });
+    async saveMessage(groupId, senderId, message, username) {
+
+        return await Message.create({ groupId, senderId, message, username });
     },
 
     async getMessages(groupId) {
