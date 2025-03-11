@@ -5,9 +5,11 @@ export default function initSocket(io) {
         console.log("🔹 User connected:", socket.id);
 
         // 🔹 Потребителят влиза в група
-        socket.on("joinGroup", (groupId) => {
+        socket.on("joinGroup", ({ groupId, username }) => {
             socket.join(groupId);
             console.log(`🔹 User joined group: ${groupId}`);
+
+            socket.emit("joinedGroup", { groupId, username });
         });
 
         // 🔹 Изпращане на съобщение
@@ -15,6 +17,8 @@ export default function initSocket(io) {
             try {
                 // 📌 Запазване на съобщението в базата
                 const newMessage = await chatService.saveMessage(groupId, senderId, message);
+
+                newMessage.senderId = { _id: senderId, username };
 
                 // 📌 Изпращане на съобщението на всички в групата
                 io.to(groupId).emit("receiveMessage", newMessage);
