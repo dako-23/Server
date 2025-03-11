@@ -5,11 +5,9 @@ export default function initSocket(io) {
         console.log("🔹 User connected:", socket.id);
 
         // 🔹 Потребителят влиза в група
-        socket.on("joinGroup", ({ groupId, username }) => {
+        socket.on("joinGroup", (groupId) => {
             socket.join(groupId);
             console.log(`🔹 User joined group: ${groupId}`);
-
-            socket.emit("joinedGroup", { groupId, username });
         });
 
         // 🔹 Изпращане на съобщение
@@ -18,6 +16,7 @@ export default function initSocket(io) {
                 // 📌 Запазване на съобщението в базата
                 const newMessage = await chatService.saveMessage(groupId, senderId, message);
 
+                // 📌 Вкарваме username в `senderId`, за да е достъпен в клиента
                 newMessage.senderId = { _id: senderId, username };
 
                 // 📌 Изпращане на съобщението на всички в групата
