@@ -11,13 +11,10 @@ export default function initSocket(io) {
         });
 
         // 🔹 Изпращане на съобщение
-        socket.on("sendMessage", async ({ groupId, senderId, message, username }) => {
+        socket.on("sendMessage", async ({ groupId, senderId, message }) => {
             try {
                 // 📌 Запазване на съобщението в базата
                 const newMessage = await chatService.saveMessage(groupId, senderId, message);
-
-                // 📌 Вкарваме username в `senderId`, за да е достъпен в клиента
-                newMessage.senderId = { _id: senderId, username };
 
                 // 📌 Изпращане на съобщението на всички в групата
                 io.to(groupId).emit("receiveMessage", newMessage);
