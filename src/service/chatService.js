@@ -5,7 +5,7 @@ export default {
     async saveMessage(groupId, senderId, message) {
         const user = await User.findById(senderId).select("username");
 
-        return await Message.create({ groupId, senderId, username: user.username, message });
+        return await Message.create({ groupId, senderId, username: user.username, message, userId: user._id });
     },
 
     async getMessages(groupId) {
