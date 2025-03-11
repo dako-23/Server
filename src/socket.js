@@ -13,7 +13,7 @@ export default function initSocket(io) {
         });
 
         // 🔹 Изпращане на съобщение
-        socket.on("sendMessage", async ({ groupId, senderId, message }) => {
+        socket.on("sendMessage", async ({ groupId, senderId, message, username }) => {
             try {
                 // 📌 Запазване на съобщението в базата
                 const newMessage = await chatService.saveMessage(groupId, senderId, message);
