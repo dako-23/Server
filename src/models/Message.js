@@ -6,7 +6,6 @@ const messageSchema = new Schema({
     message: { type: String, required: true },
     timestamp: { type: Date, default: Date.now },
     username: { type: String, required: true },
-    userId: { type: String, required: true }
 });
 
 const Message = model("Message", messageSchema);
