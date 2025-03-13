@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import groupService from '../service/groupService.js';
 import { isAuth } from '../middlewares/authMiddleware.js';
+import { log } from 'console';
 
 const groupController = Router();
 
@@ -67,8 +68,22 @@ groupController.post('/:id/leave', isAuth, async (req, res) => {
 // Delete
 groupController.delete('/:id/delete', isAuth, async (req, res) => {
     const groupId = req.params.id;
+    const userId = req.user?._id
 
-    await groupService.delete(groupId);
+    try {
+        const group = await groupService.getOne(groupId)
+
+        if (!group._ownerId?.equals(userId)) {
+            console.log('You are not the group owner!');
+        }
+
+        await groupService.delete(groupId);
+
+    } catch (err) {
+        console.log(err);
+    }
+
+
 
     res.json({ groupId });
 });
