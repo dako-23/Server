@@ -65,7 +65,7 @@ groupController.post('/:id/leave', isAuth, async (req, res) => {
 // });
 
 // Delete
-groupController.delete('/:furnitureId', async (req, res) => {
+groupController.delete('/:id/delete', async (req, res) => {
     const groupId = req.params.id;
 
     await groupService.delete(groupId);
