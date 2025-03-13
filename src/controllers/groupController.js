@@ -74,18 +74,15 @@ groupController.delete('/:id/delete', isAuth, async (req, res) => {
         const group = await groupService.getOne(groupId)
 
         if (!group._ownerId?.equals(userId)) {
-            console.log('You are not the group owner!');
+            return res.status(403).json({ error: "You are not authorized to delete this group" });
         }
 
         await groupService.delete(groupId);
+        return res.status(200).json({ message: "Group deleted successfully" });
 
     } catch (err) {
-        console.log(err);
+        return res.status(500).json({ error: "An error occurred while deleting the group" });
     }
-
-
-
-    res.json({ groupId });
 });
 
 export default groupController;
