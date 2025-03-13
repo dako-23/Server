@@ -36,9 +36,9 @@ export default {
 
         return group.save();
     },
-    // update(furnitureId, furnitureData) {
-    //     return Group.findByIdAndUpdate(furnitureId, furnitureData);
-    // },
+    update(groupId, groupData) {
+        return Group.findByIdAndUpdate(groupId, groupData);
+    },
     delete(groupId) {
         return Group.findByIdAndDelete(groupId);
     }

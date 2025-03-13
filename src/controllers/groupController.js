@@ -60,15 +60,20 @@ groupController.post('/:id/leave', isAuth, async (req, res) => {
     }
     return res.status(201).json({ groupId, userId });
 });
-// // Update
-// groupController.put('/:furnitureId', async (req, res) => {
-//     const furnitureId = req.params.furnitureId;
-//     const furnitureData = req.body;
+// Update
+groupController.put('/:id', async (req, res) => {
+    const groupId = req.params.id;
+    const groupData = req.body;
+    
+    try {
+        const updatedGroup = await groupService.update(groupId, groupData);
 
-//     const updatedFurniture = await groupService.update(furnitureId, furnitureData);
+        return res.status(201).json(updatedGroup);
+    } catch (err) {
+        console.log(err);
+    }
 
-//     res.json(updatedFurniture);
-// });
+});
 
 // Delete
 groupController.delete('/:id/delete', isAuth, async (req, res) => {
