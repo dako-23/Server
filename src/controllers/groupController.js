@@ -1,7 +1,6 @@
 import { Router } from 'express';
 import groupService from '../service/groupService.js';
 import { isAuth } from '../middlewares/authMiddleware.js';
-import { log } from 'console';
 
 const groupController = Router();
 
@@ -15,11 +14,17 @@ groupController.get('/', async (req, res) => {
 });
 
 // Get one
-// groupController.get('/:furnitureId', async (req, res) => {
-//     const furniture = await groupService.getOne(req.params.furnitureId);
+groupController.get('/:id', async (req, res) => {
+    const groupId = req.params.id
+    try {
+        const group = await groupService.getOne(groupId);
 
-//     res.json(furniture);
-// });
+        return res.status(201).json(group);
+    } catch (err) {
+        return res.status(500).json({ error: "An error occurred while get the group" });
+    }
+
+});
 
 // Create
 groupController.post('/', isAuth, async (req, res) => {
