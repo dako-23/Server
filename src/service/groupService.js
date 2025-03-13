@@ -35,12 +35,11 @@ export default {
         );
 
         return group.save();
-    }
-
+    },
     // update(furnitureId, furnitureData) {
     //     return Group.findByIdAndUpdate(furnitureId, furnitureData);
     // },
-    // delete(furnitureId) {
-    //     return Group.findByIdAndDelete(furnitureId);
-    // }
+    delete(groupId) {
+        return Group.findByIdAndDelete(groupId);
+    }
 }

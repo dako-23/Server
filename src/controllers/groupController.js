@@ -64,13 +64,13 @@ groupController.post('/:id/leave', isAuth, async (req, res) => {
 //     res.json(updatedFurniture);
 // });
 
-// // Delete
-// groupController.delete('/:furnitureId', async (req, res) => {
-//     const furnitureId = req.params.furnitureId;
+// Delete
+groupController.delete('/:furnitureId', async (req, res) => {
+    const groupId = req.params.id;
 
-//     await groupService.delete(furnitureId);
+    await groupService.delete(groupId);
 
-//     res.json({ ok: true });
-// });
+    res.json({ groupId });
+});
 
 export default groupController;
