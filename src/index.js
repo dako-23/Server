@@ -49,6 +49,17 @@ app.use(cors({
     allowedHeaders: ["Content-Type", "Authorization"],
     exposedHeaders: ['Set-Cookie']
 }));
+
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Origin", req.headers.origin || "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, Set-Cookie");
+    res.setHeader("Access-Control-Expose-Headers", "Set-Cookie");
+    res.setHeader("P3P", 'CP="This site does not have a P3P policy"');
+    next();
+});
+
 app.use(auth);
 
 app.use(routes);
