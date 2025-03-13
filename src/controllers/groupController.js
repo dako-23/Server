@@ -61,10 +61,10 @@ groupController.post('/:id/leave', isAuth, async (req, res) => {
     return res.status(201).json({ groupId, userId });
 });
 // Update
-groupController.put('/:id', async (req, res) => {
+groupController.put('/:id/edit', async (req, res) => {
     const groupId = req.params.id;
     const groupData = req.body;
-    
+
     try {
         const updatedGroup = await groupService.update(groupId, groupData);
 
