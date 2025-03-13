@@ -10,6 +10,8 @@ userController.post('/register', async (req, res) => {
 
     const { user, token } = await userService.register(userData);
 
+    // res.setHeader('Set-Cookie', `jwt=${token}; Path=/; HttpOnly; Secure; SameSite=None`)
+
     res.cookie(JWT_AUTH_NAME, token, {
         httpOnly: true,
         sameSite: 'None',

@@ -18,6 +18,8 @@ const io = new Server(server, {
         origin: ["http://localhost:5173", "https://dako23.web.app"],
         methods: ["GET", "POST"],
         credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization"],
+        exposedHeaders: ['Set-Cookie']
     }
 });
 
@@ -43,7 +45,9 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
     origin: ['http://localhost:5173', 'http://localhost:5174', 'https://dako23.web.app'],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+    exposedHeaders: ['Set-Cookie']
 }));
 app.use(auth);
 
