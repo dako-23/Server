@@ -1,14 +1,26 @@
 import chatService from "./service/chatService.js";
 
+const activeUsers = {};
+
 export default function initSocket(io) {
     io.on("connection", (socket) => {
         console.log("🔹 User connected:", socket.id);
 
         // 🔹 Потребителят влиза в група
-        socket.on("joinGroup", ({ groupId, username }) => {
+        socket.on("joinGroup", ({ groupId, userId, username }) => {
             socket.join(groupId);
-            console.log(`🔹 ${username} joined group: ${groupId}`);
-            io.to(groupId).emit('userJoined', username);
+
+            if (!activeUsers[groupId]) {
+                activeUsers[groupId] = [];
+            }
+
+            if (!activeUsers[groupId].some(user => user.userId === userId)) {
+                activeUsers[groupId].push({ userId, username });
+            }
+
+            console.log(`🔹 User joined group: ${groupId}, Active users:`, activeUsers[groupId]);
+
+            io.to(groupId).emit('userJoined', activeUsers[groupId]);
         });
 
         // 🔹 Изпращане на съобщение
@@ -24,9 +36,21 @@ export default function initSocket(io) {
             }
         });
 
+        socket.on("leaveGroup", ({ groupId, userId }) => {
+            socket.leave(groupId);
+
+            if (activeUsers[groupId]) {
+                activeUsers[groupId] = activeUsers[groupId].filter(user => user.userId !== userId);
+
+                io.to(groupId).emit("updateActiveUsers", activeUsers[groupId]);
+            }
+
+            console.log(`🔹 User left group: ${groupId}, Active users:`, activeUsers[groupId]);
+        });
+
         socket.on("disconnect", () => {
             console.log("🔹 User disconnected:", socket.id);
-            io.emit('userLeft', username);
+            // io.emit('userLeft', username);
         });
     });
 }
