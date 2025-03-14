@@ -44,14 +44,20 @@ export default function initSocket(io) {
                 activeUsers[groupId] = activeUsers[groupId].filter(user => user.userId !== userId);
 
                 io.to(groupId).emit("updateActiveUsers", activeUsers[groupId]);
+                io.to(groupId).emit("userLeft", userId);
             }
 
             console.log(`🔹 User left group: ${groupId}, Active users:`, activeUsers[groupId]);
         });
 
         socket.on("disconnect", () => {
+            for (const groupId in activeUsers) {
+                activeUsers[groupId] = activeUsers[groupId].filter(user => user.socketId !== socket.id);
+
+                io.to(groupId).emit("updateActiveUsers", activeUsers[groupId]);
+            }
+
             console.log("🔹 User disconnected:", socket.id);
-            // io.emit('userLeft', username);
         });
     });
 }
