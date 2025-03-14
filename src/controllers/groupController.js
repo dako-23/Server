@@ -7,10 +7,14 @@ const groupController = Router();
 
 groupController.get('/', async (req, res) => {
     // const filter = buildFilter(req.query);
+    try {
+        const groups = await groupService.getAll();
+        return res.json(groups);
+    } catch (err) {
 
-    const groups = await groupService.getAll();
+        return res.status(500).json({ error: "An error occurred while getting the groups" });
+    }
 
-    return res.json(groups);
 });
 
 // Get one
@@ -30,10 +34,14 @@ groupController.get('/:id', async (req, res) => {
 groupController.post('/create', isAuth, async (req, res) => {
     const newGroup = req.body;
     const creatorId = req.user._id
+    try {
+        const createdGroup = await groupService.create(newGroup, creatorId);
+        return res.status(201).json(createdGroup);
 
-    const createdGroup = await groupService.create(newGroup, creatorId);
+    } catch (err) {
+        return res.status(500).json({ error: "An error occurred while create the group" });
+    }
 
-    return res.status(201).json(createdGroup);
 
 });
 
@@ -44,7 +52,8 @@ groupController.post('/:id/join', isAuth, async (req, res) => {
     try {
         await groupService.joinGroup(groupId, userId);
     } catch (err) {
-        console.log(err);
+        return res.status(500).json({ error: "An error occurred while join the group" });
+
     }
     return res.status(201).json({ groupId, userId });
 });
@@ -56,21 +65,30 @@ groupController.post('/:id/leave', isAuth, async (req, res) => {
     try {
         await groupService.leaveGroup(groupId, userId);
     } catch (err) {
-        console.log(err);
+        return res.status(500).json({ error: "An error occurred while leave the group" });
+
     }
     return res.status(201).json({ groupId, userId });
 });
 // Update
-groupController.put('/:id/edit', async (req, res) => {
+groupController.put('/:id/edit', isAuth, async (req, res) => {
     const groupId = req.params.id;
+    const userId = req.user?._id
     const groupData = req.body;
 
+
     try {
+        const group = await groupService.getOne(groupId)
+
+        if (!group._ownerId?.equals(userId)) {
+            return res.status(403).json({ error: "You are not authorized to edit this group" });
+        }
+
         const updatedGroup = await groupService.update(groupId, groupData);
 
         return res.status(201).json(updatedGroup);
     } catch (err) {
-        console.log(err);
+        return res.status(500).json({ error: "An error occurred while edit the group" });
     }
 
 });
