@@ -2,7 +2,7 @@ import Group from '../models/Group.js'
 
 export default {
     getAll(filter = {}) {
-        return Group.find({})
+        return Group.find({}).sort({ createdAt: -1 })
     },
     getOne(groupId) {
         return Group.findById(groupId);
