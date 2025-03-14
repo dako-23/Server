@@ -5,9 +5,10 @@ export default function initSocket(io) {
         console.log("🔹 User connected:", socket.id);
 
         // 🔹 Потребителят влиза в група
-        socket.on("joinGroup", (groupId) => {
+        socket.on("joinGroup", ({ groupId, username }) => {
             socket.join(groupId);
-            console.log(`🔹 User joined group: ${groupId}`);
+            console.log(`🔹 ${username} joined group: ${groupId}`);
+            io.to(groupId).emit('userJoined', username);
         });
 
         // 🔹 Изпращане на съобщение
@@ -25,6 +26,7 @@ export default function initSocket(io) {
 
         socket.on("disconnect", () => {
             console.log("🔹 User disconnected:", socket.id);
+            io.emit('userLeft', username);
         });
     });
 }
