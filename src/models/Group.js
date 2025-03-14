@@ -26,8 +26,8 @@ const groupSchema = new Schema({
     _ownerId: {
         type: Types.ObjectId,
         ref: 'User',
-    }
-});
+    },
+}, { timestamps: true });
 
 const Group = model('Group', groupSchema);
 
