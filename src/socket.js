@@ -20,7 +20,8 @@ export default function initSocket(io) {
 
             console.log(`🔹 User joined group: ${groupId}, Active users:`, activeUsers[groupId]);
 
-            io.to(groupId).emit('userJoined', activeUsers[groupId]);
+            io.to(socket.id).emit("updateActiveUsers", activeUsers[groupId]);
+            io.to(groupId).emit('updateActiveUsers', activeUsers[groupId]);
         });
 
         // 🔹 Изпращане на съобщение
