@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const reviewsSchema = new Schema({
+const reviewSchema = new Schema({
     creatorId:
     {
         type: Schema.Types.ObjectId,
@@ -21,8 +21,7 @@ const reviewsSchema = new Schema({
         type: String,
         required: true
     },
-    timestamp: true,
-});
+}, { timestamps: true });
 
-const Review = model("Review", reviewsSchema);
+const Review = model("Review", reviewSchema);
 export default Review;

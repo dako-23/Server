@@ -1,4 +1,4 @@
-import Review from "../models/Reviews.js";
+import Review from "../models/Review.js";
 
 export default {
     getAll(filter = {}) {
