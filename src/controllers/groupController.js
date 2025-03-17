@@ -4,7 +4,6 @@ import { isAuth } from '../middlewares/authMiddleware.js';
 
 const groupController = Router();
 
-
 groupController.get('/', async (req, res) => {
     // const filter = buildFilter(req.query);
     try {
@@ -17,7 +16,19 @@ groupController.get('/', async (req, res) => {
 
 });
 
-// Get one
+groupController.get('/latest', async (req, res) => {
+
+    try {
+        const latestGroups = await groupService.getLatest()
+
+        return res.json(latestGroups);
+
+    } catch (err) {
+        return res.status(500).json({ error: "An error occurred while getting the last groups" });
+    }
+
+})
+
 groupController.get('/:id', async (req, res) => {
     const groupId = req.params.id
     try {
