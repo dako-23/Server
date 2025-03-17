@@ -3,7 +3,6 @@ import chatService from "../service/chatService.js";
 
 const chatController = Router();
 
-// 📌 Връща историята на чата за дадена група
 chatController.get("/:groupId", async (req, res) => {
     try {
         const messages = await chatService.getMessages(req.params.groupId);

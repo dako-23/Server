@@ -30,7 +30,6 @@ groupController.get('/:id', async (req, res) => {
 
 });
 
-// Create
 groupController.post('/create', isAuth, async (req, res) => {
     const newGroup = req.body;
     const creatorId = req.user._id
@@ -70,7 +69,6 @@ groupController.post('/:id/leave', isAuth, async (req, res) => {
     }
     return res.status(201).json({ groupId, userId });
 });
-// Update
 groupController.put('/:id/edit', isAuth, async (req, res) => {
     const groupId = req.params.id;
     const userId = req.user?._id
@@ -93,7 +91,6 @@ groupController.put('/:id/edit', isAuth, async (req, res) => {
 
 });
 
-// Delete
 groupController.delete('/:id/delete', isAuth, async (req, res) => {
     const groupId = req.params.id;
     const userId = req.user?._id
