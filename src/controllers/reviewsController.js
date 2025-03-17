@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { isAuth } from '../middlewares/authMiddleware.js';
-import ReviewsService from '../service/ReviewsService.js';
+import reviewsService from '../service/reviewsService.js';
 
 const reviewsController = Router();
 
@@ -8,7 +8,7 @@ const reviewsController = Router();
 reviewsController.get('/', async (req, res) => {
     // const filter = buildFilter(req.query);
     try {
-        const reviews = await ReviewsService.getAll();
+        const reviews = await reviewsService.getAll();
         return res.json(reviews);
     } catch (err) {
 
@@ -20,7 +20,7 @@ reviewsController.get('/', async (req, res) => {
 reviewsController.get('/latest', async (req, res) => {
 
     try {
-        const latestReviews = await ReviewsService.getLatest()
+        const latestReviews = await reviewsService.getLatest()
         
         return res.json(latestReviews);
 
@@ -34,7 +34,7 @@ reviewsController.get('/latest', async (req, res) => {
 reviewsController.get('/:id', async (req, res) => {
     const reviewId = req.params.id
     try {
-        const review = await ReviewsService.getOne(reviewId);
+        const review = await reviewsService.getOne(reviewId);
 
         return res.status(201).json(review);
     } catch (err) {
@@ -47,7 +47,7 @@ reviewsController.post('/create', isAuth, async (req, res) => {
     const newReview = req.body;
     const creatorId = req.user._id
     try {
-        const createdReview = await ReviewsService.create(newReview, creatorId);
+        const createdReview = await reviewsService.create(newReview, creatorId);
         return res.status(201).json(createdReview);
 
     } catch (err) {
@@ -64,7 +64,7 @@ reviewsController.put('/:id/edit', isAuth, async (req, res) => {
 
 
     try {
-        const review = await ReviewsService.getOne(reviewId)
+        const review = await reviewsService.getOne(reviewId)
 
         if (!review.creatorId?.equals(userId)) {
             return res.status(403).json({ error: "You are not authorized to edit this review" });
@@ -84,13 +84,13 @@ reviewsController.delete('/:id/delete', isAuth, async (req, res) => {
     const userId = req.user?._id
 
     try {
-        const review = await ReviewsService.getOne(reviewId)
+        const review = await reviewsService.getOne(reviewId)
 
         if (!review.creatorId?.equals(userId)) {
             return res.status(403).json({ error: "You are not authorized to delete this review" });
         }
 
-        await ReviewsService.delete(reviewId);
+        await reviewsService.delete(reviewId);
         return res.status(200).json({ message: "Review deleted successfully" });
 
     } catch (err) {

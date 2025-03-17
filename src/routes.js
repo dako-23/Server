@@ -3,7 +3,7 @@ import { Router } from 'express';
 import userController from './controllers/userController.js';
 import groupController from './controllers/groupController.js';
 import chatController from './controllers/chatController.js';
-import reviewsController from './controllers/ReviewsController.js';
+import reviewsController from './controllers/reviewsController.js';
 
 const routes = Router();
 
