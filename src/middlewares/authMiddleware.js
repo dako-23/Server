@@ -4,10 +4,9 @@ import InvalidToken from '../models/InvalidToken.js';
 
 export const auth = async (req, res, next) => {
 
-    let token = req.cookies[JWT_AUTH_NAME];
+    let token = null
 
-    // Ако няма cookie токен, проверяваме за Bearer токен в headers
-    if (!token && req.headers.authorization) {
+    if (req.headers.authorization) {
         const authHeader = req.headers.authorization;
         if (authHeader.startsWith("Bearer ")) {
             token = authHeader.split(" ")[1];
