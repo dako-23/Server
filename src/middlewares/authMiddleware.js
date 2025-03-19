@@ -14,6 +14,7 @@ export const auth = async (req, res, next) => {
     }
 
     if (!token) {
+        req.user = null;
         return next();
     }
 
@@ -29,6 +30,7 @@ export const auth = async (req, res, next) => {
 
     } catch (err) {
         res.clearCookie(JWT_AUTH_NAME);
+        req.user = null;
         return res.json({ error: 'Invalid token!' });
     }
 
@@ -38,7 +40,6 @@ export const auth = async (req, res, next) => {
 export const isAuth = (req, res, next) => {
     if (!req.user) {
         return res.status(401).send("Unauthorized: No user found.");
-
     }
 
     next();
