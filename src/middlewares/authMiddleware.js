@@ -3,7 +3,14 @@ import { JWT_SECRET, JWT_AUTH_NAME } from '../config.js';
 import InvalidToken from '../models/InvalidToken.js';
 
 export const auth = async (req, res, next) => {
-    const token = req.cookies[JWT_AUTH_NAME]
+    let token = req.cookies[JWT_AUTH_NAME]
+
+    if (!token && req.headers.authorization) {
+        const authHeader = req.headers.authorization;
+        if (authHeader.startsWith("Bearer ")) {
+            token = authHeader.split(" ")[1]; 
+        }
+    }
 
     if (!token) {
         return next();
@@ -16,7 +23,6 @@ export const auth = async (req, res, next) => {
 
     try {
         const decodedToken = jsonwebtoken.verify(token, JWT_SECRET);
-        console.log(decodedToken);
 
         req.user = decodedToken;
 
