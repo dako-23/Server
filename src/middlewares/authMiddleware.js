@@ -3,12 +3,14 @@ import { JWT_SECRET, JWT_AUTH_NAME } from '../config.js';
 import InvalidToken from '../models/InvalidToken.js';
 
 export const auth = async (req, res, next) => {
-    let token = req.cookies[JWT_AUTH_NAME]
 
+    let token = req.cookies[JWT_AUTH_NAME];
+
+    // Ако няма cookie токен, проверяваме за Bearer токен в headers
     if (!token && req.headers.authorization) {
         const authHeader = req.headers.authorization;
         if (authHeader.startsWith("Bearer ")) {
-            token = authHeader.split(" ")[1]; 
+            token = authHeader.split(" ")[1];
         }
     }
 
@@ -28,7 +30,7 @@ export const auth = async (req, res, next) => {
 
     } catch (err) {
         res.clearCookie(JWT_AUTH_NAME);
-        res.json({ error: 'Invalid token!' });
+        return res.json({ error: 'Invalid token!' });
     }
 
     next();
