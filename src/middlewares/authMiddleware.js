@@ -29,9 +29,8 @@ export const auth = async (req, res, next) => {
         req.user = decodedToken;
 
     } catch (err) {
-        res.clearCookie(JWT_AUTH_NAME);
         req.user = null;
-        return res.json({ error: 'Invalid token!' });
+        res.json({ error: 'Invalid token!' });
     }
 
     next();
