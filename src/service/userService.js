@@ -29,6 +29,11 @@ export default {
 
         return { user, token }
     },
+    async updateUser(userId, updateData) {
+        const updatedUser = await User.findByIdAndUpdate(userId, updateData, { new: true });
+        
+        return updatedUser
+    },
     invalidateToken(token) {
         return InvalidToken.create({ token });
     }

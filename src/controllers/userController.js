@@ -52,6 +52,23 @@ userController.post('/login', async (req, res) => {
     }
 });
 
+userController.put("/:id", async (req, res) => {
+    const { id } = req.params;
+    const { firstName, lastName, address, imageUrl } = req.body;
+
+    try {
+        const updatedUser = await userService.updateUser(id, { firstName, lastName, address, imageUrl });
+
+        if (!updatedUser) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        res.json(updatedUser);
+    } catch (err) {
+        res.status(500).json({ error: "Failed to update user" });
+    }
+});
+
 // userController.get('/logout', async (req, res) => {
 //     const token = req.headers['x-authorization'];
 //     res.clearCookie(JWT_AUTH_NAME);
