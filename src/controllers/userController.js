@@ -21,7 +21,8 @@ userController.post('/register', async (req, res) => {
             _id: user._id,
             accessToken: token,
             email: user.email,
-            username: user.username
+            username: user.username,
+            imageUrl: user.imageUrl,
         });
     } catch (err) {
         res.status(500).json({ error: "Failed to register" });
@@ -45,7 +46,8 @@ userController.post('/login', async (req, res) => {
             _id: user._id,
             accessToken: token,
             email: user.email,
-            username: user.username
+            username: user.username,
+            imageUrl: user.imageUrl,
         });
     } catch (err) {
         res.status(500).json({ error: "Failed to login" });
