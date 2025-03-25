@@ -3,7 +3,7 @@ import User from "../models/User.js";
 
 export default {
     async saveMessage(groupId, senderId, message) {
-        const user = await User.findById(senderId).select("username imageUrl");
+        const user = await User.findById(senderId)
 
         return await Message.create({ groupId, senderId, username: user.username, message, imageUrl: user.imageUrl });
     },
