@@ -7,7 +7,7 @@ export default function initSocket(io) {
         console.log("🔹 User connected:", socket.id);
 
         // 🔹 Потребителят влиза в група
-        socket.on("joinGroup", ({ groupId, userId, username }) => {
+        socket.on("joinGroup", ({ groupId, userId, username, imageUrl }) => {
             socket.join(groupId);
 
             if (!activeUsers[groupId]) {
@@ -15,7 +15,7 @@ export default function initSocket(io) {
             }
 
             if (!activeUsers[groupId].some(user => user.userId === userId)) {
-                activeUsers[groupId].push({ userId, username });
+                activeUsers[groupId].push({ userId, username, imageUrl });
             }
 
             console.log(`🔹 User joined group: ${groupId}, Active users:`, activeUsers[groupId]);
@@ -25,10 +25,10 @@ export default function initSocket(io) {
         });
 
         // 🔹 Изпращане на съобщение
-        socket.on("sendMessage", async ({ groupId, senderId, message }) => {
+        socket.on("sendMessage", async ({ groupId, senderId, message, imageUrl }) => {
             try {
                 // 📌 Запазване на съобщението в базата
-                const newMessage = await chatService.saveMessage(groupId, senderId, message);
+                const newMessage = await chatService.saveMessage(groupId, senderId, message, imageUrl);
 
                 // 📌 Изпращане на съобщението на всички в групата
                 io.to(groupId).emit("receiveMessage", newMessage);
