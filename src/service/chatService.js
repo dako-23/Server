@@ -5,7 +5,12 @@ export default {
     async saveMessage(groupId, senderId, message) {
         const user = await User.findById(senderId)
 
-        return await Message.create({ groupId, senderId, username: user.username, message, imageUrl: user.imageUrl });
+        const saved = await Message.create({ groupId, senderId, username: user.username, message, imageUrl: user.imageUrl });
+
+        return {
+            ...saved._doc,        // разпакетиран обект от Mongo
+            imageUrl: user.imageUrl // добавяш imageUrl РЪЧНО в отговора
+        };
     },
 
     async getMessages(groupId) {
