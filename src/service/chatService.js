@@ -11,6 +11,6 @@ export default {
     async getMessages(groupId) {
         return await Message.find({ groupId })
             .sort({ timestamp: 1 })
-            .populate("senderId", "username"); // 🔹 Връща username вместо ID
+            .populate("senderId", "username", 'imageUrl'); // 🔹 Връща username вместо ID
     }
 };
