@@ -1,4 +1,3 @@
-import Message from "./models/Message.js";
 import chatService from "./service/chatService.js";
 
 const activeUsers = {};
@@ -29,14 +28,10 @@ export default function initSocket(io) {
         socket.on("sendMessage", async ({ groupId, senderId, message, imageUrl }) => {
             try {
                 // 📌 Запазване на съобщението в базата
-                await chatService.saveMessage(groupId, senderId, message, imageUrl);
-
-                const latestMessage = await Message.findOne({ groupId, senderId, message })
-                    .sort({ createdAt: -1 })
-                    .populate("senderId", "username imageUrl");
+                const newMessage = await chatService.saveMessage(groupId, senderId, message, imageUrl);
 
                 // 📌 Изпращане на съобщението на всички в групата
-                io.to(groupId).emit("receiveMessage", latestMessage);
+                io.to(groupId).emit("receiveMessage", newMessage);
             } catch (err) {
                 console.error("❌ Error saving message:", err);
             }
