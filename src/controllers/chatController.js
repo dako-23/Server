@@ -14,8 +14,8 @@ chatController.get("/:groupId", async (req, res) => {
 
 chatController.post('/:groupId/send', async (req, res) => {
     try {
-        const { senderId, message, username } = req.body;
-        const newMessage = await chatService.saveMessage(req.params.groupId, senderId, message, username);
+        const { senderId, message, username, imageUrl } = req.body;
+        const newMessage = await chatService.saveMessage(req.params.groupId, senderId, message, username, imageUrl);
 
         res.status(201).json(newMessage);
     } catch (err) {
