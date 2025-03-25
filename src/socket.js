@@ -25,10 +25,10 @@ export default function initSocket(io) {
         });
 
         // 🔹 Изпращане на съобщение
-        socket.on("sendMessage", async ({ groupId, senderId, message }) => {
+        socket.on("sendMessage", async ({ groupId, senderId, message, username, imageUrl }) => {
             try {
                 // 📌 Запазване на съобщението в базата
-                const newMessage = await chatService.saveMessage(groupId, senderId, message);
+                const newMessage = await chatService.saveMessage(groupId, senderId, message, username, imageUrl);
 
                 // 📌 Изпращане на съобщението на всички в групата
                 io.to(groupId).emit("receiveMessage", newMessage);
