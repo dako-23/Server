@@ -27,13 +27,21 @@ newsFeedController.post('/create', isAuth, async (req, res) => {
     }
 })
 
-newsFeedController.post('/create-comment', isAuth, async (req, res) => {
-    const newComment = req.body;
+newsFeedController.post('/:id/comment', isAuth, async (req, res) => {
+    const { postId, text, firstName, lastName, imageUrlAuthor } = req.body;
     const creatorId = req.user._id;
-    const postId = req.params.id
+    const newComment = {
+        text,
+        firstName,
+        lastName,
+        imageUrlAuthor,
+        _ownerId: creatorId
+    }
+
+
 
     try {
-        const createdComment = await newsFeedService.createComment(newComment, creatorId, postId);
+        const createdComment = await newsFeedService.createComment(newComment, postId);
         return res.status(201).json(createdComment)
     } catch (err) {
         return res.status(500).json({ error: err.message });
