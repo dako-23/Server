@@ -24,7 +24,7 @@ const postSchema = new Schema({
         type: Types.ObjectId,
         ref: "User", required: true
     },
-    firtsName: {
+    firstName: {
         type: String,
         required: true
     },
