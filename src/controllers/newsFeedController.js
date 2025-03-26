@@ -19,7 +19,7 @@ newsFeedController.post('/create', isAuth, async (req, res) => {
     const newPost = req.body;
     const creatorId = req.user._id
     try {
-        const createdPost = await groupService.create(newPost, creatorId);
+        const createdPost = await newsFeedService.create(newPost, creatorId);
         return res.status(201).json(createdPost);
 
     } catch (err) {
