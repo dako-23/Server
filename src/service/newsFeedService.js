@@ -19,7 +19,9 @@ export default {
 
         await post.save();
 
-        return post
+        const created = post.comments[post.comments.length - 1]
+
+        return created
     }
 
 }

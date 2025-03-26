@@ -38,8 +38,6 @@ newsFeedController.post('/:id/comment', isAuth, async (req, res) => {
         _ownerId: creatorId
     }
 
-
-
     try {
         const createdComment = await newsFeedService.createComment(newComment, postId);
         return res.status(201).json(createdComment)
