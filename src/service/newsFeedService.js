@@ -4,9 +4,9 @@ export default {
     getAll(filter = {}) {
         return Post.find({}).sort({ createdAt: -1 })
     },
-    create(newPostData, creatorId) {
+    create(newPost, creatorId) {
         const result = Post.create({
-            ...newPostData,
+            ...newPost,
             _ownerId: creatorId
         })
         return result
