@@ -11,5 +11,18 @@ export default {
         })
         return result
     },
+    async createComment(newComment, creatorId, groupId) {
+
+        const post = await Post.findById(groupId);
+
+        post.comments.push({
+            ...newComment,
+            _ownerId: creatorId
+        });
+
+        await post.save();
+
+        return post
+    }
 
 }

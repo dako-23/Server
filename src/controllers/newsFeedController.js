@@ -27,5 +27,18 @@ newsFeedController.post('/create', isAuth, async (req, res) => {
     }
 })
 
+newsFeedController.post('/create-comment', isAuth, async (req, res) => {
+    const newComment = req.body;
+    const creatorId = req.user._id;
+    const groupId = req.params.id
+
+    try {
+        const createdComment = await newsFeedService.createComment(newComment, creatorId, groupId);
+        return res.status(201).json(createdComment)
+    } catch (err) {
+        return res.status(500).json({ error: "An error occurred while post the comment" });
+    }
+})
+
 
 export default newsFeedController

@@ -6,7 +6,11 @@ const commentSchema = new Schema({
         ref: "User",
         required: true
     },
-    username: {
+    firstName: {
+        type: String,
+        required: true
+    },
+    lastName: {
         type: String,
         required: true
     },
@@ -34,18 +38,18 @@ const postSchema = new Schema({
     },
     imageUrlAuthor: {
         type: String
-    }, 
+    },
     content: {
         type: String,
         required: true
     },
     imageUrl: {
         type: String
-    }, 
+    },
     likes: [{
         type: Types.ObjectId,
         ref: "User"
-    }], 
+    }],
     comments: [commentSchema]
 }, { timestamps: true });
 
