@@ -1,7 +1,7 @@
 import { Schema, model, Types } from "mongoose";
 
 const commentSchema = new Schema({
-    userId: {
+    ownerId: {
         type: Types.ObjectId,
         ref: "User",
         required: true
@@ -20,7 +20,7 @@ const commentSchema = new Schema({
 }, { timestamps: true });
 
 const postSchema = new Schema({
-    userId: {
+    ownerId: {
         type: Types.ObjectId,
         ref: "User", required: true
     },
