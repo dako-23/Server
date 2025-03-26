@@ -11,9 +11,9 @@ export default {
         })
         return result
     },
-    async createComment(newComment, creatorId, groupId) {
+    async createComment(newComment, creatorId, postId) {
 
-        const post = await Post.findById(groupId);
+        const post = await Post.findById(postId);
 
         post.comments.push({
             ...newComment,
