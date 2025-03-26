@@ -1,0 +1,53 @@
+import { Schema, model, Types } from "mongoose";
+
+const commentSchema = new Schema({
+    userId: {
+        type: Types.ObjectId,
+        ref: "User",
+        required: true
+    },
+    username: {
+        type: String,
+        required: true
+    },
+    imageUrlComment: {
+        type: String
+    },
+    text: {
+        rtype: String,
+        required: true
+    },
+}, { timestamps: true });
+
+const postSchema = new Schema({
+    userId: {
+        type: Types.ObjectId,
+        ref: "User", required: true
+    },
+    firtsName: {
+        type: String,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true
+    },
+    imageUrlAuthor: {
+        type: String
+    }, 
+    content: {
+        type: String,
+        required: true
+    },
+    imageUrl: {
+        type: String
+    }, 
+    likes: [{
+        type: Types.ObjectId,
+        ref: "User"
+    }], 
+    comments: [commentSchema]
+}, { timestamps: true });
+
+const Post = model("Post", postSchema);
+export default Post;
