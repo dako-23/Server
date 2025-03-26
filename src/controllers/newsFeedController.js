@@ -28,13 +28,13 @@ newsFeedController.post('/create', isAuth, async (req, res) => {
 })
 
 newsFeedController.post('/:id/comment', isAuth, async (req, res) => {
-    const { postId, text, firstName, lastName, imageUrlAuthor } = req.body;
+    const { postId, text, firstName, lastName, imageUrlComment } = req.body;
     const creatorId = req.user._id;
     const newComment = {
         text,
         firstName,
         lastName,
-        imageUrlAuthor,
+        imageUrlComment,
         _ownerId: creatorId
     }
 
