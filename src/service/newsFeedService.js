@@ -3,6 +3,7 @@ import Post from "../models/Post.js";
 export default {
     getAll(filter = {}) {
         return Post.find({}).sort({ createdAt: -1 })
+            .populate('likes', 'firstName lastName imageUrl');
     },
     create(newPost, creatorId) {
         const result = Post.create({
