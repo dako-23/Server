@@ -4,9 +4,9 @@ const activeUsers = {};
 
 export default function initSocket(io) {
     io.on("connection", (socket) => {
-        console.log("🔹 User connected:", socket.id);
+        console.log("User connected:", socket.id);
 
-        // 🔹 Потребителят влиза в група
+        // Потребителят влиза в група
         socket.on("joinGroup", ({ groupId, userId, username, imageUrl }) => {
             socket.join(groupId);
 
@@ -24,7 +24,7 @@ export default function initSocket(io) {
             io.to(groupId).emit('updateActiveUsers', activeUsers[groupId]);
         });
 
-        // 🔹 Изпращане на съобщение
+        // Изпращане на съобщение
         socket.on("sendMessage", async ({ groupId, senderId, message, username, imageUrl }) => {
             try {
                 // 📌 Запазване на съобщението в базата

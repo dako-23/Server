@@ -1,4 +1,5 @@
-import { model, Schema } from 'mongoose';
+import { Schema, model, Types } from "mongoose";
+
 import bcrypt from 'bcrypt';
 
 const userSchema = new Schema({
@@ -25,7 +26,11 @@ const userSchema = new Schema({
     },
     imageUrl: {
         type: String,
-    }
+    },
+    favorites: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'Post'
+    }],
 });
 
 userSchema.pre('save', async function () {
