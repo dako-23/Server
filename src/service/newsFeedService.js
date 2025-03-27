@@ -15,7 +15,7 @@ export default {
 
         const post = await Post.findById(postId);
 
-        post.comments.unshift(newComment);
+        post.comments.push(newComment);
 
         await post.save();
 
