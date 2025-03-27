@@ -22,6 +22,14 @@ export default {
         const created = post.comments[0]
 
         return created
+    },
+    async like(postId, userId) {
+
+        const post = await Post.findById(postId)
+
+        post.likes.push(userId)
+        
+        await post.save();
     }
 
 }

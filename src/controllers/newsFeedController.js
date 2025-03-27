@@ -46,5 +46,16 @@ newsFeedController.post('/:id/comment', isAuth, async (req, res) => {
     }
 })
 
+newsFeedController.post('/:id/like', isAuth, async (req, res) => {
+    const postId = req.params.id;
+    const { userId } = req.body;
+    try {
+        const createdLike = await newsFeedService.like(postId, userId)
+        return res.status(201).json(createdLike)
+    } catch (err) {
+        return res.status(500).json({ error: err.message });
+    }
+})
+
 
 export default newsFeedController
