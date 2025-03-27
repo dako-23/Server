@@ -28,9 +28,9 @@ const userSchema = new Schema({
         type: String,
     },
     favorites: [{
-        type: mongoose.Types.ObjectId,
+        type: Types.ObjectId,
         ref: 'Post'
-    }],
+    }]
 });
 
 userSchema.pre('save', async function () {
