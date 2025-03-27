@@ -27,10 +27,10 @@ export default {
 
         const post = await Post.findById(postId)
 
-        const alreadyLiked = post.likes.includes(userId);
+        const alreadyLiked = post.likes.some(id => id.toString() === userId.toString());
 
         if (alreadyLiked) {
-            post.likes = post.likes.filter(id => id !== userId);
+            post.likes = post.likes.filter(id => id.toString() !== userId.toString());
         } else {
             post.likes.push(userId);
         }
@@ -38,7 +38,7 @@ export default {
         await post.save();
 
         const populated = await Post.findById(postId)
-            .populate('likes', 'firstName lastName imageUrlAuthor'); 
+            .populate('likes', 'firstName lastName imageUrlAuthor');
 
         return populated;
 
