@@ -38,7 +38,7 @@ export default {
         await post.save();
 
         const populated = await Post.findById(postId)
-            .populate('likes', 'firstName lastName imageUrl'); // избери само каквото ти трябва
+            .populate('likes', 'firstName lastName imageUrlAuthor'); 
 
         return populated;
 
