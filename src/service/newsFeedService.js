@@ -27,9 +27,21 @@ export default {
 
         const post = await Post.findById(postId)
 
-        post.likes.push(userId)
-        
+        const alreadyLiked = post.likes.includes(userId);
+
+        if (alreadyLiked) {
+            post.likes = post.likes.filter(id => id !== userId);
+        } else {
+            post.likes.push(userId);
+        }
+
         await post.save();
+
+        const populated = await Post.findById(postId)
+            .populate('likes', 'firstName lastName imageUrl'); // избери само каквото ти трябва
+
+        return populated;
+
     }
 
 }
