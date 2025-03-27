@@ -38,7 +38,7 @@ export default {
         await post.save();
 
         const populated = await Post.findById(postId)
-            .populate('likes', 'firstName lastName imageUrlAuthor');
+            .populate('likes', 'firstName lastName imageUrl');
 
         return populated;
 
