@@ -1,4 +1,3 @@
-import User from "../models/User.js"
 import Post from "../models/Post.js"
 import Group from "../models/Group.js"
 

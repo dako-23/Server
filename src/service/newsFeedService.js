@@ -4,25 +4,10 @@ import mongoose from "mongoose";
 
 
 export default {
-    async getAll(userId) {
-        const posts = await Post.find({})
+    async getAll() {
+        return await Post.find({})
             .sort({ createdAt: -1 })
             .populate('likes', 'firstName lastName imageUrl')
-            
-
-        if (!userId) return posts;
-
-        const user = await User.findById(userId)
-        const favorites = Array.isArray(user?.favorites)
-            ? user.favorites.map(id => id?.toString?.()).filter(Boolean)
-            : [];
-
-        const enrichedPosts = posts.map(post => ({
-            ...post,
-            isFavorited: favorites.includes(post._id.toString())
-        }));
-
-        return enrichedPosts;
 
     },
     create(newPost, creatorId) {
@@ -74,7 +59,7 @@ export default {
             user.favorites = user.favorites.filter(id => id.toString() !== postId.toString());
 
         } else {
-            user.favorites.push(new mongoose.Types.ObjectId(postId));
+            user.favorites.push(postId);
         }
 
         await user.save();
