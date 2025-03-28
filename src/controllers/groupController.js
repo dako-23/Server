@@ -16,6 +16,17 @@ groupController.get('/', async (req, res) => {
 
 });
 
+groupController.get('/:userId/my-groups', isAuth, async (req, res) => {
+    const { userId } = req.params;
+
+    try {
+        const myGroups = await groupService.getByOwner(userId);
+        res.json(myGroups);
+    } catch (err) {
+        res.status(500).json({ error: "Failed to fetch your groups." });
+    }
+});
+
 groupController.get('/latest', async (req, res) => {
 
     try {

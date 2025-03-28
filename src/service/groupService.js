@@ -4,6 +4,9 @@ export default {
     getAll(filter = {}) {
         return Group.find({}).sort({ createdAt: -1 })
     },
+    getByOwner(userId) {
+        return Group.find({ _ownerId: userId }).sort({ createdAt: -1 });
+    },
     getLatest() {
         return Group.find({}).sort({ createdAt: -1 }).limit(4)
     },
