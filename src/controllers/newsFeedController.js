@@ -63,7 +63,7 @@ newsFeedController.post('/:id/favorites', isAuth, async (req, res) => {
 
     try {
         await newsFeedService.addToFavorite(postId, userId)
-        return res.status(201)
+        return res.status(201).json({ message: "Favorite updated" });
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
