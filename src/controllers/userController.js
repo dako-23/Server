@@ -25,7 +25,7 @@ userController.post('/register', async (req, res) => {
             imageUrl: user.imageUrl,
             firstName: user.firstName,
             lastName: user.lastName,
-            favorites: user.favorites
+            favorites: user.favorites.map(id => id.toString())
         });
     } catch (err) {
         res.status(500).json({ error: "Failed to register" });
@@ -53,7 +53,7 @@ userController.post('/login', async (req, res) => {
             imageUrl: user.imageUrl,
             firstName: user.firstName,
             lastName: user.lastName,
-            favorites: user.favorites
+            favorites: user.favorites.map(id => id.toString())
         });
     } catch (err) {
         res.status(500).json({ error: "Failed to login" });
