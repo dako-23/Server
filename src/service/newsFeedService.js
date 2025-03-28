@@ -2,9 +2,24 @@ import Post from "../models/Post.js";
 import User from "../models/User.js";
 
 export default {
-    getAll(filter = {}) {
-        return Post.find({}).sort({ createdAt: -1 })
-            .populate('likes', 'firstName lastName imageUrl');
+    async getAll(userId) {
+        const posts = await Post.find({})
+            .sort({ createdAt: -1 })
+            .populate('likes', 'firstName lastName imageUrl')
+            .lean();
+
+        if (!userId) return posts;
+
+        const user = await User.findById(userId).lean();
+        const favorites = user?.favorites?.map(id => id.toString()) || [];
+
+        const enrichedPosts = posts.map(post => ({
+            ...post,
+            isFavorited: favorites.includes(post._id.toString())
+        }));
+
+        return enrichedPosts;
+
     },
     create(newPost, creatorId) {
         const result = Post.create({
