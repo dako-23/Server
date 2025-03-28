@@ -1,5 +1,7 @@
 import Post from "../models/Post.js";
 import User from "../models/User.js";
+import mongoose from "mongoose";
+
 
 export default {
     async getAll(userId) {
@@ -11,7 +13,9 @@ export default {
         if (!userId) return posts;
 
         const user = await User.findById(userId).lean();
-        const favorites = user?.favorites?.map(id => id.toString()) || [];
+        const favorites = Array.isArray(user?.favorites)
+            ? user.favorites.map(id => id?.toString?.()).filter(Boolean)
+            : [];
 
         const enrichedPosts = posts.map(post => ({
             ...post,
@@ -64,12 +68,13 @@ export default {
 
         const user = await User.findById(userId)
 
-        const alreadyFavorited = user.favorites.some(id => id.toString() === postId);
+        const alreadyFavorited = user.favorites.some(id => id.toString() === postId.toString());
 
         if (alreadyFavorited) {
-            user.favorites = user.favorites.filter(id => id.toString() !== postId);
+            user.favorites = user.favorites.filter(id => id.toString() !== postId.toString());
+
         } else {
-            user.favorites.push(postId);
+            user.favorites.push(new mongoose.Types.ObjectId(postId));
         }
 
         await user.save();
