@@ -4,6 +4,17 @@ import myProfileService from "../service/myProfileService.js";
 
 const myProfileController = Router();
 
+myProfileController.post('/:id/favorites', isAuth, async (req, res) => {
+    const postId = req.params.id;
+    const { userId } = req.body;
+
+    try {
+        const addedToFavorites = await myProfileService.addToFavorite(postId, userId)
+        return res.status(201).json(addedToFavorites)
+    } catch (err) {
+        return res.status(500).json({ error: err.message });
+    }
+})
 
 myProfileController.get('/:id/my-groups', isAuth, async (req, res) => {
     const userId = req.params.id

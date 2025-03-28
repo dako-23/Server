@@ -6,10 +6,8 @@ const newsFeedController = Router();
 
 
 newsFeedController.get('/', async (req, res) => {
-    const userId = req.user?._id
-
     try {
-        const posts = await newsFeedService.getAll(userId);
+        const posts = await newsFeedService.getAll();
         return res.json(posts);
 
     } catch (err) {
@@ -58,19 +56,6 @@ newsFeedController.post('/:id/like', isAuth, async (req, res) => {
         return res.status(500).json({ error: err.message });
     }
 })
-
-newsFeedController.post('/:id/favorites', isAuth, async (req, res) => {
-    const postId = req.params.id;
-    const { userId } = req.body;
-
-    try {
-        await newsFeedService.addToFavorite(postId, userId)
-        return res.status(201).json({ message: "Favorite updated" });
-    } catch (err) {
-        return res.status(500).json({ error: err.message });
-    }
-})
-
 
 
 export default newsFeedController
