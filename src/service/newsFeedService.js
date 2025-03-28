@@ -1,13 +1,27 @@
 import Post from "../models/Post.js";
 import User from "../models/User.js";
-import mongoose from "mongoose";
 
 
 export default {
-    async getAll() {
-        return await Post.find({})
+    async getAll(userId) {
+        const posts = await Post.find({})
             .sort({ createdAt: -1 })
             .populate('likes', 'firstName lastName imageUrl')
+            .lean()
+
+        if (!userId) return posts;
+
+        const user = await User.findById(userId)
+        const favorites = Array.isArray(user?.favorites)
+            ? user.favorites.map(id => id?.toString?.()).filter(Boolean)
+            : [];
+
+        const enrichedPosts = posts.map(post => ({
+            ...post,
+            isFavorited: favorites.includes(post._id.toString())
+        }));
+
+        return enrichedPosts;
 
     },
     create(newPost, creatorId) {
@@ -57,13 +71,12 @@ export default {
 
         if (alreadyFavorited) {
             user.favorites = user.favorites.filter(id => id.toString() !== postId);
+
         } else {
             user.favorites.push(postId);
         }
 
         await user.save();
-
-        return alreadyFavorited
     }
 
 }

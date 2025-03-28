@@ -6,8 +6,9 @@ const newsFeedController = Router();
 
 
 newsFeedController.get('/', async (req, res) => {
+    const userId = req.user?._id;
     try {
-        const posts = await newsFeedService.getAll();
+        const posts = await newsFeedService.getAll(userId);
         return res.json(posts);
 
     } catch (err) {
