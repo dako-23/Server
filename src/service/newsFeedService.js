@@ -53,16 +53,17 @@ export default {
 
         const user = await User.findById(userId)
 
-        const alreadyFavorited = user.favorites.some(id => id.toString() === postId.toString());
+        const alreadyFavorited = user.favorites.some(id => id.toString() === postId);
 
         if (alreadyFavorited) {
-            user.favorites = user.favorites.filter(id => id.toString() !== postId.toString());
-
+            user.favorites = user.favorites.filter(id => id.toString() !== postId);
         } else {
             user.favorites.push(postId);
         }
 
         await user.save();
+
+        return alreadyFavorited
     }
 
 }
