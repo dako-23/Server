@@ -8,11 +8,11 @@ export default {
         const posts = await Post.find({})
             .sort({ createdAt: -1 })
             .populate('likes', 'firstName lastName imageUrl')
-            .lean();
+            
 
         if (!userId) return posts;
 
-        const user = await User.findById(userId).lean();
+        const user = await User.findById(userId)
         const favorites = Array.isArray(user?.favorites)
             ? user.favorites.map(id => id?.toString?.()).filter(Boolean)
             : [];

@@ -56,7 +56,7 @@ userController.post('/login', async (req, res) => {
             favorites: user.favorites.map(id => id.toString())
         });
     } catch (err) {
-        res.status(500).json({ error: "Failed to login" });
+        res.status(500).json({ error: err.message });
     }
 });
 
