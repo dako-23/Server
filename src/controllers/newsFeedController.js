@@ -62,8 +62,8 @@ newsFeedController.post('/:id/favorites', isAuth, async (req, res) => {
     const { userId } = req.body;
 
     try {
-        const addedToFavorites = await newsFeedService.addToFavorite(postId, userId)
-        return res.status(201).json(addedToFavorites)
+        await newsFeedService.addToFavorite(postId, userId)
+        return res.status(201)
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
