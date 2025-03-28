@@ -57,5 +57,18 @@ newsFeedController.post('/:id/like', isAuth, async (req, res) => {
     }
 })
 
+newsFeedController.post('/:id/favorites', isAuth, async (req, res) => {
+    const postId = req.params.id;
+    const { userId } = req.body;
+
+    try {
+        await newsFeedService.addToFavorite(postId, userId)
+        return res.status(201)
+    } catch (err) {
+        return res.status(500).json({ error: err.message });
+    }
+})
+
+
 
 export default newsFeedController
