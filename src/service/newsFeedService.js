@@ -1,4 +1,5 @@
 import Post from "../models/Post.js";
+import User from "../models/User.js";
 
 export default {
     getAll(filter = {}) {
@@ -43,6 +44,20 @@ export default {
 
         return populated;
 
+    },
+    async addToFavorite(postId, userId) {
+
+        const user = await User.findById(userId)
+
+        const alreadyFavorited = user.favorites.some(id => id.toString() === postId);
+
+        if (alreadyFavorited) {
+            user.favorites = user.favorites.filter(id => id.toString() !== postId);
+        } else {
+            user.favorites.push(postId);
+        }
+
+        await user.save();
     }
 
 }

@@ -4,20 +4,6 @@ import Group from "../models/Group.js"
 
 
 export default {
-    async addToFavorite(postId, userId) {
-
-        const user = await User.findById(userId)
-
-        const alreadyFavorited = user.favorites.some(id => id.toString() === postId);
-
-        if (alreadyFavorited) {
-            user.favorites = user.favorites.filter(id => id.toString() !== postId);
-        } else {
-            user.favorites.push(postId);
-        }
-
-        await user.save();
-    },
     async myGroups(userId) {
 
         return Group.find({ _ownerId: userId }).sort({ createdAt: -1 })
