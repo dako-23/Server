@@ -112,7 +112,7 @@ userController.post('/change-password', isAuth, async (req, res) => {
 
         res.status(200).json({ message: "Password changed successfully" });
     } catch (err) {
-        res.status(500).json({ error: "Something went wrong" });
+        res.status(500).json({ error: err.message });
     }
 });
 
