@@ -37,6 +37,20 @@ export default {
 
         return updatedUser
     },
+    async changePassword(userId, currentPassword, newPassword) {
+
+        const user = await User.findById(userId);
+
+        const isMatch = await bcrypt.compare(currentPassword, user.password);
+
+        if (!isMatch) {
+            throw new Error("Incorrect current password");
+        }
+
+        user.password = newPassword;
+
+        await user.save();
+    },
     invalidateToken(token) {
         return InvalidToken.create({ token });
     }

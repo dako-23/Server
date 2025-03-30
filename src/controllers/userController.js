@@ -102,4 +102,17 @@ userController.get('/:id', async (req, res) => {
 //     res.json({});
 // });
 
+userController.post('/change-password', isAuth, async (req, res) => {
+    const { currentPassword, newPassword } = req.body;
+    const userId = req.user._id;
+
+    try {
+        await userService.changePassword(userId, currentPassword, newPassword)
+
+        res.status(200).json({ message: "Password changed successfully" });
+    } catch (err) {
+        res.status(500).json({ error: "Something went wrong" });
+    }
+});
+
 export default userController;
