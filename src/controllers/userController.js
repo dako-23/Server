@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { JWT_AUTH_NAME } from '../config.js';
 
 import userService from '../service/userService.js';
+import { isAuth } from '../middlewares/authMiddleware.js';
 
 const userController = Router();
 
