@@ -27,6 +27,10 @@ const userSchema = new Schema({
     imageUrl: {
         type: String,
     },
+    isAdmin: {
+        type: Boolean,
+        default: false,
+    },
     favorites: [{
         type: Types.ObjectId,
         ref: 'Post'
