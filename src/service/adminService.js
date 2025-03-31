@@ -3,7 +3,7 @@ import User from "../models/User.js";
 export default {
 
     getAllUsers() {
-        return User.find({}, 'imageUrl username firstName lastName isAdmin isBlocked');
+        return User.find({}, 'imageUrl username firstName lastName email isAdmin isBlocked');
     },
     async makeAdmin(userId) {
         const user = await User.findById(userId);
