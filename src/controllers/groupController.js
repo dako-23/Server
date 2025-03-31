@@ -116,11 +116,12 @@ groupController.put('/:id/edit', isAuth, async (req, res) => {
 groupController.delete('/:id/delete', isAuth, async (req, res) => {
     const groupId = req.params.id;
     const userId = req.user?._id
+    const isAdmin = req.user?.isAdmin;
 
     try {
         const group = await groupService.getOne(groupId)
 
-        if (!group._ownerId?.equals(userId)) {
+        if (!group._ownerId?.equals(userId) && !isAdmin) {
             return res.status(403).json({ error: "You are not authorized to delete this group" });
         }
 
