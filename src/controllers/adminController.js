@@ -36,11 +36,16 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
 
         const totalReviews = await Review.countDocuments();
         const avgRatingAgg = await Review.aggregate([
-            { $project: { numericRating: { $toDouble: "$rating" } } },
-            { $group: { _id: null, avg: { $avg: "$numericRating" } } }
+            {
+                $group: {
+                    _id: null,
+                    avg: { $avg: "$rating" }
+                }
+            }
         ]);
 
         const avgRating = avgRatingAgg[0]?.avg || 0;
+
 
 
         res.json({
