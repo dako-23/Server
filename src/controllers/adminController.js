@@ -39,3 +39,5 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         res.status(500).json({ error: "Failed to load dashboard stats" });
     }
 });
+
+export default adminController;

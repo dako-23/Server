@@ -6,6 +6,7 @@ import chatController from './controllers/chatController.js';
 import reviewsController from './controllers/reviewsController.js';
 import newsFeedController from './controllers/newsFeedController.js';
 import myProfileController from './controllers/myProfileController.js';
+import adminController from './controllers/adminController.js';
 
 const routes = Router();
 
@@ -15,5 +16,6 @@ routes.use('/chat', chatController);
 routes.use('/reviews', reviewsController);
 routes.use('/news-feed', newsFeedController);
 routes.use('/my-profile', myProfileController)
+routes.use('/admin', adminController);
 
 export default routes;
