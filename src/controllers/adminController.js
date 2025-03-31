@@ -22,7 +22,7 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
             {
                 $project: {
                     favoritesCount: {
-                        $size: { $ifNull: ["$favorites", []] } // ако липсва, празен масив
+                        $size: { $ifNull: ["$favorites", []] }
                     }
                 }
             },
@@ -45,8 +45,8 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         ]);
 
         const avgRating = avgRatingAgg[0]?.avg || 0;
-
-
+        
+        console.log("AVG DEBUG:", avgRatingAgg);
 
         res.json({
             users: { total: totalUsers, admins: totalAdmins },
