@@ -26,6 +26,11 @@ export const auth = async (req, res, next) => {
 
         const decodedToken = jsonwebtoken.verify(token, JWT_SECRET);
 
+        if (decodedToken.isBlocked) {
+            req.user = null;
+            return res.status(403).json({ error: "Your account has been blocked." });
+        }
+
         req.user = decodedToken;
     } catch (err) {
         req.user = null;
