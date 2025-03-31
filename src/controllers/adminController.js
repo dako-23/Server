@@ -46,8 +46,6 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
 
         const avgRating = avgRatingAgg[0]?.avg || 0;
 
-        console.log("AVG DEBUG:", avgRatingAgg);
-
         res.json({
             users: { total: totalUsers, admins: totalAdmins },
             posts: { total: totalPosts },
