@@ -62,7 +62,7 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
     }
 });
 
-userController.get('/all', isAuth, isAdmin, async (req, res) => {
+adminController.get('/all', isAuth, isAdmin, async (req, res) => {
     try {
         const users = await adminService.getAllUsers();
         res.status(200).json(users);
