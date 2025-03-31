@@ -5,6 +5,7 @@ import Group from "../models/Group.js";
 import Review from "../models/Review.js";
 import Partner from "../models/Partner.js";
 import { isAuth, isAdmin } from '../middlewares/authMiddleware.js';
+import adminService from "../service/adminService.js";
 
 const adminController = Router();
 
@@ -58,6 +59,15 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         console.error("Dashboard error:", err);
 
         res.status(500).json({ error: err });
+    }
+});
+
+userController.get('/all', isAuth, isAdmin, async (req, res) => {
+    try {
+        const users = await adminService.getAllUsers();
+        res.status(200).json(users);
+    } catch (err) {
+        res.status(500).json({ error: "Failed to fetch users" });
     }
 });
 
