@@ -8,6 +8,7 @@ export const generateToken = (user) => {
         _id: user._id,
         username: user.username,
         email: user.email,
+        isAdmin: user.isAdmin
     };
     const token = jsonwebtoken.sign(payload, JWT_SECRET, { expiresIn: '2h' });
 

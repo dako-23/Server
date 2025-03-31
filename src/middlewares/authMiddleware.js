@@ -41,3 +41,11 @@ export const isAuth = (req, res, next) => {
 
     next();
 };
+
+export const isAdmin = (req, res, next) => {
+    if (!req.user?.isAdmin) {
+        return res.status(403).json({ error: 'Forbidden: Admins only.' });
+    }
+
+    next();
+};
