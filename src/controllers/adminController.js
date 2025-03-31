@@ -14,7 +14,7 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         const totalAdmins = await User.countDocuments({ isAdmin: true });
 
         const totalPosts = await Post.countDocuments();
-        const totalPartners = await Partner.countDocuments();
+        // const totalPartners = await Partner.countDocuments();
         const totalGroups = await Group.countDocuments();
         const lockedGroups = await Group.countDocuments({ isLocked: true });
 
@@ -31,7 +31,7 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         res.json({
             users: { total: totalUsers, admins: totalAdmins },
             posts: { total: totalPosts },
-            partners: { total: totalPartners },
+            // partners: { total: totalPartners },
             groups: { total: totalGroups, locked: lockedGroups },
             favorites: totalFavorites[0]?.total || 0,
             reviews: { total: totalReviews, avgRating: avgRating[0]?.avg || 0 },
