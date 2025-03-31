@@ -19,8 +19,19 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         const lockedGroups = await Group.countDocuments({ isLocked: true });
 
         const totalFavorites = await User.aggregate([
-            { $project: { favoritesCount: { $size: "$favorites" } } },
-            { $group: { _id: null, total: { $sum: "$favoritesCount" } } }
+            {
+                $project: {
+                    favoritesCount: {
+                        $size: { $ifNull: ["$favorites", []] } // ако липсва, празен масив
+                    }
+                }
+            },
+            {
+                $group: {
+                    _id: null,
+                    total: { $sum: "$favoritesCount" }
+                }
+            }
         ]);
 
         const totalReviews = await Review.countDocuments();
