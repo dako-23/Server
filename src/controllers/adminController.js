@@ -41,7 +41,9 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
             reviews: { total: totalReviews, avgRating: avgRating[0]?.avg || 0 },
         });
     } catch (err) {
-        res.status(500).json({ error: "Failed to load dashboard stats" });
+        console.error("Dashboard error:", err);
+
+        res.status(500).json({ error: err });
     }
 });
 
