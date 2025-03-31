@@ -19,6 +19,10 @@ const groupSchema = new Schema({
     imageUrl: {
         type: String,
     },
+    isLocked: {
+        type: Boolean,
+        default: false
+    },
     joinedGroup: [{
         type: Types.ObjectId,
         ref: 'User'

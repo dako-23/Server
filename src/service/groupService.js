@@ -47,5 +47,11 @@ export default {
     },
     delete(groupId) {
         return Group.findByIdAndDelete(groupId);
+    },
+    async lockGroup(groupId) {
+        const group = await Group.findById(groupId);
+        group.isLocked = !group.isLocked;
+        await group.save();
+        return group;
     }
 }

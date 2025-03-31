@@ -132,4 +132,15 @@ groupController.delete('/:id/delete', isAuth, async (req, res) => {
     }
 });
 
+groupController.patch('/:id/lock', isAuth, async (req, res) => {
+    groupId = req.params.id;
+
+    try {
+        const updatedGroup = await groupService.lockGroup(groupId);
+        res.status(200).json(updatedGroup);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to toggle lock' });
+    }
+});
+
 export default groupController;
