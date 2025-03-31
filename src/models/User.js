@@ -31,6 +31,10 @@ const userSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    isBlocked: {
+        type: Boolean,
+        default: false
+    },
     favorites: [{
         type: Types.ObjectId,
         ref: 'Post'

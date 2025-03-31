@@ -71,4 +71,28 @@ adminController.get('/all', isAuth, isAdmin, async (req, res) => {
     }
 });
 
+adminController.patch('/:id/make-admin', isAdmin, isAuth, async (req, res) => {
+
+    const userId = req.params.id;
+
+    try {
+        const updatedUser = await adminService.makeAdmin(userId);
+        res.status(200).json(updatedUser);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to make admin' });
+    }
+});
+
+adminController.patch('/:id/block-user', isAdmin, isAuth, async (req, res) => {
+
+    const userId = req.params.id;
+
+    try {
+        const blockedUser = await adminService.blockUser(userId);
+        res.status(200).json(blockedUser);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to make admin' });
+    }
+});
+
 export default adminController;
