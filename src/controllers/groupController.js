@@ -133,7 +133,8 @@ groupController.delete('/:id/delete', isAuth, async (req, res) => {
 });
 
 groupController.patch('/:id/lock', isAuth, async (req, res) => {
-    groupId = req.params.id;
+
+    const groupId = req.params.id;
 
     try {
         const updatedGroup = await groupService.lockGroup(groupId);
