@@ -45,7 +45,7 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         ]);
 
         const avgRating = avgRatingAgg[0]?.avg || 0;
-        
+
         console.log("AVG DEBUG:", avgRatingAgg);
 
         res.json({
@@ -54,7 +54,7 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
             // partners: { total: totalPartners },
             groups: { total: totalGroups, locked: lockedGroups },
             favorites: totalFavorites[0]?.total || 0,
-            reviews: { total: totalReviews, avgRating: avgRating[0]?.avg || 0 },
+            reviews: { total: totalReviews, avgRating, },
         });
     } catch (err) {
         console.error("Dashboard error:", err);
