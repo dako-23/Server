@@ -4,6 +4,7 @@ import Post from "../models/Post.js";
 import Group from "../models/Group.js";
 import Review from "../models/Review.js";
 import Partner from "../models/Partner.js";
+import { isAuth, isAdmin } from '../middlewares/authMiddleware.js';
 
 const adminController = Router();
 

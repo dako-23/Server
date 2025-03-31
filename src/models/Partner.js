@@ -13,4 +13,5 @@ const partnerSchema = new Schema({
 }, { timestamps: true });
 
 const Partner = model("Partner", partnerSchema);
+
 export default Partner;
