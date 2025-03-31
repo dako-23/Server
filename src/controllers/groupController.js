@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import groupService from '../service/groupService.js';
-import { isAuth } from '../middlewares/authMiddleware.js';
+import { isAuth, isAdmin } from '../middlewares/authMiddleware.js';
 
 const groupController = Router();
 
@@ -133,7 +133,7 @@ groupController.delete('/:id/delete', isAuth, async (req, res) => {
     }
 });
 
-groupController.patch('/:id/lock', isAuth, async (req, res) => {
+groupController.patch('/:id/lock', isAdmin, async (req, res) => {
 
     const groupId = req.params.id;
 
