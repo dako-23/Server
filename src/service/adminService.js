@@ -28,5 +28,11 @@ export default {
         })
         return result
     },
+    async deletePartner(partnerId) {
+        const partner = await Partner.findById(partnerId);
+        partner.isDeleted = true
+        await post.save();
+        return post;
+    },
 
 }

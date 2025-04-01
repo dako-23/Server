@@ -117,4 +117,15 @@ adminController.patch('/:id/block-user', isAdmin, isAuth, async (req, res) => {
     }
 });
 
+adminController.patch('/:id/delete-partner', isAuth, isAdmin, async (req, res) => {
+    const partnerId = req.params.id;
+
+    try {
+        const updatedPartner = await adminService.deletePartner(partnerId);
+        res.status(200).json(updatedPartner);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to delete' });
+    }
+});
+
 export default adminController;
