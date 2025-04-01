@@ -84,7 +84,7 @@ adminController.post('/partner-create', isAuth, isAdmin, async (req, res) => {
     const newPartner = req.body;
     const creatorId = req.user._id
     try {
-        const createdPartner = await groupService.create(newPartner, creatorId);
+        const createdPartner = await adminService.create(newPartner, creatorId);
         return res.status(201).json(createdPartner);
 
     } catch (err) {

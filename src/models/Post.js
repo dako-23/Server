@@ -46,6 +46,10 @@ const postSchema = new Schema({
     imageUrl: {
         type: String
     },
+    isDeleted: {
+        type: Boolean,
+        default: false
+    },
     likes: [{
         type: Types.ObjectId,
         ref: "User"

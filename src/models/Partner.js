@@ -18,6 +18,10 @@ const partnerSchema = new Schema({
         type: Types.ObjectId,
         ref: 'User',
     },
+    isDeleted: {
+        type: Boolean,
+        default: false
+    },
 }, { timestamps: true });
 
 const Partner = model("Partner", partnerSchema);
