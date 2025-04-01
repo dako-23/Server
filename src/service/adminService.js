@@ -7,7 +7,7 @@ export default {
         return User.find({}, 'imageUrl username firstName lastName email isAdmin isBlocked');
     },
     getAllPartners() {
-        return Partner.find({}).sort({ createdAt: -1 });
+        return Partner.find({ isDeleted: { $ne: true } }).sort({ createdAt: -1 });
     },
     async makeAdmin(userId) {
         const user = await User.findById(userId);
