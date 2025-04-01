@@ -64,7 +64,7 @@ newsFeedController.post('/:id/favorites', isAuth, async (req, res) => {
 
     try {
         const addedToFavorites = await newsFeedService.addToFavorite(postId, userId)
-        return res.status(201).json(addedToFavorites)
+        return res.status(200).json(addedToFavorites)
     } catch (err) {
         return res.status(500).json({ error: err.message });
     }
@@ -81,6 +81,16 @@ newsFeedController.patch('/:id/delete', isAuth, async (req, res) => {
     }
 });
 
+newsFeedController.get('/:id/get-post', async (req, res) => {
+    const postId = req.params.id
+    try {
+        const post = await newsFeedService.getOne(postId);
 
+        return res.status(200).json(post);
+    } catch (err) {
+        return res.status(500).json({ error: "An error occurred while get the group" });
+    }
+
+});
 
 export default newsFeedController

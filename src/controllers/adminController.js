@@ -71,7 +71,7 @@ adminController.get('/all-users', isAuth, isAdmin, async (req, res) => {
     }
 });
 
-adminController.get('/all-partners', isAuth, isAdmin, async (req, res) => {
+adminController.get('/all-partners', async (req, res) => {
     try {
         const users = await adminService.getAllPartners();
         res.status(200).json(users);

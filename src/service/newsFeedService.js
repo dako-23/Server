@@ -24,6 +24,10 @@ export default {
         return enrichedPosts;
 
     },
+    async getOne(postId) {
+        return await Post.findById(postId)
+
+    },
     create(newPost, creatorId) {
         const result = Post.create({
             ...newPost,
