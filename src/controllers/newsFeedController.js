@@ -70,6 +70,17 @@ newsFeedController.post('/:id/favorites', isAuth, async (req, res) => {
     }
 })
 
+newsFeedController.patch('/:id/delete', isAuth, async (req, res) => {
+    const postId = req.params.id;
+
+    try {
+        const updatedPost = await newsFeedService.deletePost(postId);
+        res.status(200).json(updatedPost);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to delete' });
+    }
+});
+
 
 
 export default newsFeedController

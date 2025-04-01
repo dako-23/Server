@@ -4,7 +4,7 @@ import User from "../models/User.js";
 
 export default {
     async getAll(userId) {
-        const posts = await Post.find({})
+        const posts = await Post.find({ isDeleted: { $ne: true } })
             .sort({ createdAt: -1 })
             .populate('likes', 'firstName lastName imageUrl')
             .lean()
@@ -77,6 +77,12 @@ export default {
         }
 
         await user.save();
-    }
+    },
+    async deletePost(postId) {
+        const post = await Post.findById(postId);
+        post.isDeleted = true
+        await post.save();
+        return post;
+    },
 
 }
