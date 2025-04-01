@@ -15,7 +15,7 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         const totalAdmins = await User.countDocuments({ isAdmin: true });
 
         const totalPosts = await Post.countDocuments();
-        // const totalPartners = await Partner.countDocuments();
+        const totalPartners = await Partner.countDocuments();
         const totalGroups = await Group.countDocuments();
         const lockedGroups = await Group.countDocuments({ isLocked: true });
 
@@ -50,7 +50,7 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
         res.json({
             users: { total: totalUsers, admins: totalAdmins },
             posts: { total: totalPosts },
-            // partners: { total: totalPartners },
+            partners: { total: totalPartners },
             groups: { total: totalGroups, locked: lockedGroups },
             favorites: totalFavorites[0]?.total || 0,
             reviews: { total: totalReviews, avgRating, },
@@ -62,13 +62,35 @@ adminController.get('/dashboard', isAuth, isAdmin, async (req, res) => {
     }
 });
 
-adminController.get('/all', isAuth, isAdmin, async (req, res) => {
+adminController.get('/all-users', isAuth, isAdmin, async (req, res) => {
     try {
         const users = await adminService.getAllUsers();
         res.status(200).json(users);
     } catch (err) {
         res.status(500).json({ error: "Failed to fetch users" });
     }
+});
+
+adminController.get('/all-partners', isAuth, isAdmin, async (req, res) => {
+    try {
+        const users = await adminService.getAllPartners();
+        res.status(200).json(users);
+    } catch (err) {
+        res.status(500).json({ error: "Failed to fetch users" });
+    }
+});
+
+adminController.post('/partner-create', isAuth, isAdmin, async (req, res) => {
+    const newPartner = req.body;
+    const creatorId = req.user._id
+    try {
+        const createdPartner = await groupService.create(newPartner, creatorId);
+        return res.status(201).json(createdPartner);
+
+    } catch (err) {
+        return res.status(500).json({ error: "An error occurred while create partner" });
+    }
+
 });
 
 adminController.patch('/:id/make-admin', isAdmin, isAuth, async (req, res) => {

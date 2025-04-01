@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 const partnerSchema = new Schema({
-    imageUrl: {
+    logo: {
         type: String,
         required: true
     },
@@ -9,6 +9,14 @@ const partnerSchema = new Schema({
     {
         type: String,
         required: true
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    _ownerId: {
+        type: Types.ObjectId,
+        ref: 'User',
     },
 }, { timestamps: true });
 
