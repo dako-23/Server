@@ -31,8 +31,8 @@ export default {
     async deletePartner(partnerId) {
         const partner = await Partner.findById(partnerId);
         partner.isDeleted = true
-        await post.save();
-        return post;
+        await partner.save();
+        return partner;
     },
 
 }
