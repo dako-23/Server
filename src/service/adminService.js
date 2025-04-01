@@ -7,7 +7,7 @@ export default {
         return User.find({}, 'imageUrl username firstName lastName email isAdmin isBlocked');
     },
     getAllPartners() {
-        return Partner.find({}, 'imageUrl username firstName lastName email isAdmin isBlocked');
+        return Partner.find({});
     },
     async makeAdmin(userId) {
         const user = await User.findById(userId);
