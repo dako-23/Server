@@ -44,9 +44,21 @@ export default {
         return await User.findById(userId)
     },
     async updateUser(userId, updateData) {
-        const updatedUser = await User.findByIdAndUpdate(userId, updateData, { new: true });
+        const existingUser = await User.findById(userId);
 
-        return updatedUser
+        const alreadyHasNames = existingUser.firstName && existingUser.lastName;
+
+        if (alreadyHasNames) {
+            if (
+                (updateData.firstName !== undefined && updateData.firstName.trim() === '') ||
+                (updateData.lastName !== undefined && updateData.lastName.trim() === '')
+            ) {
+                throw new Error("First name and last name are required once set.");
+            }
+        }
+
+        const updatedUser = await User.findByIdAndUpdate(userId, updateData, { new: true });
+        return updatedUser;
     },
     async changePassword(userId, currentPassword, newPassword) {
 
