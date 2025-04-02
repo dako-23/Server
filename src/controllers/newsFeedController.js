@@ -24,7 +24,7 @@ newsFeedController.post('/create', isAuth, async (req, res) => {
         return res.status(201).json(createdPost);
 
     } catch (err) {
-        return res.status(500).json({ error: "An error occurred while create the post" });
+        return res.status(500).json({ error: err.message });
     }
 })
 
