@@ -29,11 +29,6 @@ export default {
 
     },
     create(newPost, creatorId) {
-        const { firstName, lastName } = newPost
-        
-        if (!firstName || !lastName || firstName.trim() === '' || lastName.trim() === '') {
-            throw new Error('Complete your profile first!');
-        }
         const result = Post.create({
             ...newPost,
             _ownerId: creatorId
