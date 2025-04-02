@@ -7,7 +7,18 @@ import InvalidToken from '../models/InvalidToken.js';
 export default {
     async register(userData) {
 
-        const user = await User.create(userData)
+        const emailExist = User.findOne(userData.email);
+        const usernameExist = User.findOne(userData.username);
+
+        if (emailExist) {
+            throw new Error('Email is already registered.');
+        }
+
+        if (usernameExist) {
+            throw new Error('Username is already registered.');
+        }
+
+        const user = await User.create(userData);
 
         const token = generateToken(user);
 
