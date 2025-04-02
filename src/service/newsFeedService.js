@@ -81,6 +81,7 @@ export default {
         }
 
         await user.save();
+        return alreadyFavorited
     },
     async deletePost(postId) {
         const post = await Post.findById(postId);
