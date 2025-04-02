@@ -31,7 +31,7 @@ userController.post('/register', async (req, res) => {
             isBlocked: user.isBlocked
         });
     } catch (err) {
-        res.status(500).json({ error: "Failed to register" });
+        res.status(500).json({ error: err.message });
     }
 
 });
