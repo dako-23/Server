@@ -78,7 +78,7 @@ userController.put("/:id", async (req, res) => {
 
         res.json(updatedUser);
     } catch (err) {
-        res.status(500).json({ error: "Failed to update user" });
+        res.status(500).json({ error: err.message });
     }
 });
 
