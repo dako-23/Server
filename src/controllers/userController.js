@@ -2,11 +2,11 @@ import { Router } from 'express';
 import { JWT_AUTH_NAME } from '../config.js';
 
 import userService from '../service/userService.js';
-import { isAuth } from '../middlewares/authMiddleware.js';
+import { isAuth, isGuest } from '../middlewares/authMiddleware.js';
 
 const userController = Router();
 
-userController.post('/register', async (req, res) => {
+userController.post('/register', isGuest, async (req, res) => {
     const userData = req.body;
     try {
         const { user, token } = await userService.register(userData);
@@ -36,7 +36,7 @@ userController.post('/register', async (req, res) => {
 
 });
 
-userController.post('/login', async (req, res) => {
+userController.post('/login', isGuest, async (req, res) => {
     const { email, password } = req.body;
     try {
         const { user, token } = await userService.login(email, password)

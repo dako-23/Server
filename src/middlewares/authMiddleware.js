@@ -47,6 +47,14 @@ export const isAuth = (req, res, next) => {
     next();
 };
 
+export const isGuest = (req, res, next) => {
+    if (req.user) {
+        return res.status(401).send("You are already authorized!");
+    }
+
+    next();
+};
+
 export const isAdmin = (req, res, next) => {
     if (!req.user?.isAdmin) {
         return res.status(403).json({ error: 'Forbidden: Admins only.' });
