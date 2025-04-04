@@ -4,7 +4,7 @@ import Partner from "../models/Partner.js";
 export default {
 
     getAllUsers() {
-        return User.find({}, 'imageUrl username firstName lastName email isAdmin isBlocked');
+        return User.find({}, 'imageUrl username firstName lastName email isAdmin isBlocked').sort({ createdAt: -1 });
     },
     getAllPartners() {
         return Partner.find({ isDeleted: { $ne: true } }).sort({ createdAt: -1 });
