@@ -54,7 +54,7 @@ galleryController.get('/home-slider', async (req, res) => {
             max_results: 15,
         });
 
-        const sorted = result.resources.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        const sorted = result.resources.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
 
         const images = sorted.map(img => img.secure_url);
 
