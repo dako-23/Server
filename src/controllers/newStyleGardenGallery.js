@@ -10,11 +10,11 @@ galleryController.get('/', async (req, res) => {
             type: 'upload',
             prefix: 'gallery/',
             max_results: 100,
-            direction: 'desc',
-            sort_by: [{ created_at: 'desc' }]
         });
 
-        const images = result.resources.map(img => img.secure_url);
+        const sorted = result.resources.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+        const images = sorted.map(img => img.secure_url);
 
         res.json(images);
     } catch (err) {
@@ -31,11 +31,11 @@ galleryController.get('/carousel', async (req, res) => {
             type: 'upload',
             prefix: 'home-page/',
             max_results: 5,
-            direction: 'desc',
-            sort_by: [{ created_at: 'desc' }]
         });
 
-        const images = result.resources.map(img => img.secure_url);
+        const sorted = result.resources.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+        const images = sorted.map(img => img.secure_url);
 
         res.json(images);
     } catch (err) {
@@ -52,11 +52,11 @@ galleryController.get('/home-slider', async (req, res) => {
             type: 'upload',
             prefix: 'gallery/',
             max_results: 15,
-            direction: 'desc',
-            sort_by: [{ created_at: 'desc' }]
         });
 
-        const images = result.resources.map(img => img.secure_url);
+        const sorted = result.resources.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+        const images = sorted.map(img => img.secure_url);
 
         res.json(images);
     } catch (err) {
