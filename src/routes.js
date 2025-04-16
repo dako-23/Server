@@ -7,6 +7,7 @@ import reviewsController from './controllers/reviewsController.js';
 import newsFeedController from './controllers/newsFeedController.js';
 import myProfileController from './controllers/myProfileController.js';
 import adminController from './controllers/adminController.js';
+import galleryController from './controllers/newStyleGardenGallery.js';
 
 const routes = Router();
 
@@ -17,5 +18,6 @@ routes.use('/reviews', reviewsController);
 routes.use('/news-feed', newsFeedController);
 routes.use('/my-profile', myProfileController)
 routes.use('/admin', adminController);
+routes.use('/new-style-garden-gallery', galleryController);
 
 export default routes;

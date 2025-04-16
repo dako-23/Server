@@ -10,6 +10,7 @@ import http from 'http'
 import initSocket from './socket.js';
 
 dotenv.config();
+
 const app = express();
 const server = http.createServer(app);
 
@@ -44,7 +45,7 @@ try {
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://dako23.web.app'],
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://dako23.web.app', 'https://new-style-garden.web.app', 'https://newstylegarden.com'],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
     exposedHeaders: ['Set-Cookie']
