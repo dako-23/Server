@@ -7,17 +7,20 @@ galleryController.get('/', async (req, res) => {
 
     try {
         const result = await cloudinary.api.resources({
-            type: 'upload',
-            prefix: 'gallery/',
+            type: "upload",
             max_results: 100,
         });
 
-        const images = result.resources.map(img => img.secure_url);
+        const images = result.resources
+            .filter(img => {
+                return img.public_id.startsWith("gallery/") || img.folder === "gallery";
+            })
+            .map(img => img.secure_url);
 
         res.json(images);
     } catch (err) {
-        console.error('Cloudinary error:', err.message);
-        res.status(500).json({ error: 'Failed to load images' });
+        console.error("Cloudinary error:", err.message);
+        res.status(500).json({ error: "Failed to load images" });
     }
 
 })
