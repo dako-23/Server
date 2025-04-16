@@ -8,7 +8,7 @@ galleryController.get('/', async (req, res) => {
     try {
         const result = await cloudinary.api.resources({
             type: 'upload',
-            prefix: 'gallery',
+            prefix: 'gallery/',
             max_results: 100,
         });
 
