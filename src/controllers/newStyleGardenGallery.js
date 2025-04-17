@@ -3,6 +3,10 @@ import cloudinary from '../config/cloudinary.js';
 
 const galleryController = Router();
 
+let cachedGallery = null;
+let cacheTimestamp = 0;
+const CACHE_TTL = 10 * 60 * 1000;
+
 const fetchGallery = async () => {
     const result = await cloudinary.api.resources({
         type: 'upload',
@@ -16,8 +20,16 @@ const fetchGallery = async () => {
 };
 
 galleryController.get('/', async (req, res) => {
+    const now = Date.now();
+
+    if (cachedGallery && (now - cacheTimestamp < CACHE_TTL)) {
+        return res.json(cachedGallery);
+    }
+
     try {
         const images = await fetchGallery();
+        cachedGallery = images
+        cacheTimestamp = now
         res.json(images);
     } catch (err) {
         console.error('Cloudinary error:', err.message);
@@ -26,10 +38,17 @@ galleryController.get('/', async (req, res) => {
 });
 
 galleryController.get('/home-slider', async (req, res) => {
+    const now = Date.now();
+
+    if (cachedGallery && (now - cacheTimestamp < CACHE_TTL)) {
+        return res.json(cachedGallery.slice(0, 15));
+    }
+
     try {
         const images = await fetchGallery();
-        const first15 = images.slice(0, 15);
-        res.json(first15);
+        cachedGallery = images;
+        cacheTimestamp = now
+        res.json(images.slice(0, 15));
     } catch (err) {
         console.error('Cloudinary error:', err.message);
         res.status(500).json({ error: 'Failed to load home slider' });
