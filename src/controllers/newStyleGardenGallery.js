@@ -11,7 +11,7 @@ const fetchGallery = async () => {
     });
 
     return result.resources
-        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at)) 
+        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
         .map(img => img.secure_url);
 };
 
@@ -52,7 +52,12 @@ galleryController.get('/carousel', async (req, res) => {
         res.json(images);
     } catch (err) {
         console.error('Cloudinary error:', err.message);
-        res.status(500).json({ error: err.message });
+        const detailedError =
+            err?.error?.message ||
+            err?.response?.data?.error?.message ||
+            err?.message ||
+            'Unknown error from Cloudinary';
+        res.status(500).json({ error: detailedError });
     }
 
 })
