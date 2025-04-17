@@ -52,7 +52,7 @@ galleryController.get('/carousel', async (req, res) => {
         res.json(images);
     } catch (err) {
         console.error('Cloudinary error:', err.message);
-        res.status(500).json({ error: 'Failed to load images' });
+        res.status(500).json({ error: err.message });
     }
 
 })
