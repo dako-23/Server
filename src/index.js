@@ -45,7 +45,7 @@ try {
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://dako23.web.app', 'https://new-style-garden.web.app', 'https://newstylegarden.com'],
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://dako23.web.app', 'https://new-style-garden.web.app', 'https://newstylegarden.com', 'https://megasys.megaparts.bg/megasys/product'],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
     exposedHeaders: ['Set-Cookie']

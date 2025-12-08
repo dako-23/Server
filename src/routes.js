@@ -8,6 +8,7 @@ import newsFeedController from './controllers/newsFeedController.js';
 import myProfileController from './controllers/myProfileController.js';
 import adminController from './controllers/adminController.js';
 import galleryController from './controllers/newStyleGardenGallery.js';
+import aiPriceController from './controllers/aiPriceController.js';
 
 const routes = Router();
 
@@ -19,5 +20,6 @@ routes.use('/news-feed', newsFeedController);
 routes.use('/my-profile', myProfileController)
 routes.use('/admin', adminController);
 routes.use('/new-style-garden-gallery', galleryController);
+routes.use('/prices', aiPriceController);
 
 export default routes;
