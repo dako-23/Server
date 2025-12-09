@@ -44,9 +44,14 @@ ${items.map((t, i) => `${i + 1}. ${t}`).join("\n")}
         });
         const rawText = response.output_text;
 
+        let cleaned = rawText
+            .replace(/```json/gi, "")
+            .replace(/```/g, "")
+            .trim();
+
         let json;
         try {
-            json = JSON.parse(rawText);
+            json = JSON.parse(cleaned);
         } catch (e) {
             throw new Error(`Неуспешен JSON от модела:${rawText}`);
         }
