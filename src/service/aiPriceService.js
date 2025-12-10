@@ -34,7 +34,7 @@ ${items.map((t, i) => `${i + 1}. ${t}`).join("\n")}
 `;
 
         const response = await client.responses.create({
-            model: "gpt-4.1",
+            model: "gpt-4.1-mini",
             tools: [
                 {
                     type: "web_search_preview",
