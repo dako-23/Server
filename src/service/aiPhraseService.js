@@ -21,7 +21,7 @@ export default {
                     {
                         type: "file_search",
                         vector_store_ids: [vectorStoreId],
-                        max_num_results: 40,
+                        max_num_results: 25,
                     },
                 ],
                 input: [
