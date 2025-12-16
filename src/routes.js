@@ -9,6 +9,7 @@ import myProfileController from './controllers/myProfileController.js';
 import adminController from './controllers/adminController.js';
 import galleryController from './controllers/newStyleGardenGallery.js';
 import aiPriceController from './controllers/aiPriceController.js';
+import aiPhraseController from './controllers/aiPhraseController.js';
 
 const routes = Router();
 
@@ -21,5 +22,6 @@ routes.use('/my-profile', myProfileController)
 routes.use('/admin', adminController);
 routes.use('/new-style-garden-gallery', galleryController);
 routes.use('/prices', aiPriceController);
+routes.use('/phrases', aiPhraseController);
 
 export default routes;
