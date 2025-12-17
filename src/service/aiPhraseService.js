@@ -79,144 +79,62 @@
 //     }
 // }
 
-//------------------------------------------------------------------------------------
-
-// import fs from "node:fs";
-// import path from "node:path";
-// import { fileURLToPath } from "node:url";
-// import OpenAI from "openai";
-
-// const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-
-// const CATALOG_PATH = path.join(__dirname, "../embeddings/phrases.embedded.json");
-// const CATALOG = JSON.parse(fs.readFileSync(CATALOG_PATH, "utf8"));
-
-// function cosine(a, b) {
-//     let dot = 0, na = 0, nb = 0;
-//     for (let i = 0; i < a.length; i++) {
-//         dot += a[i] * b[i];
-//         na += a[i] * a[i];
-//         nb += b[i] * b[i];
-//     }
-//     return dot / (Math.sqrt(na) * Math.sqrt(nb) + 1e-12);
-// }
-
-// function cleanLabel(s) {
-//     return (s || "")
-//         .toLowerCase()
-//         .replace(/\b(за|на|към|от|с|и|автомобил|автомобилен|автомобилна|автомобилно)\b/g, " ")
-//         .replace(/\s+/g, " ")
-//         .trim();
-// }
-
-// export default {
-//     async getPhrases(items) {
-
-//         const results = [];
-//         const THRESHOLD = 0.6;
-
-//         for (const { id, imageUrl, detailsUrl } of items) {
-//             const r1 = await client.responses.create({
-//                 model: "gpt-4.1",
-//                 temperature: 0,
-//                 input: [{
-//                     role: "user",
-//                     content: [
-//                         {
-//                             type: "input_text",
-//                             text: `Определи ОСНОВНАТА авточаст на снимката.
-//                            Правила:
-//                            - Ако ясно се вижда ЕДНА основна част, върни възможно най-конкретно име за нея.
-//                            - Ако се вижда комплект/сглобка (кабели, лентов кабел, букси, крепежи, пластмаси около нея),
-//                            избери името на ОСНОВНАТА част, а не на аксесоарите.
-
-//                            Пример:
-//                            - "Лостчета за светлини и чистачки" + "лентов кабел" → label трябва да е "Лостчета за светлини и чистачки", НЕ "Лентов кабел".
-//                            Формат:
-//                            Върни САМО валиден JSON: {"label":"..."}.
-//                            label да е 2–6 думи на български, без обяснения.`
-//                         },
-//                         { type: "input_image", image_url: imageUrl }
-//                     ]
-//                 }]
-//             });
-
-//             const raw1 = r1.output_text || r1.output?.[0]?.content?.[0]?.text || "";
-//             let label = "";
-//             try {
-//                 label = (JSON.parse(raw1).label || "").trim();
-//             } catch {
-//                 label = "";
-//             }
-
-//             const cleanedLabel = cleanLabel(label);
-
-//             const r2 = await client.embeddings.create({
-//                 model: "text-embedding-3-small",
-//                 input: cleanedLabel || "авточаст"
-//             });
-//             const q = r2.data[0].embedding;
-
-//             let bestPhrase = "";
-//             let bestScore = -1;
-
-//             for (const p of CATALOG) {
-//                 const score = cosine(q, p.embedding);
-//                 if (score > bestScore) {
-//                     bestScore = score;
-//                     bestPhrase = p.phrase;
-//                 }
-//             }
-
-//             results.push({
-//                 id,
-//                 detailsUrl,
-//                 phrase: bestScore >= THRESHOLD ? bestPhrase : "",
-//                 debug: { label, cleanedLabel, score: bestScore }
-//             });
-//         }
-
-//         return results;
-//     }
-// };
-
-
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import OpenAI from "openai";
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const CATALOG_PATH = path.join(__dirname, "../embeddings/phrases.embedded.json");
+const CATALOG = JSON.parse(fs.readFileSync(CATALOG_PATH, "utf8"));
+
+function cosine(a, b) {
+    let dot = 0, na = 0, nb = 0;
+    for (let i = 0; i < a.length; i++) {
+        dot += a[i] * b[i];
+        na += a[i] * a[i];
+        nb += b[i] * b[i];
+    }
+    return dot / (Math.sqrt(na) * Math.sqrt(nb) + 1e-12);
+}
+
+function cleanLabel(s) {
+    return (s || "")
+        .toLowerCase()
+        .replace(/\b(за|на|към|от|с|и|автомобил|автомобилен|автомобилна|автомобилно)\b/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
 export default {
     async getPhrases(items) {
-        const vectorStoreId = process.env.VECTOR_STORE_ID;
+
         const results = [];
+        const THRESHOLD = 0.75;
 
         for (const { id, imageUrl, detailsUrl } of items) {
-
-            // 1) heavy: image + file_search -> кандидати
             const r1 = await client.responses.create({
                 model: "gpt-4.1-mini",
                 temperature: 0,
-                tool_choice: { type: "file_search" },
-                tools: [{
-                    type: "file_search",
-                    vector_store_ids: [vectorStoreId],
-                    max_num_results: 40,
-                }],
                 input: [{
                     role: "user",
                     content: [
                         {
                             type: "input_text",
-                            text: `Виж изображението и използвай резултатите от file_search (каталог фрази).
-
-Върни ТОЧНО 10 кандидата (реални фрази от каталога).
-НЯМАШ право да измисляш фрази. Кандидатите трябва да са копирани 1:1 от каталога.
-
-Върни САМО JSON:
-{"candidates":[ "...(10)" ]}`
+                            text: `Определи авто частта на снимката.
+                           Правила:
+                           - Ако ясно се вижда ЕДНА основна част, и има конкретни белези на нещо специфично (форма, рисунка, детайл) върни възможно най-конкретно име за нея.
+                           - Ако се вижда комплект/сглобка (кабели, лентов кабел, букси, крепежи, пластмаси около нея),избери името на ОСНОВНАТА част, а не на аксесоарите.
+                           
+                           Пример:
+                           - "Лостчета за светлини и чистачки" + "лентов кабел" → label трябва да е "Лостчета за светлини и чистачки", НЕ "Лентов кабел".
+                           Формат:
+                           Върни САМО валиден JSON: {"label":"..."}.
+                           label да е 2–6 думи на български, без обяснения.`
                         },
                         { type: "input_image", image_url: imageUrl }
                     ]
@@ -224,50 +142,40 @@ export default {
             });
 
             const raw1 = r1.output_text || r1.output?.[0]?.content?.[0]?.text || "";
-            let candidates = [];
-            try { candidates = JSON.parse(raw1).candidates || []; } catch { candidates = []; }
-
-            candidates = [...new Set(candidates.map(x => String(x).trim()).filter(Boolean))].slice(0, 10);
-
-            if (candidates.length === 0) {
-                results.push({ id, detailsUrl, phrase: "", debug: { candidates: [] } });
-                continue;
+            let label = "";
+            try {
+                label = (JSON.parse(raw1).label || "").trim();
+            } catch {
+                label = "";
             }
 
-            // 2) choose: image + candidates -> idx
-            const r2 = await client.responses.create({
-                model: "gpt-4.1",
-                temperature: 0,
-                input: [{
-                    role: "user",
-                    content: [
-                        {
-                            type: "input_text",
-                            text: `Избери най-точната фраза от списъка за частта на изображението.
-Трябва да избереш САМО от candidates (по индекс).
+            const cleanedLabel = cleanLabel(label);
 
-Върни САМО JSON: {"idx": <число>}
-
-candidates = ${JSON.stringify(candidates)}`
-                        },
-                        { type: "input_image", image_url: imageUrl }
-                    ]
-                }]
+            const r2 = await client.embeddings.create({
+                model: "text-embedding-3-small",
+                input: cleanedLabel || "авточаст"
             });
+            const q = r2.data[0].embedding;
 
-            const raw2 = r2.output_text || r2.output?.[0]?.content?.[0]?.text || "";
-            let idx = -1;
-            try { idx = Number(JSON.parse(raw2).idx); } catch { idx = -1; }
+            let bestPhrase = "";
+            let bestScore = -1;
 
-            const phrase =
-                Number.isInteger(idx) && idx >= 0 && idx < candidates.length
-                    ? candidates[idx]
-                    : "";
+            for (const p of CATALOG) {
+                const score = cosine(q, p.embedding);
+                if (score > bestScore) {
+                    bestScore = score;
+                    bestPhrase = p.phrase;
+                }
+            }
 
-            results.push({ id, detailsUrl, phrase, debug: { candidates, idx } });
+            results.push({
+                id,
+                detailsUrl,
+                phrase: bestScore >= THRESHOLD ? bestPhrase : "",
+                debug: { label, cleanedLabel, score: bestScore }
+            });
         }
 
         return results;
     }
 };
-
