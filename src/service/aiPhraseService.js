@@ -194,7 +194,8 @@ export default {
         const results = [];
 
         for (const { id, imageUrl, detailsUrl } of items) {
-            // 1) file_search -> кандидати
+
+            // 1) heavy: image + file_search -> кандидати
             const r1 = await client.responses.create({
                 model: "gpt-4.1-mini",
                 temperature: 0,
@@ -202,32 +203,20 @@ export default {
                 tools: [{
                     type: "file_search",
                     vector_store_ids: [vectorStoreId],
-                    max_num_results: 30,
+                    max_num_results: 40,
                 }],
                 input: [{
                     role: "user",
                     content: [
                         {
                             type: "input_text",
-                            text:
-                                `Виж изображението и използвай резултатите от file_search (каталог фрази).
-                                Върни ТОЧНО 10 кандидата, които са най-вероятните фрази от каталога.
+                            text: `Виж изображението и използвай резултатите от file_search (каталог фрази).
 
-                                 Нямаш право да измисляш нови фрази НИКОГА НЕ СИ ГО ПОЗВОЛЯВАЙ.
-                                 Правила за избор:
-                                 - Ако на изображението ясно се вижда ЕДНА основна авточаст,
-                                 избери най-конкретната фраза за тази част.
-                                 - Ако на изображението се вижда КОМПЛЕКТ или сглобка
-                                 от няколко части, които обичайно се продават заедно,
-                                 (кабели, лентов кабел, букси, крепежи),
-                                 избери фразата за ОСНОВНАТА част, а не за аксесоарите.
-                                 ВИНАГИ ИЗБИРАЙ САМО ОТ VECTOR STORE
-                                 Пример:
-                                 - Лостчета за светлини и чистачки + лентов кабел → избери
-                                 "Лостчета за светлини и чистачки", а НЕ "Лентов кабел
+Върни ТОЧНО 10 кандидата (реални фрази от каталога).
+НЯМАШ право да измисляш фрази. Кандидатите трябва да са копирани 1:1 от каталога.
 
-Формат: върни САМО JSON:
-{"candidates":["...","...","...","...","...","...","...","...","...","..."]}`
+Върни САМО JSON:
+{"candidates":[ "...(10)" ]}`
                         },
                         { type: "input_image", image_url: imageUrl }
                     ]
@@ -238,7 +227,6 @@ export default {
             let candidates = [];
             try { candidates = JSON.parse(raw1).candidates || []; } catch { candidates = []; }
 
-            // чистим кандидати (уникални, без празни)
             candidates = [...new Set(candidates.map(x => String(x).trim()).filter(Boolean))].slice(0, 10);
 
             if (candidates.length === 0) {
@@ -246,20 +234,24 @@ export default {
                 continue;
             }
 
-            // 2) избор само по индекс (без измисляне)
+            // 2) choose: image + candidates -> idx
             const r2 = await client.responses.create({
                 model: "gpt-4.1",
                 temperature: 0,
                 input: [{
                     role: "user",
-                    content: [{
-                        type: "input_text",
-                        text:
-                            `Избери най-точната фраза от списъка за частта на изображението.
+                    content: [
+                        {
+                            type: "input_text",
+                            text: `Избери най-точната фраза от списъка за частта на изображението.
+Трябва да избереш САМО от candidates (по индекс).
+
 Върни САМО JSON: {"idx": <число>}
 
 candidates = ${JSON.stringify(candidates)}`
-                    }]
+                        },
+                        { type: "input_image", image_url: imageUrl }
+                    ]
                 }]
             });
 
@@ -278,3 +270,4 @@ candidates = ${JSON.stringify(candidates)}`
         return results;
     }
 };
+
