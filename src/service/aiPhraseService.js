@@ -102,6 +102,14 @@ function cosine(a, b) {
     return dot / (Math.sqrt(na) * Math.sqrt(nb) + 1e-12);
 }
 
+function cleanLabel(s) {
+    return (s || "")
+        .toLowerCase()
+        .replace(/\b(за|на|към|от|с|и|автомобил|автомобилен|автомобилна|автомобилно)\b/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
 export default {
     async getPhrases(items) {
 
@@ -136,11 +144,36 @@ export default {
 
             const raw1 = r1.output_text || r1.output?.[0]?.content?.[0]?.text || "";
             let label = "";
-            try { label = (JSON.parse(raw1).label || "").trim(); } catch { label = ""; }
+            try {
+                label = (JSON.parse(raw1).label || "").trim();
+            } catch {
+                label = "";
+            }
+
+            const cleanedLabel = cleanLabel(label);
+
+            let directPhrase = "";
+
+            for (const p of CATALOG) {
+                const ph = p.phrase.toLowerCase();
+                if (ph && cleanedLabel.includes(ph) && ph.length > directPhrase.length) {
+                    directPhrase = p.phrase;
+                }
+            }
+
+            if (directPhrase) {
+                results.push({
+                    id,
+                    detailsUrl,
+                    phrase: directPhrase,
+                    debug: { label, cleanedLabel, score: 1 }
+                });
+                continue;
+            }
 
             const r2 = await client.embeddings.create({
                 model: "text-embedding-3-small",
-                input: label || "авточаст"
+                input: cleanedLabel || "авточаст"
             });
             const q = r2.data[0].embedding;
 
@@ -159,7 +192,7 @@ export default {
                 id,
                 detailsUrl,
                 phrase: bestScore >= THRESHOLD ? bestPhrase : "",
-                debug: { label, score: bestScore }
+                debug: { label, cleanedLabel, score: bestScore }
             });
         }
 
