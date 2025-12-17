@@ -118,7 +118,7 @@ export default {
 
         for (const { id, imageUrl, detailsUrl } of items) {
             const r1 = await client.responses.create({
-                model: "gpt-4.1-mini",
+                model: "gpt-4.1",
                 temperature: 0,
                 input: [{
                     role: "user",
