@@ -114,7 +114,7 @@ export default {
     async getPhrases(items) {
 
         const results = [];
-        const THRESHOLD = 0.75;
+        const THRESHOLD = 0.6;
 
         for (const { id, imageUrl, detailsUrl } of items) {
             const r1 = await client.responses.create({
@@ -151,25 +151,6 @@ export default {
             }
 
             const cleanedLabel = cleanLabel(label);
-
-            let directPhrase = "";
-
-            for (const p of CATALOG) {
-                const ph = p.phrase.toLowerCase();
-                if (ph && cleanedLabel.includes(ph) && ph.length > directPhrase.length) {
-                    directPhrase = p.phrase;
-                }
-            }
-
-            if (directPhrase) {
-                results.push({
-                    id,
-                    detailsUrl,
-                    phrase: directPhrase,
-                    debug: { label, cleanedLabel, score: 1 }
-                });
-                continue;
-            }
 
             const r2 = await client.embeddings.create({
                 model: "text-embedding-3-small",
