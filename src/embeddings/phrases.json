@@ -1,3362 +1,4482 @@
 [
   {
-    "phrase": "Микрофон"
+    "phrase": "Микрофон",
+    "description": ""
   },
   {
-    "phrase": "Дистанционно мултимедия"
+    "phrase": "Дистанционно мултимедия",
+    "description": ""
   },
   {
-    "phrase": "Поставка телефон"
+    "phrase": "Поставка телефон",
+    "description": ""
   },
   {
-    "phrase": "Мултимедия"
+    "phrase": "Мултимедия",
+    "description": "Автомобилен мултимедиен плеър"
   },
   {
-    "phrase": "CD плеър"
+    "phrase": "CD плеър",
+    "description": ""
   },
   {
-    "phrase": "CD плеър и панел климатроник"
+    "phrase": "CD плеър и панел климатроник",
+    "description": ""
   },
   {
-    "phrase": "CD чейнджър"
+    "phrase": "CD чейнджър",
+    "description": ""
   },
   {
-    "phrase": "DVD / GPS"
+    "phrase": "DVD / GPS",
+    "description": ""
   },
   {
-    "phrase": "DVD плеър"
+    "phrase": "DVD плеър",
+    "description": ""
   },
   {
-    "phrase": "GPS навигация"
+    "phrase": "GPS навигация",
+    "description": ""
   },
   {
-    "phrase": "Hands free"
+    "phrase": "Hands free",
+    "description": ""
   },
   {
-    "phrase": "TV приемник"
+    "phrase": "TV приемник",
+    "description": ""
   },
   {
-    "phrase": "TV тунер"
+    "phrase": "TV тунер",
+    "description": ""
   },
   {
-    "phrase": "TV усилвател"
+    "phrase": "Автокасетофон",
+    "description": ""
   },
   {
-    "phrase": "Автокасетофон"
+    "phrase": "Авторадио",
+    "description": ""
   },
   {
-    "phrase": "Авторадио"
+    "phrase": "Аудио усилвател",
+    "description": ""
   },
   {
-    "phrase": "Аудио усилвател"
+    "phrase": "Bluetooth микрофон",
+    "description": ""
   },
   {
-    "phrase": "Bluetooth микрофон"
+    "phrase": "Високоговорител",
+    "description": "Автомобилен говорител"
   },
   {
-    "phrase": "Високоговорител"
+    "phrase": "Високоговорители",
+    "description": "Автомобилни говорители"
   },
   {
-    "phrase": "Високоговорители"
+    "phrase": "Камера",
+    "description": ""
   },
   {
-    "phrase": "Камера"
+    "phrase": "Панел радио",
+    "description": ""
   },
   {
-    "phrase": "Панел радио"
+    "phrase": "Радио усилвател",
+    "description": ""
   },
   {
-    "phrase": "Радио усилвател"
+    "phrase": "Субуфер",
+    "description": ""
   },
   {
-    "phrase": "Субуфер"
+    "phrase": "Телефон",
+    "description": ""
   },
   {
-    "phrase": "Телефон"
+    "phrase": "Усилвател",
+    "description": ""
   },
   {
-    "phrase": "Усилвател"
+    "phrase": "Усилвател антена",
+    "description": ""
   },
   {
-    "phrase": "Усилвател антена"
+    "phrase": "Палче външна дръжка",
+    "description": ""
   },
   {
-    "phrase": "Палче външна дръжка"
+    "phrase": "Външна дръжка - капачка",
+    "description": ""
   },
   {
-    "phrase": "Външна дръжка - капачка"
+    "phrase": "Моторче Soft close",
+    "description": ""
   },
   {
-    "phrase": "Моторче Soft close"
+    "phrase": "Брава за кабина",
+    "description": ""
   },
   {
-    "phrase": "Брава за кабина"
+    "phrase": "Ръкохватка платформа",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка платформа"
+    "phrase": "Дръжка кабина",
+    "description": ""
   },
   {
-    "phrase": "Дръжка кабина"
+    "phrase": "Брава хардтоп",
+    "description": ""
   },
   {
-    "phrase": "Брава хардтоп"
+    "phrase": "Ръкохватка шибедах",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка шибедах"
+    "phrase": "Ръкохватка преден капак и резервоар",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка преден капак и резервоар"
+    "phrase": "Ключалка преден капак",
+    "description": ""
   },
   {
-    "phrase": "Ключалка преден капак"
+    "phrase": "Брава задно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Брава задно стъкло"
+    "phrase": "Вътрешна дръжка заден капак",
+    "description": ""
   },
   {
-    "phrase": "Вътрешна дръжка заден капак"
+    "phrase": "Ръкохватка заден капак и резервоар",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка заден капак и резервоар"
+    "phrase": "Ключалка врата",
+    "description": ""
   },
   {
-    "phrase": "Ключалка врата"
+    "phrase": "Ръкохватка заден капак",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка заден капак"
+    "phrase": "Заключалка товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Заключалка товарна врата"
+    "phrase": "Заключалка преден капак",
+    "description": ""
   },
   {
-    "phrase": "Заключалка преден капак"
+    "phrase": "Ключалка заден капак",
+    "description": ""
   },
   {
-    "phrase": "Ключалка заден капак"
+    "phrase": "Заключалка заден капак",
+    "description": ""
   },
   {
-    "phrase": "Заключалка заден капак"
+    "phrase": "Вътрешна дръжка плъзгаща врата",
+    "description": ""
   },
   {
-    "phrase": "Вътрешна дръжка плъзгаща врата"
+    "phrase": "Външна дръжка товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Външна дръжка товарна врата"
+    "phrase": "Външна дръжка заден капак",
+    "description": ""
   },
   {
-    "phrase": "Външна дръжка заден капак"
+    "phrase": "Брава на врата",
+    "description": ""
   },
   {
-    "phrase": "Брава на врата"
+    "phrase": "Брава заден капак",
+    "description": ""
   },
   {
-    "phrase": "Брава заден капак"
+    "phrase": "Брава преден капак",
+    "description": ""
   },
   {
-    "phrase": "Брава преден капак"
+    "phrase": "Ключалка за капачката на резервоара",
+    "description": ""
   },
   {
-    "phrase": "Ключалка за капачката на резервоара"
+    "phrase": "Брава странична врата",
+    "description": ""
   },
   {
-    "phrase": "Брава странична врата"
+    "phrase": "Брава товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Брава товарна врата"
+    "phrase": "Външна дръжка",
+    "description": "Външна дръжка за врата"
   },
   {
-    "phrase": "Външна дръжка"
+    "phrase": "Външна дръжка плъзгаща врата",
+    "description": ""
   },
   {
-    "phrase": "Външна дръжка плъзгаща врата"
+    "phrase": "Външна дръжка преден капак",
+    "description": ""
   },
   {
-    "phrase": "Външна дръжка преден капак"
+    "phrase": "Външна дръжка странична врата",
+    "description": ""
   },
   {
-    "phrase": "Външна дръжка странична врата"
+    "phrase": "Вътрешна дръжка",
+    "description": "Вътрешна дръжка на врата"
   },
   {
-    "phrase": "Вътрешна дръжка"
+    "phrase": "Вътрешна дръжка преден капак",
+    "description": ""
   },
   {
-    "phrase": "Вътрешна дръжка преден капак"
+    "phrase": "Вътрешна дръжка товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Вътрешна дръжка товарна врата"
+    "phrase": "Заключалка",
+    "description": ""
   },
   {
-    "phrase": "Заключалка"
+    "phrase": "Заключалка врата",
+    "description": ""
   },
   {
-    "phrase": "Заключалка врата"
+    "phrase": "Закопчалка в багажник",
+    "description": ""
   },
   {
-    "phrase": "Закопчалка в багажник"
+    "phrase": "Ключалка външна дръжка",
+    "description": ""
   },
   {
-    "phrase": "Ключалка външна дръжка"
+    "phrase": "Основа външна дръжка",
+    "description": ""
   },
   {
-    "phrase": "Основа външна дръжка"
+    "phrase": "Основа вътрешна дръжка",
+    "description": ""
   },
   {
-    "phrase": "Основа вътрешна дръжка"
+    "phrase": "Основа вътрешна дръжка товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Основа вътрешна дръжка товарна врата"
+    "phrase": "Ръкохватка за таван",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка за таван"
+    "phrase": "Ръкохватка врата",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка врата"
+    "phrase": "Ръкохватка реглаж волан",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка реглаж волан"
+    "phrase": "Ръкохватка резервоар",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка резервоар"
+    "phrase": "Ръкохватка седалка",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка седалка"
+    "phrase": "Ръкохватка фикс",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка фикс"
+    "phrase": "Фенерче",
+    "description": ""
   },
   {
-    "phrase": "Фенерче"
+    "phrase": "Уред налягане диференциал",
+    "description": ""
   },
   {
-    "phrase": "Уред налягане диференциал"
+    "phrase": "Дистанционно управление запалване",
+    "description": ""
   },
   {
-    "phrase": "Дистанционно управление запалване"
+    "phrase": "Основа волан",
+    "description": ""
   },
   {
-    "phrase": "Основа волан"
+    "phrase": "Ключ за гуми",
+    "description": ""
   },
   {
-    "phrase": "Ключ за гуми"
+    "phrase": "Ключ за заключване на диференциала",
+    "description": ""
   },
   {
-    "phrase": "Ключ за заключване на диференциала"
+    "phrase": "Бутон подгрев свещи",
+    "description": ""
   },
   {
-    "phrase": "Бутон подгрев свещи"
+    "phrase": "Бутон антена",
+    "description": ""
   },
   {
-    "phrase": "Бутон антена"
+    "phrase": "Хладилна жабка",
+    "description": ""
   },
   {
-    "phrase": "Хладилна жабка"
+    "phrase": "Бутон за настройка налягане гуми",
+    "description": ""
   },
   {
-    "phrase": "Бутон за настройка налягане гуми"
+    "phrase": "Бутон Auto hold",
+    "description": ""
   },
   {
-    "phrase": "Бутон Auto hold"
+    "phrase": "Лостчета скорости за волан",
+    "description": ""
   },
   {
-    "phrase": "Лостчета скорости за волан"
+    "phrase": "Ключ чистачки",
+    "description": ""
   },
   {
-    "phrase": "Ключ чистачки"
+    "phrase": "Моторче предпазен колан",
+    "description": ""
   },
   {
-    "phrase": "Моторче предпазен колан"
+    "phrase": "Ключ борд компютър",
+    "description": ""
   },
   {
-    "phrase": "Ключ борд компютър"
+    "phrase": "Бутон плъзгаща врата",
+    "description": ""
   },
   {
-    "phrase": "Бутон плъзгаща врата"
+    "phrase": "Седалка с ел. регулиране",
+    "description": ""
   },
   {
-    "phrase": "Седалка с ел. регулиране"
+    "phrase": "Механизъм реглаж седалка",
+    "description": ""
   },
   {
-    "phrase": "Механизъм реглаж седалка"
+    "phrase": "Кутия за очила",
+    "description": ""
   },
   {
-    "phrase": "Кутия за очила"
+    "phrase": "Бутон",
+    "description": ""
   },
   {
-    "phrase": "Бутон"
+    "phrase": "Кутия за дискове",
+    "description": ""
   },
   {
-    "phrase": "Кутия за дискове"
+    "phrase": "Бутон отопление",
+    "description": ""
   },
   {
-    "phrase": "Бутон отопление"
+    "phrase": "Бутон TRIP",
+    "description": ""
   },
   {
-    "phrase": "Бутон TRIP"
+    "phrase": "Уред температура масло",
+    "description": ""
   },
   {
-    "phrase": "Уред температура масло"
+    "phrase": "Маншон лост ръчна спирачка",
+    "description": ""
   },
   {
-    "phrase": "Маншон лост ръчна спирачка"
+    "phrase": "Заключалка седалка",
+    "description": ""
   },
   {
-    "phrase": "Заключалка седалка"
+    "phrase": "Бутон клаксон",
+    "description": ""
   },
   {
-    "phrase": "Бутон клаксон"
+    "phrase": "Бутон ел. спойлер",
+    "description": ""
   },
   {
-    "phrase": "Бутон ел. спойлер"
+    "phrase": "Ски сак",
+    "description": ""
   },
   {
-    "phrase": "Ски сак"
+    "phrase": "Бутон SOS",
+    "description": ""
   },
   {
-    "phrase": "Бутон SOS"
+    "phrase": "Кожен салон с подгрев",
+    "description": ""
   },
   {
-    "phrase": "Кожен салон с подгрев"
+    "phrase": "Кутия инструменти",
+    "description": ""
   },
   {
-    "phrase": "Кутия инструменти"
+    "phrase": "Педал газ",
+    "description": ""
   },
   {
-    "phrase": "Педал газ"
+    "phrase": "Индикатор автоматични скорости",
+    "description": ""
   },
   {
-    "phrase": "Индикатор автоматични скорости"
+    "phrase": "Бутон светлини мъгла",
+    "description": ""
   },
   {
-    "phrase": "Бутон светлини мъгла"
+    "phrase": "Бутони чистачки",
+    "description": ""
   },
   {
-    "phrase": "Бутони чистачки"
+    "phrase": "Брава седалка",
+    "description": ""
   },
   {
-    "phrase": "Брава седалка"
+    "phrase": "Механизъм заключване волан",
+    "description": ""
   },
   {
-    "phrase": "Механизъм заключване волан"
+    "phrase": "Капак за жабка",
+    "description": ""
   },
   {
-    "phrase": "Капак за жабка"
+    "phrase": "Бутони климатик",
+    "description": ""
   },
   {
-    "phrase": "Бутони климатик"
+    "phrase": "Бутони заден капак и резервоар",
+    "description": ""
   },
   {
-    "phrase": "Бутони заден капак и резервоар"
+    "phrase": "Бутони борд компютър",
+    "description": ""
   },
   {
-    "phrase": "Бутони борд компютър"
+    "phrase": "Ръкохватка жабка",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка жабка"
+    "phrase": "Ключалка airbag",
+    "description": ""
   },
   {
-    "phrase": "Ключалка airbag"
+    "phrase": "Закачалка",
+    "description": ""
   },
   {
-    "phrase": "Закачалка"
+    "phrase": "Моторче подглавник",
+    "description": ""
   },
   {
-    "phrase": "Моторче подглавник"
+    "phrase": "Капак airbag",
+    "description": ""
   },
   {
-    "phrase": "Капак airbag"
+    "phrase": "Бутони автопилот",
+    "description": ""
   },
   {
-    "phrase": "Бутони автопилот"
+    "phrase": "Бутон студен старт",
+    "description": ""
   },
   {
-    "phrase": "Бутон студен старт"
+    "phrase": "Бутон гюрук",
+    "description": ""
   },
   {
-    "phrase": "Бутон гюрук"
+    "phrase": "Бутон 4x4",
+    "description": ""
   },
   {
-    "phrase": "Бутон 4x4"
+    "phrase": "Бутон парктроник",
+    "description": ""
   },
   {
-    "phrase": "Бутон парктроник"
+    "phrase": "Бутон осветление купе",
+    "description": ""
   },
   {
-    "phrase": "Бутон осветление купе"
+    "phrase": "Бутон автопилот",
+    "description": ""
   },
   {
-    "phrase": "Бутон автопилот"
+    "phrase": "Бутон запалване",
+    "description": ""
   },
   {
-    "phrase": "Бутон запалване"
+    "phrase": "Бутон задна чистачка",
+    "description": ""
   },
   {
-    "phrase": "Бутон задна чистачка"
+    "phrase": "Бутон жабка",
+    "description": ""
   },
   {
-    "phrase": "Бутон жабка"
+    "phrase": "Бутон заден капак",
+    "description": ""
   },
   {
-    "phrase": "Бутон заден капак"
+    "phrase": "Бутон резервоар",
+    "description": ""
   },
   {
-    "phrase": "Бутон резервоар"
+    "phrase": "Бутон реглаж окачване",
+    "description": ""
   },
   {
-    "phrase": "Бутон реглаж окачване"
+    "phrase": "Airbag",
+    "description": ""
   },
   {
-    "phrase": "Airbag"
+    "phrase": "GPS дисплей",
+    "description": ""
   },
   {
-    "phrase": "GPS дисплей"
+    "phrase": "Head up дисплей",
+    "description": ""
   },
   {
-    "phrase": "Head up дисплей"
+    "phrase": "TRC бутон",
+    "description": ""
   },
   {
-    "phrase": "TRC бутон"
+    "phrase": "Арматурно табло",
+    "description": ""
   },
   {
-    "phrase": "Арматурно табло | ОПИСАНИЕ: основна интериорна голяма конструкция пред водача"
+    "phrase": "Арматурно табло горна част",
+    "description": ""
   },
   {
-    "phrase": "Арматурно табло горна част"
+    "phrase": "Арматурно табло долна част",
+    "description": ""
   },
   {
-    "phrase": "Арматурно табло долна част"
+    "phrase": "Бордови компютър",
+    "description": ""
   },
   {
-    "phrase": "Бордови компютър"
+    "phrase": "Бутон ABS",
+    "description": ""
   },
   {
-    "phrase": "Бутон ABS"
+    "phrase": "Бутон ASC",
+    "description": ""
   },
   {
-    "phrase": "Бутон ASC"
+    "phrase": "Бутон ASR",
+    "description": ""
   },
   {
-    "phrase": "Бутон ASR"
+    "phrase": "Бутон Airbag",
+    "description": ""
   },
   {
-    "phrase": "Бутон Airbag"
+    "phrase": "Бутон DSC",
+    "description": ""
   },
   {
-    "phrase": "Бутон DSC"
+    "phrase": "Бутон DSTC",
+    "description": ""
   },
   {
-    "phrase": "Бутон DSTC"
+    "phrase": "Бутон ECO",
+    "description": ""
   },
   {
-    "phrase": "Бутон ECO"
+    "phrase": "Бутон ESP",
+    "description": ""
   },
   {
-    "phrase": "Бутон ESP"
+    "phrase": "Бутон Head up дисплей",
+    "description": ""
   },
   {
-    "phrase": "Бутон Head up дисплей"
+    "phrase": "Бутон Info",
+    "description": ""
   },
   {
-    "phrase": "Бутон Info"
+    "phrase": "Бутон TV",
+    "description": ""
   },
   {
-    "phrase": "Бутон TV"
+    "phrase": "Бутон VSA",
+    "description": ""
   },
   {
-    "phrase": "Бутон VSA"
+    "phrase": "Бутон аварийни светлини",
+    "description": ""
   },
   {
-    "phrase": "Бутон аварийни светлини"
+    "phrase": "Бутон аларма",
+    "description": ""
   },
   {
-    "phrase": "Бутон аларма"
+    "phrase": "Бутон аудио управление",
+    "description": ""
   },
   {
-    "phrase": "Бутон аудио управление"
+    "phrase": "Бутон блокаж диференциал",
+    "description": ""
   },
   {
-    "phrase": "Бутон блокаж диференциал"
+    "phrase": "Бутон блокировка ел. стъкла",
+    "description": ""
   },
   {
-    "phrase": "Бутон блокировка ел. стъкла"
+    "phrase": "Бутон борд компютър",
+    "description": ""
   },
   {
-    "phrase": "Бутон борд компютър"
+    "phrase": "Бутон вентилатор парно",
+    "description": ""
   },
   {
-    "phrase": "Бутон вентилатор парно"
+    "phrase": "Бутон вентилация",
+    "description": ""
   },
   {
-    "phrase": "Бутон вентилация"
+    "phrase": "Бутон волан",
+    "description": ""
   },
   {
-    "phrase": "Бутон волан"
+    "phrase": "Бутон ел. огледала",
+    "description": ""
   },
   {
-    "phrase": "Бутон ел. огледала"
+    "phrase": "Бутон ел. стъкло",
+    "description": ""
   },
   {
-    "phrase": "Бутон ел. стъкло"
+    "phrase": "Бутон ел. щора",
+    "description": ""
   },
   {
-    "phrase": "Бутон ел. щора"
+    "phrase": "Бутон кикдаун",
+    "description": ""
   },
   {
-    "phrase": "Бутон кикдаун"
+    "phrase": "Бутон климатик",
+    "description": ""
   },
   {
-    "phrase": "Бутон климатик"
+    "phrase": "Бутон осветление километраж",
+    "description": ""
   },
   {
-    "phrase": "Бутон осветление километраж"
+    "phrase": "Бутон ръчна спирачка",
+    "description": ""
   },
   {
-    "phrase": "Бутон ръчна спирачка"
+    "phrase": "Бутон подгрев задно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Бутон подгрев задно стъкло"
+    "phrase": "Бутон подгрев огледала",
+    "description": ""
   },
   {
-    "phrase": "Бутон подгрев огледала"
+    "phrase": "Бутон подгрев предно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Бутон подгрев предно стъкло"
+    "phrase": "Бутон подгрев седалка",
+    "description": ""
   },
   {
-    "phrase": "Бутон подгрев седалка"
+    "phrase": "Бутон подгрев стъкла и огледала",
+    "description": ""
   },
   {
-    "phrase": "Бутон подгрев стъкла и огледала"
+    "phrase": "Бутон подгрев стъкло",
+    "description": ""
   },
   {
-    "phrase": "Бутон подгрев стъкло"
+    "phrase": "Бутон преден капак",
+    "description": ""
   },
   {
-    "phrase": "Бутон преден капак"
+    "phrase": "Бутон пръскалки предно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Бутон пръскалки предно стъкло"
+    "phrase": "Бутон пръскалки фарове",
+    "description": ""
   },
   {
-    "phrase": "Бутон пръскалки фарове"
+    "phrase": "Бутон реглаж волан",
+    "description": ""
   },
   {
-    "phrase": "Бутон реглаж волан"
+    "phrase": "Бутон реглаж и подгрев огледала",
+    "description": ""
   },
   {
-    "phrase": "Бутон реглаж и подгрев огледала"
+    "phrase": "Бутон реглаж осветление",
+    "description": ""
   },
   {
-    "phrase": "Бутон реглаж осветление"
+    "phrase": "Бутон реглаж подглавник",
+    "description": ""
   },
   {
-    "phrase": "Бутон реглаж подглавник"
+    "phrase": "Бутон реглаж светлини",
+    "description": ""
   },
   {
-    "phrase": "Бутон реглаж светлини"
+    "phrase": "Бутон реглаж седалка",
+    "description": ""
   },
   {
-    "phrase": "Бутон реглаж седалка"
+    "phrase": "Бутон реглаж чистачки",
+    "description": ""
   },
   {
-    "phrase": "Бутон реглаж чистачки"
+    "phrase": "Бутон режим автоматични скорости",
+    "description": ""
   },
   {
-    "phrase": "Бутон режим автоматични скорости"
+    "phrase": "Бутон рециркулация",
+    "description": ""
   },
   {
-    "phrase": "Бутон рециркулация"
+    "phrase": "Бутон светлини",
+    "description": ""
   },
   {
-    "phrase": "Бутон светлини"
+    "phrase": "Бутон товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Бутон товарна врата"
+    "phrase": "Бутон тракшън контрол",
+    "description": ""
   },
   {
-    "phrase": "Бутон тракшън контрол"
+    "phrase": "Бутон централно заключване",
+    "description": ""
   },
   {
-    "phrase": "Бутон централно заключване"
+    "phrase": "Бутон чистачки",
+    "description": ""
   },
   {
-    "phrase": "Бутон чистачки"
+    "phrase": "Бутон шибедах",
+    "description": ""
   },
   {
-    "phrase": "Бутон шибедах"
+    "phrase": "Бутони аудио управление",
+    "description": ""
   },
   {
-    "phrase": "Бутони аудио управление"
+    "phrase": "Бутони волан",
+    "description": ""
   },
   {
-    "phrase": "Бутони волан"
+    "phrase": "Бутони ел. стъкла",
+    "description": "Панел за управление на ел. Стъкла"
   },
   {
-    "phrase": "Бутони ел. стъкла"
+    "phrase": "Бутони ел. стъкла и огледала",
+    "description": ""
   },
   {
-    "phrase": "Бутони ел. стъкла и огледала"
+    "phrase": "Бутони клаксон",
+    "description": ""
   },
   {
-    "phrase": "Бутони клаксон"
+    "phrase": "Бутон аварийни светлини / ключ за подгряване на седалките",
+    "description": ""
   },
   {
-    "phrase": "Бутон аварийни светлини / ключ за подгряване на седалките"
+    "phrase": "Бутони подгрев седалки",
+    "description": ""
   },
   {
-    "phrase": "Бутони подгрев седалки"
+    "phrase": "Бутони реглаж ел. седалка",
+    "description": ""
   },
   {
-    "phrase": "Бутони реглаж ел. седалка"
+    "phrase": "Бутони реглаж светлини",
+    "description": ""
   },
   {
-    "phrase": "Бутони реглаж светлини"
+    "phrase": "Волан",
+    "description": ""
   },
   {
-    "phrase": "Волан"
+    "phrase": "Греда под арматурно табло",
+    "description": ""
   },
   {
-    "phrase": "Греда под арматурно табло"
+    "phrase": "Джойстик",
+    "description": ""
   },
   {
-    "phrase": "Джойстик"
+    "phrase": "Дисплей",
+    "description": ""
   },
   {
-    "phrase": "Дисплей"
+    "phrase": "Дисплей навигация",
+    "description": ""
   },
   {
-    "phrase": "Дисплей навигация"
+    "phrase": "Електро-хроматично огледало",
+    "description": ""
   },
   {
-    "phrase": "Дисплей парктроник"
+    "phrase": "Жабка",
+    "description": ""
   },
   {
-    "phrase": "Електро-хроматично огледало"
+    "phrase": "Жила скорости",
+    "description": ""
   },
   {
-    "phrase": "Жабка"
+    "phrase": "Жило за скорости",
+    "description": ""
   },
   {
-    "phrase": "Жила скорости"
+    "phrase": "Закопчалка предпазен колан",
+    "description": ""
   },
   {
-    "phrase": "Жило за скорости"
+    "phrase": "Закопчалки предпазни колани",
+    "description": ""
   },
   {
-    "phrase": "Закопчалка предпазен колан"
+    "phrase": "Запалка",
+    "description": ""
   },
   {
-    "phrase": "Закопчалки предпазни колани"
+    "phrase": "Индикатор AIRBAG",
+    "description": ""
   },
   {
-    "phrase": "Запалка"
+    "phrase": "Индикатор парктроник",
+    "description": ""
   },
   {
-    "phrase": "Запалки"
+    "phrase": "Индикатор предпазни колани",
+    "description": ""
   },
   {
-    "phrase": "Индикатор AIRBAG"
+    "phrase": "Индикаторен дисплей",
+    "description": ""
   },
   {
-    "phrase": "Индикатор парктроник"
+    "phrase": "Индикаторно табло",
+    "description": ""
   },
   {
-    "phrase": "Индикатор предпазни колани"
+    "phrase": "Инструменти",
+    "description": ""
   },
   {
-    "phrase": "Индикаторен дисплей"
+    "phrase": "Километраж",
+    "description": ""
   },
   {
-    "phrase": "Индикаторно табло"
+    "phrase": "Клеморед контактен ключ",
+    "description": ""
   },
   {
-    "phrase": "Инструменти"
+    "phrase": "Ключ светлини",
+    "description": ""
   },
   {
-    "phrase": "Километраж | КЛЮЧОВИ ДУМИ: скоростомер"
+    "phrase": "Ключалка жабка",
+    "description": ""
   },
   {
-    "phrase": "Клеморед контактен ключ"
+    "phrase": "Кожа ръчна спирачка",
+    "description": ""
   },
   {
-    "phrase": "Ключ светлини"
+    "phrase": "Кожа скоростен лост",
+    "description": ""
   },
   {
-    "phrase": "Ключалка жабка"
+    "phrase": "Кожен салон",
+    "description": ""
   },
   {
-    "phrase": "Кожа ръчна спирачка"
+    "phrase": "Кожен салон с ел. регулиране",
+    "description": ""
   },
   {
-    "phrase": "Кожа скоростен лост"
+    "phrase": "Кожен салон с ел. регулиране и подгрев",
+    "description": ""
   },
   {
-    "phrase": "Кожен салон"
+    "phrase": "Комплект инструменти",
+    "description": ""
   },
   {
-    "phrase": "Кожен салон с ел. регулиране"
+    "phrase": "Комплект салон",
+    "description": ""
   },
   {
-    "phrase": "Кожен салон с ел. регулиране и подгрев"
+    "phrase": "Комплект салон с ел. регулиране",
+    "description": ""
   },
   {
-    "phrase": "Комплект инструменти"
+    "phrase": "Комплект салон с подгрев",
+    "description": ""
   },
   {
-    "phrase": "Комплект салон"
+    "phrase": "Конзола контактен ключ",
+    "description": ""
   },
   {
-    "phrase": "Комплект салон с ел. регулиране"
+    "phrase": "Контактен ключ",
+    "description": ""
   },
   {
-    "phrase": "Комплект салон с подгрев"
+    "phrase": "Крик",
+    "description": ""
   },
   {
-    "phrase": "Конзола контактен ключ"
+    "phrase": "Лост реглаж волан",
+    "description": ""
   },
   {
-    "phrase": "Контактен ключ"
+    "phrase": "Лост за ръчна спирачка",
+    "description": ""
   },
   {
-    "phrase": "Крик"
+    "phrase": "Лостче автопилот",
+    "description": ""
   },
   {
-    "phrase": "Лост раздатъчна кутия"
+    "phrase": "Лостче аудио управление",
+    "description": ""
   },
   {
-    "phrase": "Лост реглаж волан"
+    "phrase": "Лостче за светлини",
+    "description": ""
   },
   {
-    "phrase": "Лост за ръчна спирачка"
+    "phrase": "Лостче за светлини и чистачки",
+    "description": ""
   },
   {
-    "phrase": "Лостче автопилот"
+    "phrase": "Лостче скорости",
+    "description": ""
   },
   {
-    "phrase": "Лостче аудио управление"
+    "phrase": "Лостче за чистачки",
+    "description": ""
   },
   {
-    "phrase": "Лостче за светлини"
+    "phrase": "Лостчета аудио управление",
+    "description": ""
   },
   {
-    "phrase": "Лостче за светлини и чистачки"
+    "phrase": "Лостчета светлини и чистачки",
+    "description": ""
   },
   {
-    "phrase": "Лостче скорости"
+    "phrase": "Маншон за скоростен лост",
+    "description": ""
   },
   {
-    "phrase": "Лостче за чистачки"
+    "phrase": "Механизъм подглавник",
+    "description": ""
   },
   {
-    "phrase": "Лостчета аудио управление"
+    "phrase": "Механизъм реглаж предпазен колан",
+    "description": ""
   },
   {
-    "phrase": "Лостчета светлини и чистачки"
+    "phrase": "Моторче реглаж волан",
+    "description": ""
   },
   {
-    "phrase": "Маншон за скоростен лост"
+    "phrase": "Моторче реглаж ел. седалка",
+    "description": ""
   },
   {
-    "phrase": "Механизъм подглавник"
+    "phrase": "Моторче седалки",
+    "description": ""
   },
   {
-    "phrase": "Механизъм реглаж предпазен колан"
+    "phrase": "Мулти волан",
+    "description": ""
   },
   {
-    "phrase": "Моторче реглаж волан"
+    "phrase": "Оборотомер",
+    "description": ""
   },
   {
-    "phrase": "Моторче реглаж ел. седалка"
+    "phrase": "Основа арматурно табло",
+    "description": ""
   },
   {
-    "phrase": "Моторче седалки"
+    "phrase": "Панел бутони",
+    "description": ""
   },
   {
-    "phrase": "Мулти волан"
+    "phrase": "Панел бутони волан",
+    "description": ""
   },
   {
-    "phrase": "Оборотомер"
+    "phrase": "Панел бутони климатик и подгрев",
+    "description": ""
   },
   {
-    "phrase": "Основа арматурно табло"
+    "phrase": "Панел бутони навигация",
+    "description": ""
   },
   {
-    "phrase": "Панел бутони"
+    "phrase": "Панел бутони режим окачване",
+    "description": ""
   },
   {
-    "phrase": "Панел бутони волан"
+    "phrase": "Панел бутони светлини",
+    "description": ""
   },
   {
-    "phrase": "Панел бутони климатик и подгрев"
+    "phrase": "Панел бутони чистачки",
+    "description": ""
   },
   {
-    "phrase": "Панел бутони навигация"
+    "phrase": "Панел климатик",
+    "description": ""
   },
   {
-    "phrase": "Панел бутони режим окачване"
+    "phrase": "Панел климатроник",
+    "description": ""
   },
   {
-    "phrase": "Панел бутони светлини"
+    "phrase": "Панел парно",
+    "description": ""
   },
   {
-    "phrase": "Панел бутони чистачки"
+    "phrase": "Педал паркинг спирачка",
+    "description": ""
   },
   {
-    "phrase": "Панел климатик"
+    "phrase": "Педал съединител",
+    "description": ""
   },
   {
-    "phrase": "Панел климатроник"
+    "phrase": "Педали",
+    "description": ""
   },
   {
-    "phrase": "Панел парно"
+    "phrase": "Пепелник",
+    "description": ""
   },
   {
-    "phrase": "Педал паркинг спирачка"
+    "phrase": "Пепелник врата",
+    "description": ""
   },
   {
-    "phrase": "Педал съединител"
+    "phrase": "Плафон",
+    "description": ""
   },
   {
-    "phrase": "Педали"
+    "phrase": "Плафон багажник",
+    "description": ""
   },
   {
-    "phrase": "Пепелник"
+    "phrase": "Плафон в жабка",
+    "description": ""
   },
   {
-    "phrase": "Пепелник врата"
+    "phrase": "Плафон врата",
+    "description": ""
   },
   {
-    "phrase": "Плафон"
+    "phrase": "Подглавник",
+    "description": ""
   },
   {
-    "phrase": "Плафон багажник"
+    "phrase": "Подглавници",
+    "description": ""
   },
   {
-    "phrase": "Плафон в жабка"
+    "phrase": "Подлакътник",
+    "description": ""
   },
   {
-    "phrase": "Плафон врата"
+    "phrase": "Поставка чаша",
+    "description": ""
   },
   {
-    "phrase": "Подглавник"
+    "phrase": "Поставка за чаши",
+    "description": ""
   },
   {
-    "phrase": "Подглавници"
+    "phrase": "Предпазен колан",
+    "description": ""
   },
   {
-    "phrase": "Подлакътник"
+    "phrase": "Ресет бутон",
+    "description": ""
   },
   {
-    "phrase": "Поставка чаша"
+    "phrase": "Ръкохватка паркинг спирачка",
+    "description": ""
   },
   {
-    "phrase": "Поставка за чаши"
+    "phrase": "Седалка",
+    "description": ""
   },
   {
-    "phrase": "Предпазен колан"
+    "phrase": "Седалки",
+    "description": ""
   },
   {
-    "phrase": "Ресет бутон"
+    "phrase": "Седалки трети ред",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка паркинг спирачка"
+    "phrase": "Сенник",
+    "description": ""
   },
   {
-    "phrase": "Седалка"
+    "phrase": "Скоростен лост (за превключване)",
+    "description": ""
   },
   {
-    "phrase": "Седалки"
+    "phrase": "Скоростен лост с жила",
+    "description": ""
   },
   {
-    "phrase": "Седалки трети ред"
+    "phrase": "Скоростен лост с жило",
+    "description": ""
   },
   {
-    "phrase": "Сенник"
+    "phrase": "Спирачен педал",
+    "description": ""
   },
   {
-    "phrase": "Скоростен лост (за превключване)"
+    "phrase": "Спирачен педал и педал паркинг спирачка",
+    "description": ""
   },
   {
-    "phrase": "Скоростен лост с жила"
+    "phrase": "Спирачен педал и педал съединител",
+    "description": ""
   },
   {
-    "phrase": "Скоростен лост с жило"
+    "phrase": "Стойка с инструменти",
+    "description": ""
   },
   {
-    "phrase": "Спирачен педал"
+    "phrase": "Таван",
+    "description": ""
   },
   {
-    "phrase": "Спирачен педал и педал паркинг спирачка"
+    "phrase": "Топка на скоростния лост",
+    "description": ""
   },
   {
-    "phrase": "Спирачен педал и педал съединител"
+    "phrase": "Триъгълник",
+    "description": ""
   },
   {
-    "phrase": "Стойка жила скорости"
+    "phrase": "Уреди",
+    "description": ""
   },
   {
-    "phrase": "Стойка с инструменти"
+    "phrase": "Вътрешно огледало",
+    "description": ""
   },
   {
-    "phrase": "Таван"
+    "phrase": "Часовник",
+    "description": ""
   },
   {
-    "phrase": "Тахограф"
+    "phrase": "Часовник с индикаторен дисплей",
+    "description": ""
   },
   {
-    "phrase": "Топка на скоростния лост"
+    "phrase": "Четец с карта",
+    "description": ""
   },
   {
-    "phrase": "Триъгълник"
+    "phrase": "Вихрови клапи",
+    "description": ""
   },
   {
-    "phrase": "Уред гориво"
+    "phrase": "Електромагнитен клапан гориво",
+    "description": ""
   },
   {
-    "phrase": "Уред температура"
+    "phrase": "Сепаратор",
+    "description": ""
   },
   {
-    "phrase": "Уреди"
+    "phrase": "Резервоар AdBlue",
+    "description": ""
   },
   {
-    "phrase": "Вътрешно огледало"
+    "phrase": "Помпа AdBlue",
+    "description": ""
   },
   {
-    "phrase": "Часовник"
+    "phrase": "Актуатор дроселова клапа",
+    "description": ""
   },
   {
-    "phrase": "Часовник с индикаторен дисплей"
+    "phrase": "Метанов инжекцион",
+    "description": ""
   },
   {
-    "phrase": "Четец с карта"
+    "phrase": "Дюза метан",
+    "description": ""
   },
   {
-    "phrase": "Вихрови клапи"
+    "phrase": "Дюза бензин",
+    "description": ""
   },
   {
-    "phrase": "Електромагнитен клапан гориво"
+    "phrase": "Дюза дизел",
+    "description": ""
   },
   {
-    "phrase": "Сепаратор"
+    "phrase": "Горивна помпа високо налягане",
+    "description": ""
   },
   {
-    "phrase": "Резервоар AdBlue"
+    "phrase": "Мотор валвтроник",
+    "description": ""
   },
   {
-    "phrase": "Помпа AdBlue"
+    "phrase": "Компенсаторен съд гориво",
+    "description": ""
   },
   {
-    "phrase": "Актуатор дроселова клапа"
+    "phrase": "Регулатор налягане гориво",
+    "description": ""
   },
   {
-    "phrase": "Метанов инжекцион"
+    "phrase": "Бензинова помпа",
+    "description": ""
   },
   {
-    "phrase": "Дюза метан"
+    "phrase": "Бензинова рейка",
+    "description": ""
   },
   {
-    "phrase": "Дюза бензин"
+    "phrase": "Бензинова рейка с дюзи",
+    "description": ""
   },
   {
-    "phrase": "Дюза дизел"
+    "phrase": "ГНП-горивонагнетателна помпа",
+    "description": ""
   },
   {
-    "phrase": "Подгрев всмукателен колектор"
+    "phrase": "Газов инжекцион",
+    "description": ""
   },
   {
-    "phrase": "Горивна помпа високо налягане"
+    "phrase": "Горивен клапан",
+    "description": ""
   },
   {
-    "phrase": "Мотор валвтроник"
+    "phrase": "Горивен разпределител",
+    "description": ""
   },
   {
-    "phrase": "Компенсаторен съд гориво"
+    "phrase": "Горивна помпа ниско налягане",
+    "description": ""
   },
   {
-    "phrase": "Регулатор налягане гориво"
+    "phrase": "Горивна рейка",
+    "description": ""
   },
   {
-    "phrase": "Бензинова помпа"
+    "phrase": "Горивна рейка с дюзи",
+    "description": ""
   },
   {
-    "phrase": "Бензинова рейка"
+    "phrase": "Гърловина резервоар",
+    "description": ""
   },
   {
-    "phrase": "Бензинова рейка с дюзи"
+    "phrase": "Дебитомер",
+    "description": ""
   },
   {
-    "phrase": "ГНП-горивонагнетателна помпа"
+    "phrase": "Дроселова клапа",
+    "description": ""
   },
   {
-    "phrase": "Газов инжекцион"
+    "phrase": "Карбуратор",
+    "description": ""
   },
   {
-    "phrase": "Горивен клапан"
+    "phrase": "Клапа входящ въздух",
+    "description": ""
   },
   {
-    "phrase": "Горивен разпределител"
+    "phrase": "Клапан бензинови пари",
+    "description": ""
   },
   {
-    "phrase": "Горивна помпа ниско налягане"
+    "phrase": "Корпус за горивен филтър",
+    "description": ""
   },
   {
-    "phrase": "Горивна рейка"
+    "phrase": "Корпус за маслен филтър",
+    "description": ""
   },
   {
-    "phrase": "Горивна рейка с дюзи"
+    "phrase": "Кошница бензинова помпа",
+    "description": ""
   },
   {
-    "phrase": "Гърловина резервоар"
+    "phrase": "Кошница подкачваща помпа",
+    "description": ""
   },
   {
-    "phrase": "Дебитомер"
+    "phrase": "Механичен инжекцион",
+    "description": ""
   },
   {
-    "phrase": "Дроселова клапа"
+    "phrase": "Моноинжекцион",
+    "description": ""
   },
   {
-    "phrase": "Карбуратор"
+    "phrase": "Моторче вихрова клапа",
+    "description": ""
   },
   {
-    "phrase": "Клапа входящ въздух"
+    "phrase": "Моторче вихрови клапи",
+    "description": ""
   },
   {
-    "phrase": "Клапан бензинови пари"
+    "phrase": "Нагревател антифриз",
+    "description": ""
   },
   {
-    "phrase": "Корпус за горивен филтър"
+    "phrase": "Нагревател гориво",
+    "description": ""
   },
   {
-    "phrase": "Корпус за маслен филтър"
+    "phrase": "Нивомер",
+    "description": ""
   },
   {
-    "phrase": "Кошница бензинова помпа"
+    "phrase": "Подкачваща помпа",
+    "description": ""
   },
   {
-    "phrase": "Кошница подкачваща помпа"
+    "phrase": "Резервоар за горивото",
+    "description": ""
   },
   {
-    "phrase": "Механичен инжекцион"
+    "phrase": "Стойка ГНП",
+    "description": ""
   },
   {
-    "phrase": "Моноинжекцион"
+    "phrase": "Стъпков мотор",
+    "description": ""
   },
   {
-    "phrase": "Моторче вихрова клапа"
+    "phrase": "Умна дюза",
+    "description": ""
   },
   {
-    "phrase": "Моторче вихрови клапи"
+    "phrase": "Филтърна кутия",
+    "description": ""
   },
   {
-    "phrase": "Нагревател антифриз"
+    "phrase": "Алуминиева джанта",
+    "description": ""
   },
   {
-    "phrase": "Нагревател гориво"
+    "phrase": "Фланец",
+    "description": ""
   },
   {
-    "phrase": "Нивомер"
+    "phrase": "Зимна гума",
+    "description": ""
   },
   {
-    "phrase": "Подкачваща помпа"
+    "phrase": "Лятна гума",
+    "description": ""
   },
   {
-    "phrase": "Резервоар за горивото"
+    "phrase": "Стоманена джанта",
+    "description": ""
   },
   {
-    "phrase": "Стойка ГНП"
+    "phrase": "Стоманени джанти",
+    "description": ""
   },
   {
-    "phrase": "Стъпков мотор"
+    "phrase": "Летни гуми",
+    "description": ""
   },
   {
-    "phrase": "Умна дюза"
+    "phrase": "Зимни гуми",
+    "description": ""
   },
   {
-    "phrase": "Филтърна кутия"
+    "phrase": "Алуминиеви джанти",
+    "description": ""
   },
   {
-    "phrase": "Алуминиева джанта"
+    "phrase": "Болтове",
+    "description": ""
   },
   {
-    "phrase": "Фланец"
+    "phrase": "Гайки",
+    "description": ""
   },
   {
-    "phrase": "Зимна гума"
+    "phrase": "Резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Лятна гума"
+    "phrase": "Цилиндров блок",
+    "description": ""
   },
   {
-    "phrase": "Стоманена джанта"
+    "phrase": "Ексцентричен вал",
+    "description": ""
   },
   {
-    "phrase": "Стоманени джанти"
+    "phrase": "Обтегач ангренажна верига",
+    "description": ""
   },
   {
-    "phrase": "Летни гуми"
+    "phrase": "Клапан Ванос",
+    "description": ""
   },
   {
-    "phrase": "Зимни гуми"
+    "phrase": "Актуатор Ванос",
+    "description": ""
   },
   {
-    "phrase": "Алуминиеви джанти"
+    "phrase": "Ванос",
+    "description": ""
   },
   {
-    "phrase": "Болтове"
+    "phrase": "Маслен щит",
+    "description": ""
   },
   {
-    "phrase": "Гайки"
+    "phrase": "Щека за масло скорости",
+    "description": ""
   },
   {
-    "phrase": "Резервна гума"
+    "phrase": "Капак колянов вал",
+    "description": ""
   },
   {
-    "phrase": "Цилиндров блок"
+    "phrase": "Ролка алтернатор",
+    "description": ""
   },
   {
-    "phrase": "Ексцентричен вал"
+    "phrase": "Биела (мотовилка)",
+    "description": ""
   },
   {
-    "phrase": "Обтегач ангренажна верига"
+    "phrase": "Успокоител ангренажна верига",
+    "description": ""
   },
   {
-    "phrase": "Клапан Ванос"
+    "phrase": "Щека за масло",
+    "description": ""
   },
   {
-    "phrase": "Актуатор Ванос"
+    "phrase": "EGR-клапан",
+    "description": ""
   },
   {
-    "phrase": "Ванос"
+    "phrase": "EGR охладител",
+    "description": ""
   },
   {
-    "phrase": "Маслен щит"
+    "phrase": "Актуатор турбо",
+    "description": ""
   },
   {
-    "phrase": "Щека за масло скорости"
+    "phrase": "Алуминиева конзола двигател",
+    "description": ""
   },
   {
-    "phrase": "Капак колянов вал"
+    "phrase": "Балансиращ вал",
+    "description": ""
   },
   {
-    "phrase": "Ролка алтернатор"
+    "phrase": "Бутало",
+    "description": ""
   },
   {
-    "phrase": "Биела (мотовилка)"
+    "phrase": "Вакуум клапан",
+    "description": ""
   },
   {
-    "phrase": "Успокоител ангренажна верига"
+    "phrase": "Вакуум помпа",
+    "description": ""
   },
   {
-    "phrase": "Щека за масло"
+    "phrase": "Вакуум тръба",
+    "description": ""
   },
   {
-    "phrase": "EGR-клапан"
+    "phrase": "Вариатор",
+    "description": ""
   },
   {
-    "phrase": "EGR охладител"
+    "phrase": "Глава",
+    "description": ""
   },
   {
-    "phrase": "Актуатор турбо"
+    "phrase": "Глава без разпределителен вал",
+    "description": ""
   },
   {
-    "phrase": "Алуминиева конзола двигател"
+    "phrase": "Горивен радиатор",
+    "description": ""
   },
   {
-    "phrase": "Балансиращ вал"
+    "phrase": "Гърловина маслени пари",
+    "description": ""
   },
   {
-    "phrase": "Бутало"
+    "phrase": "Гърловина масло",
+    "description": ""
   },
   {
-    "phrase": "Вакуум клапан"
+    "phrase": "Двигател",
+    "description": ""
   },
   {
-    "phrase": "Вакуум клапан за EGR"
+    "phrase": "Демпферна шайба",
+    "description": ""
   },
   {
-    "phrase": "Вакуум помпа"
+    "phrase": "Зъбна ролка",
+    "description": ""
   },
   {
-    "phrase": "Вакуум тръба"
+    "phrase": "Зъбно колело",
+    "description": ""
   },
   {
-    "phrase": "Вариатор"
+    "phrase": "Капак ангренажен ремък",
+    "description": ""
   },
   {
-    "phrase": "Глава"
+    "phrase": "Капак ангренажна верига",
+    "description": ""
   },
   {
-    "phrase": "Глава без разпределителен вал"
+    "phrase": "Капак на клапаните (на цилиндровата глава)",
+    "description": ""
   },
   {
-    "phrase": "Горивен радиатор"
+    "phrase": "Капачка за гърловината за наливане на масло",
+    "description": ""
   },
   {
-    "phrase": "Гърловина маслени пари"
+    "phrase": "Картер",
+    "description": ""
   },
   {
-    "phrase": "Гърловина масло"
+    "phrase": "Клапан картерни газове",
+    "description": ""
   },
   {
-    "phrase": "Двигател"
+    "phrase": "Клапан маслени пари",
+    "description": ""
   },
   {
-    "phrase": "Демпферна шайба"
+    "phrase": "Клапан турбо",
+    "description": ""
   },
   {
-    "phrase": "Зъбна ролка"
+    "phrase": "Кобилици разпределителен вал",
+    "description": ""
   },
   {
-    "phrase": "Зъбно колело"
+    "phrase": "Колянов вал",
+    "description": ""
   },
   {
-    "phrase": "Капак ангренажен ремък"
+    "phrase": "Маслен клапан",
+    "description": ""
   },
   {
-    "phrase": "Капак ангренажна верига"
+    "phrase": "Маслена помпа",
+    "description": ""
   },
   {
-    "phrase": "Капак на клапаните (на цилиндровата глава)"
+    "phrase": "Маслоохладител",
+    "description": ""
   },
   {
-    "phrase": "Капачка за гърловината за наливане на масло"
+    "phrase": "Обтегач ангренажен ремък",
+    "description": ""
   },
   {
-    "phrase": "Картер"
+    "phrase": "Обтегач пистов ремък",
+    "description": ""
   },
   {
-    "phrase": "Клапан картерни газове"
+    "phrase": "Обтяжна пружина",
+    "description": ""
   },
   {
-    "phrase": "Клапан маслени пари"
+    "phrase": "Обтяжна ролка ангренажен ремък",
+    "description": ""
   },
   {
-    "phrase": "Клапан турбо"
+    "phrase": "Обтяжни ролки",
+    "description": ""
   },
   {
-    "phrase": "Кобилици разпределителен вал"
+    "phrase": "Отдушник картерни газове",
+    "description": ""
   },
   {
-    "phrase": "Колянов вал"
+    "phrase": "Паразитна ролка",
+    "description": ""
   },
   {
-    "phrase": "Маслен клапан"
+    "phrase": "Разпределителен вал",
+    "description": ""
   },
   {
-    "phrase": "Маслена помпа"
+    "phrase": "Ремъчна ролка",
+    "description": ""
   },
   {
-    "phrase": "Маслоохладител"
+    "phrase": "Ремъчна шайба",
+    "description": ""
   },
   {
-    "phrase": "Обтегач ангренажен ремък"
+    "phrase": "Сонда маслена помпа",
+    "description": ""
   },
   {
-    "phrase": "Обтегач пистов ремък"
+    "phrase": "Стойка хидравлична помпа",
+    "description": ""
   },
   {
-    "phrase": "Обтяжна пружина"
+    "phrase": "Топлообменник",
+    "description": ""
   },
   {
-    "phrase": "Обтяжна ролка ангренажен ремък"
+    "phrase": "Турбо",
+    "description": ""
   },
   {
-    "phrase": "Обтяжни ролки"
+    "phrase": "Турбокомпресор",
+    "description": ""
   },
   {
-    "phrase": "Отдушник картерни газове"
+    "phrase": "Успокоител ремък",
+    "description": ""
   },
   {
-    "phrase": "Паразитна ролка"
+    "phrase": "Хидравлична помпа",
+    "description": ""
   },
   {
-    "phrase": "Повдигачи разпределителен вал"
+    "phrase": "Ремъчна шайба за колянов вал",
+    "description": ""
   },
   {
-    "phrase": "Разпределителен вал"
+    "phrase": "Шайба маслена помпа",
+    "description": ""
   },
   {
-    "phrase": "Ремъчна ролка"
+    "phrase": "Шайба разпределителен вал",
+    "description": ""
   },
   {
-    "phrase": "Ремъчна шайба"
+    "phrase": "Регулатор налягане",
+    "description": ""
   },
   {
-    "phrase": "Сонда маслена помпа"
+    "phrase": "Трансформатор",
+    "description": ""
   },
   {
-    "phrase": "Стойка хидравлична помпа"
+    "phrase": "Радар дистроник",
+    "description": ""
   },
   {
-    "phrase": "Топлообменник"
+    "phrase": "Сензор Dynamic Drive",
+    "description": ""
   },
   {
-    "phrase": "Турбо"
+    "phrase": "Сензор за ексцентричен вал",
+    "description": ""
   },
   {
-    "phrase": "Турбокомпресор"
+    "phrase": "Батерия",
+    "description": ""
   },
   {
-    "phrase": "Успокоител ремък"
+    "phrase": "Актуатор окачване",
+    "description": ""
   },
   {
-    "phrase": "Хидравлична помпа"
+    "phrase": "Резистор",
+    "description": ""
   },
   {
-    "phrase": "Ремъчна шайба за колянов вал"
+    "phrase": "Датчик задна скорост",
+    "description": ""
   },
   {
-    "phrase": "Шайба маслена помпа"
+    "phrase": "Актуатор автопилот",
+    "description": ""
   },
   {
-    "phrase": "Шайба разпределителен вал"
+    "phrase": "Клема минусов кабел",
+    "description": ""
   },
   {
-    "phrase": "Start/Stop кондензатор"
+    "phrase": "USB куплунг",
+    "description": ""
   },
   {
-    "phrase": "Сензор въздушен филтър"
+    "phrase": "Сензор външна дръжка",
+    "description": ""
   },
   {
-    "phrase": "Контактна букса"
+    "phrase": "Машинка централно заключване",
+    "description": ""
   },
   {
-    "phrase": "Регулатор налягане"
+    "phrase": "Потенциометър газ",
+    "description": ""
   },
   {
-    "phrase": "Трансформатор"
+    "phrase": "Сензор за дъжд",
+    "description": ""
   },
   {
-    "phrase": "Радар дистроник"
+    "phrase": "Датчик ABS",
+    "description": ""
   },
   {
-    "phrase": "Сензор Dynamic Drive"
+    "phrase": "Сензор airbag",
+    "description": ""
   },
   {
-    "phrase": "IBS сензор"
+    "phrase": "Ел. инсталация бобина",
+    "description": ""
   },
   {
-    "phrase": "Датчик хардтоп"
+    "phrase": "Вакуум помпа за централно заключване",
+    "description": ""
   },
   {
-    "phrase": "Датчик положение диафрагма серво"
+    "phrase": "Прекъсвач осветление купе",
+    "description": ""
   },
   {
-    "phrase": "Сензор за ексцентричен вал"
+    "phrase": "AUC сензор",
+    "description": ""
   },
   {
-    "phrase": "Батерия"
+    "phrase": "DSC сензор",
+    "description": ""
   },
   {
-    "phrase": "Актуатор окачване"
+    "phrase": "Датчик за температура на изгорелите газове",
+    "description": ""
   },
   {
-    "phrase": "Резистор"
+    "phrase": "MAP сензор",
+    "description": ""
   },
   {
-    "phrase": "Датчик задна скорост"
+    "phrase": "Датчик за положение на дроселовата клапа",
+    "description": ""
   },
   {
-    "phrase": "Контактор заден капак"
+    "phrase": "Алтернатор / генератор",
+    "description": ""
   },
   {
-    "phrase": "Актуатор автопилот"
+    "phrase": "Аудио букса",
+    "description": ""
   },
   {
-    "phrase": "Датчик преден капак"
+    "phrase": "Запалителна бобина",
+    "description": ""
   },
   {
-    "phrase": "Клема минусов кабел"
+    "phrase": "Букса",
+    "description": ""
   },
   {
-    "phrase": "USB куплунг"
+    "phrase": "Букси",
+    "description": ""
   },
   {
-    "phrase": "Сензор външна дръжка"
+    "phrase": "Бушонно табло",
+    "description": ""
   },
   {
-    "phrase": "Предпазител инсталация плъзгаща врата"
+    "phrase": "Вакуум разпределител",
+    "description": ""
   },
   {
-    "phrase": "Машинка централно заключване"
+    "phrase": "Датчик",
+    "description": ""
   },
   {
-    "phrase": "Потенциометър газ"
+    "phrase": "Датчик автопилот",
+    "description": ""
   },
   {
-    "phrase": "Сензор за дъжд"
+    "phrase": "Датчик височина",
+    "description": ""
   },
   {
-    "phrase": "Датчик ABS"
+    "phrase": "Датчик за външна температура",
+    "description": ""
   },
   {
-    "phrase": "Сензор airbag"
+    "phrase": "Датчик за вътрешна температура",
+    "description": ""
   },
   {
-    "phrase": "Ел. инсталация бобина"
+    "phrase": "Датчик AIRBAG",
+    "description": ""
   },
   {
-    "phrase": "Датчик горивен филтър"
+    "phrase": "Датчик климатик",
+    "description": ""
   },
   {
-    "phrase": "Вакуум помпа за централно заключване"
+    "phrase": "Датчик климатроник",
+    "description": ""
   },
   {
-    "phrase": "Прекъсвач осветление купе"
+    "phrase": "Датчик за колянов вал",
+    "description": ""
   },
   {
-    "phrase": "AUC сензор"
+    "phrase": "Датчик налягане",
+    "description": ""
   },
   {
-    "phrase": "DSC сензор"
+    "phrase": "Датчик за налягане на горивото",
+    "description": ""
   },
   {
-    "phrase": "Датчик за температура на изгорелите газове"
+    "phrase": "Датчик за налягане на маслото",
+    "description": ""
   },
   {
-    "phrase": "MAP сензор"
+    "phrase": "Датчик за ниво на маслото в двигателя",
+    "description": ""
   },
   {
-    "phrase": "Датчик за положение на дроселовата клапа"
+    "phrase": "Датчик охладителна система",
+    "description": ""
   },
   {
-    "phrase": "Алтернатор / генератор"
+    "phrase": "Датчик за положение на разпределителния вал",
+    "description": ""
   },
   {
-    "phrase": "Аудио букса"
+    "phrase": "Датчик скорости",
+    "description": ""
   },
   {
-    "phrase": "Запалителна бобина"
+    "phrase": "Палец на разпределителя на запалването (делко)",
+    "description": ""
   },
   {
-    "phrase": "Букса"
+    "phrase": "Детонационен датчик",
+    "description": ""
   },
   {
-    "phrase": "Букси"
+    "phrase": "Дистрибуторна капачка",
+    "description": ""
   },
   {
-    "phrase": "Бушонно табло"
+    "phrase": "Ел. инсталация",
+    "description": ""
   },
   {
-    "phrase": "Вакуум разпределител"
+    "phrase": "Ел. инсталация двигател",
+    "description": ""
   },
   {
-    "phrase": "Датчик"
+    "phrase": "Ел. инсталация дюзи",
+    "description": ""
   },
   {
-    "phrase": "Датчик Yaw"
+    "phrase": "Ел. инсталация парктроник",
+    "description": ""
   },
   {
-    "phrase": "Датчик автопилот"
+    "phrase": "Захранващ извод",
+    "description": ""
   },
   {
-    "phrase": "Датчик височина"
+    "phrase": "Захранващ кабел",
+    "description": ""
   },
   {
-    "phrase": "Датчик за външна температура"
+    "phrase": "Капак бушонно табло",
+    "description": ""
   },
   {
-    "phrase": "Датчик за вътрешна температура"
+    "phrase": "Клема плюсов кабел",
+    "description": ""
   },
   {
-    "phrase": "Датчик AIRBAG"
+    "phrase": "Комутатор",
+    "description": ""
   },
   {
-    "phrase": "Датчик клапа всмукателен колектор"
+    "phrase": "Кутия бушонно табло",
+    "description": ""
   },
   {
-    "phrase": "Датчик климатик"
+    "phrase": "Лентов кабел за Airbag",
+    "description": ""
   },
   {
-    "phrase": "Датчик климатроник"
+    "phrase": "Обемен датчик",
+    "description": ""
   },
   {
-    "phrase": "Датчик за колянов вал"
+    "phrase": "Пиропатрон",
+    "description": ""
   },
   {
-    "phrase": "Датчик налягане"
+    "phrase": "Регулатор налягане бензин",
+    "description": ""
   },
   {
-    "phrase": "Датчик за налягане на горивото"
+    "phrase": "Светлинен сензор",
+    "description": ""
   },
   {
-    "phrase": "Датчик за налягане на маслото"
+    "phrase": "Сензор",
+    "description": ""
   },
   {
-    "phrase": "Датчик за ниво на маслото в двигателя"
+    "phrase": "Сензор ESP",
+    "description": ""
   },
   {
-    "phrase": "Датчик охладителна система"
+    "phrase": "Сензор аларма",
+    "description": ""
   },
   {
-    "phrase": "Датчик парно"
+    "phrase": "Сензор волан",
+    "description": ""
   },
   {
-    "phrase": "Датчик за положение на разпределителния вал"
+    "phrase": "Сензор въздух",
+    "description": ""
   },
   {
-    "phrase": "Датчик скорости"
+    "phrase": "Сензор за налягане в изпускателната система",
+    "description": ""
   },
   {
-    "phrase": "Датчик съединител автопилот"
+    "phrase": "Сензор за ниво на окачване",
+    "description": ""
   },
   {
-    "phrase": "Датчик централно"
+    "phrase": "Сензор светлини",
+    "description": ""
   },
   {
-    "phrase": "Палец на разпределителя на запалването (делко)"
+    "phrase": "Сензор сити контрол",
+    "description": ""
   },
   {
-    "phrase": "Детонационен датчик"
+    "phrase": "Датчик скорост",
+    "description": ""
   },
   {
-    "phrase": "Дистрибуторна капачка"
+    "phrase": "Сензор температура въздух",
+    "description": ""
   },
   {
-    "phrase": "Ел. инсталация"
+    "phrase": "Стартер",
+    "description": ""
   },
   {
-    "phrase": "Ел. инсталация двигател"
+    "phrase": "Стойка алтернатор",
+    "description": ""
   },
   {
-    "phrase": "Ел. инсталация дюзи"
+    "phrase": "Стойка лентов кабел",
+    "description": ""
   },
   {
-    "phrase": "Ел. инсталация парктроник"
+    "phrase": "Стоп машинка",
+    "description": ""
   },
   {
-    "phrase": "Захранващ извод"
+    "phrase": "Температурен датчик",
+    "description": ""
   },
   {
-    "phrase": "Захранващ кабел"
+    "phrase": "Температурен датчик входящ въздух",
+    "description": ""
   },
   {
-    "phrase": "Капак бушонно табло"
+    "phrase": "Средно, задно гърне",
+    "description": ""
   },
   {
-    "phrase": "Клема плюсов кабел"
+    "phrase": "Гърнета, генерации",
+    "description": ""
   },
   {
-    "phrase": "Комутатор"
+    "phrase": "Крайно гърне",
+    "description": ""
   },
   {
-    "phrase": "Кондензатор"
+    "phrase": "Ламбда сонда",
+    "description": ""
   },
   {
-    "phrase": "Контактор плъзгаща врата"
+    "phrase": "Резонансно гърне",
+    "description": ""
   },
   {
-    "phrase": "Контактор товарна врата"
+    "phrase": "Изпускателна тръба",
+    "description": ""
   },
   {
-    "phrase": "Кутия бушонно табло"
+    "phrase": "Филтър за твърди частици",
+    "description": ""
   },
   {
-    "phrase": "Лентов кабел за Airbag"
+    "phrase": "Гърловина казанче чистачки",
+    "description": ""
   },
   {
-    "phrase": "Обемен датчик"
+    "phrase": "Казанче за антифриз",
+    "description": ""
   },
   {
-    "phrase": "Обемни датчици"
+    "phrase": "Казанче за спирачна течност",
+    "description": ""
   },
   {
-    "phrase": "Пиропатрон"
+    "phrase": "Казанче за хидравлична течност",
+    "description": ""
   },
   {
-    "phrase": "Плюсов кабел с пиробушон"
+    "phrase": "Казанче за чистачки",
+    "description": ""
   },
   {
-    "phrase": "Регулатор налягане бензин"
+    "phrase": "Модул спирачка",
+    "description": ""
   },
   {
-    "phrase": "Светлинен сензор"
+    "phrase": "SAM модул",
+    "description": ""
   },
   {
-    "phrase": "Сензор"
+    "phrase": "BSM модул",
+    "description": ""
   },
   {
-    "phrase": "Сензор ESP"
+    "phrase": "BCM модул",
+    "description": ""
   },
   {
-    "phrase": "Сензор аларма"
+    "phrase": "Модул SBC",
+    "description": ""
   },
   {
-    "phrase": "Сензор волан"
+    "phrase": "Модул диференциал",
+    "description": ""
   },
   {
-    "phrase": "Сензор въздух"
+    "phrase": "Модул камера",
+    "description": ""
   },
   {
-    "phrase": "Сензор за налягане в изпускателната система"
+    "phrase": "BSI модул",
+    "description": ""
   },
   {
-    "phrase": "Сензор за ниво на окачване"
+    "phrase": "Компютър газова уредба",
+    "description": ""
   },
   {
-    "phrase": "Сензор светлини"
+    "phrase": "Модул сити контрол",
+    "description": ""
   },
   {
-    "phrase": "Сензор сити контрол"
+    "phrase": "Модул централно заключване",
+    "description": ""
   },
   {
-    "phrase": "Датчик скорост"
+    "phrase": "Модул GPS",
+    "description": ""
   },
   {
-    "phrase": "Сензор температура въздух"
+    "phrase": "Компютър ABS/ESP",
+    "description": ""
   },
   {
-    "phrase": "Сензор централно"
+    "phrase": "Модул електрическа рейка",
+    "description": ""
   },
   {
-    "phrase": "Силов кабел"
+    "phrase": "Модул ABS",
+    "description": ""
   },
   {
-    "phrase": "Стартер"
+    "phrase": "CAS модул",
+    "description": ""
   },
   {
-    "phrase": "Стойка алтернатор"
+    "phrase": "CCC модул",
+    "description": ""
   },
   {
-    "phrase": "Стойка кабели"
+    "phrase": "ESP+BAS модул",
+    "description": ""
   },
   {
-    "phrase": "Стойка лентов кабел"
+    "phrase": "ICM модул",
+    "description": ""
   },
   {
-    "phrase": "Стоп машинка"
+    "phrase": "LWR3 модул",
+    "description": ""
   },
   {
-    "phrase": "Температурен датчик"
+    "phrase": "MMI модул",
+    "description": ""
   },
   {
-    "phrase": "Температурен датчик входящ въздух"
+    "phrase": "PDC модул",
+    "description": ""
   },
   {
-    "phrase": "Средно"
+    "phrase": "TV модул",
+    "description": ""
   },
   {
-    "phrase": "Гърнета"
+    "phrase": "Bluetooth модул",
+    "description": ""
   },
   {
-    "phrase": "Крайно гърне"
+    "phrase": "Имобилайзер",
+    "description": ""
   },
   {
-    "phrase": "Ламбда сонда"
+    "phrase": "Компютър ABS",
+    "description": ""
   },
   {
-    "phrase": "Резонансно гърне"
+    "phrase": "Компютър автоматични скорости",
+    "description": ""
   },
   {
-    "phrase": "Тампон гърне"
+    "phrase": "Компютър автопилот",
+    "description": ""
   },
   {
-    "phrase": "Изпускателна тръба"
+    "phrase": "Компютър двигател",
+    "description": ""
   },
   {
-    "phrase": "Филтър за твърди частици"
+    "phrase": "Компютър налягане на гуми",
+    "description": ""
   },
   {
-    "phrase": "Гърловина казанче чистачки"
+    "phrase": "Компютър окачване",
+    "description": ""
   },
   {
-    "phrase": "Казанче за антифриз"
+    "phrase": "Компютър с имобилайзер",
+    "description": ""
   },
   {
-    "phrase": "Казанче за спирачна течност"
+    "phrase": "Компютър с контактен ключ и имобилайзер",
+    "description": ""
   },
   {
-    "phrase": "Казанче за хидравлична течност"
+    "phrase": "Компютър с контактен ключ и четец",
+    "description": ""
   },
   {
-    "phrase": "Казанче за чистачки"
+    "phrase": "Компютър с четец и карта",
+    "description": ""
   },
   {
-    "phrase": "Модул спирачка"
+    "phrase": "Компютър скоростна кутия",
+    "description": ""
   },
   {
-    "phrase": "SAM модул"
+    "phrase": "Комфорт модул",
+    "description": ""
   },
   {
-    "phrase": "Реле ниво масло"
+    "phrase": "Модул",
+    "description": ""
   },
   {
-    "phrase": "BSM модул"
+    "phrase": "Модул DSC",
+    "description": ""
   },
   {
-    "phrase": "BCM модул"
+    "phrase": "Модул Dynamic Drive",
+    "description": ""
   },
   {
-    "phrase": "Модул SBC"
+    "phrase": "Модул ESP",
+    "description": ""
   },
   {
-    "phrase": "Модулатор ABS"
+    "phrase": "Модул EWS",
+    "description": ""
   },
   {
-    "phrase": "Модул диференциал"
+    "phrase": "Модул GSM",
+    "description": ""
   },
   {
-    "phrase": "Модул камера"
+    "phrase": "Модул Hands Free",
+    "description": ""
   },
   {
-    "phrase": "BSI модул"
+    "phrase": "Модул за AIRBAG",
+    "description": ""
   },
   {
-    "phrase": "Компютър газова уредба"
+    "phrase": "Модул ГНП",
+    "description": ""
   },
   {
-    "phrase": "Модул сити контрол"
+    "phrase": "Модул автопилот",
+    "description": ""
   },
   {
-    "phrase": "Модул централно заключване"
+    "phrase": "Модул адаптивни светлини",
+    "description": ""
   },
   {
-    "phrase": "Модул GPS"
+    "phrase": "Модул адаптивно окачване",
+    "description": ""
   },
   {
-    "phrase": "Компютър ABS/ESP"
+    "phrase": "Модул аларма",
+    "description": ""
   },
   {
-    "phrase": "Модул електрическа рейка"
+    "phrase": "Модул антена",
+    "description": ""
   },
   {
-    "phrase": "Модул ABS"
+    "phrase": "Модул багажник",
+    "description": ""
   },
   {
-    "phrase": "CAS модул"
+    "phrase": "Модул борд компютър",
+    "description": ""
   },
   {
-    "phrase": "CCC модул"
+    "phrase": "Модул валвтроник",
+    "description": ""
   },
   {
-    "phrase": "ESP+BAS модул"
+    "phrase": "Модул врата",
+    "description": ""
   },
   {
-    "phrase": "ICM модул"
+    "phrase": "Модул врати",
+    "description": ""
   },
   {
-    "phrase": "LWR3 модул"
+    "phrase": "Модул за горивна помпа",
+    "description": ""
   },
   {
-    "phrase": "MMI модул"
+    "phrase": "Модул ел. огледала",
+    "description": ""
   },
   {
-    "phrase": "PDC модул"
+    "phrase": "Модул ел. седалка",
+    "description": ""
   },
   {
-    "phrase": "TV модул"
+    "phrase": "Модул ел. стъкла",
+    "description": ""
   },
   {
-    "phrase": "TV-Video модул"
+    "phrase": "Модул климатик",
+    "description": ""
   },
   {
-    "phrase": "Активиращ модул фарове"
+    "phrase": "Модул климатроник",
+    "description": ""
   },
   {
-    "phrase": "Bluetooth модул"
+    "phrase": "Модул окачване",
+    "description": ""
   },
   {
-    "phrase": "Видео модул"
+    "phrase": "Модул осветление",
+    "description": ""
   },
   {
-    "phrase": "Имобилайзер"
+    "phrase": "Модул отваряне на гаражна врата",
+    "description": ""
   },
   {
-    "phrase": "Компютър ABS"
+    "phrase": "Модул отключване без ключ",
+    "description": ""
   },
   {
-    "phrase": "Компютър автоматични скорости"
+    "phrase": "Модул паркинг спирачка",
+    "description": ""
   },
   {
-    "phrase": "Компютър автопилот"
+    "phrase": "Модул парктроник",
+    "description": ""
   },
   {
-    "phrase": "Компютър двигател"
+    "phrase": "Модул перка",
+    "description": ""
   },
   {
-    "phrase": "Компютър налягане на гуми"
+    "phrase": "Модул перки",
+    "description": ""
   },
   {
-    "phrase": "Компютър окачване"
+    "phrase": "Модул подгрев на седалки",
+    "description": ""
   },
   {
-    "phrase": "Компютър с имобилайзер"
+    "phrase": "Модул радио",
+    "description": ""
   },
   {
-    "phrase": "Компютър с карта"
+    "phrase": "Модул раздатка",
+    "description": ""
   },
   {
-    "phrase": "Компютър с контактен ключ"
+    "phrase": "Модул реглаж фарове",
+    "description": ""
   },
   {
-    "phrase": "Компютър с контактен ключ и имобилайзер"
+    "phrase": "Модул ръчна спирачка",
+    "description": ""
   },
   {
-    "phrase": "Компютър с контактен ключ и модул EWS"
+    "phrase": "Модул светлини",
+    "description": ""
   },
   {
-    "phrase": "Компютър с контактен ключ и четец"
+    "phrase": "Модул филтър твърди частици",
+    "description": ""
   },
   {
-    "phrase": "Компютър с четец и карта"
+    "phrase": "Модул чистачки",
+    "description": ""
   },
   {
-    "phrase": "Компютър скоростна кутия"
+    "phrase": "Модул шибедах",
+    "description": ""
   },
   {
-    "phrase": "Комфорт модул"
+    "phrase": "Мулти функционално реле",
+    "description": ""
   },
   {
-    "phrase": "Модул"
+    "phrase": "Реле ABS",
+    "description": ""
   },
   {
-    "phrase": "Модул DSC"
+    "phrase": "Реле антена",
+    "description": ""
   },
   {
-    "phrase": "Модул Dynamic Drive"
+    "phrase": "Реле бензинова помпа",
+    "description": ""
   },
   {
-    "phrase": "Модул ESP"
+    "phrase": "Реле битрон",
+    "description": ""
   },
   {
-    "phrase": "Модул EWS"
+    "phrase": "Реле за горивна помпа",
+    "description": ""
   },
   {
-    "phrase": "Модул GSM"
+    "phrase": "Реле инжекцион",
+    "description": ""
   },
   {
-    "phrase": "Модул Hands Free"
+    "phrase": "Реле климатик",
+    "description": ""
   },
   {
-    "phrase": "Модул за AIRBAG"
+    "phrase": "Реле за мигачи",
+    "description": ""
   },
   {
-    "phrase": "Модул ГНП"
+    "phrase": "Реле осветление",
+    "description": ""
   },
   {
-    "phrase": "Модул автопилот"
+    "phrase": "Реле перка",
+    "description": ""
   },
   {
-    "phrase": "Модул адаптивни светлини"
+    "phrase": "Реле подгрев седалки",
+    "description": ""
   },
   {
-    "phrase": "Модул адаптивно окачване"
+    "phrase": "Реле подгревни свещи",
+    "description": ""
   },
   {
-    "phrase": "Модул аларма"
+    "phrase": "Реле пренапрежение",
+    "description": ""
   },
   {
-    "phrase": "Модул антена"
+    "phrase": "Реле за стартер",
+    "description": ""
   },
   {
-    "phrase": "Модул багажник"
+    "phrase": "Реле за централно заключване",
+    "description": ""
   },
   {
-    "phrase": "Модул борд компютър"
+    "phrase": "Реле чистачки",
+    "description": ""
   },
   {
-    "phrase": "Модул валвтроник"
+    "phrase": "Реле шибедах",
+    "description": ""
   },
   {
-    "phrase": "Модул вентилатори"
+    "phrase": "Релета",
+    "description": ""
   },
   {
-    "phrase": "Модул врата"
+    "phrase": "Стойка компютър",
+    "description": ""
   },
   {
-    "phrase": "Модул врати"
+    "phrase": "Стойка модули",
+    "description": ""
   },
   {
-    "phrase": "Модул за горивна помпа"
+    "phrase": "Щора задна врата",
+    "description": ""
   },
   {
-    "phrase": "Модул допълнително отопление"
+    "phrase": "Кутия компютър",
+    "description": ""
   },
   {
-    "phrase": "Модул ел. огледала"
+    "phrase": "Интериорна пластмаса багажник",
+    "description": ""
   },
   {
-    "phrase": "Модул ел. седалка"
+    "phrase": "Лайсна (облицовка) на праг",
+    "description": ""
   },
   {
-    "phrase": "Модул ел. стъкла"
+    "phrase": "Щора задно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Модул ел. стъкло"
+    "phrase": "Основа кора врата",
+    "description": ""
   },
   {
-    "phrase": "Модул климатик"
+    "phrase": "Кора врата",
+    "description": "Вътрешна облицовка на врата"
   },
   {
-    "phrase": "Модул климатроник"
+    "phrase": "Релса щора багажник",
+    "description": ""
   },
   {
-    "phrase": "Модул окачване"
+    "phrase": "Мрежа багажник",
+    "description": ""
   },
   {
-    "phrase": "Модул осветление"
+    "phrase": "Елемент от броня",
+    "description": ""
   },
   {
-    "phrase": "Модул отваряне на гаражна врата"
+    "phrase": "Кора под броня",
+    "description": ""
   },
   {
-    "phrase": "Модул отключване без ключ"
+    "phrase": "Конзола скоростен лост",
+    "description": ""
   },
   {
-    "phrase": "Модул паркинг спирачка"
+    "phrase": "Кора багажник",
+    "description": ""
   },
   {
-    "phrase": "Модул парктроник"
+    "phrase": "Кора заден капак",
+    "description": ""
   },
   {
-    "phrase": "Модул перка"
+    "phrase": "Барче",
+    "description": ""
   },
   {
-    "phrase": "Модул перки"
+    "phrase": "Вътрешен праг",
+    "description": ""
   },
   {
-    "phrase": "Модул подгрев на седалки"
+    "phrase": "Декоративен капак",
+    "description": ""
   },
   {
-    "phrase": "Модул радио"
+    "phrase": "Декоративен капак двигател",
+    "description": ""
   },
   {
-    "phrase": "Модул раздатка"
+    "phrase": "Декоративна капачка",
+    "description": ""
   },
   {
-    "phrase": "Модул реглаж фарове"
+    "phrase": "Декоративна капачка високоговорител",
+    "description": ""
   },
   {
-    "phrase": "Модул ръчна спирачка"
+    "phrase": "Декоративна лайсна",
+    "description": ""
   },
   {
-    "phrase": "Модул светлини"
+    "phrase": "Духалка парно",
+    "description": ""
   },
   {
-    "phrase": "Модул филтър твърди частици"
+    "phrase": "Духалка стъкло",
+    "description": ""
   },
   {
-    "phrase": "Модул чистачки"
+    "phrase": "Духалки парно",
+    "description": ""
   },
   {
-    "phrase": "Модул шибедах"
+    "phrase": "Ел. щора",
+    "description": ""
   },
   {
-    "phrase": "Мулти функционално реле"
+    "phrase": "Изолираща кора",
+    "description": ""
   },
   {
-    "phrase": "Реле ABS"
+    "phrase": "Интериорна кора",
+    "description": ""
   },
   {
-    "phrase": "Реле антена"
+    "phrase": "Интериорна лайсна",
+    "description": ""
   },
   {
-    "phrase": "Реле бензинова помпа"
+    "phrase": "Интериорна пластмаса",
+    "description": ""
   },
   {
-    "phrase": "Реле битрон"
+    "phrase": "Интериорна пластмаса волан",
+    "description": ""
   },
   {
-    "phrase": "Реле за горивна помпа"
+    "phrase": "Интериорна пластмаса километраж",
+    "description": ""
   },
   {
-    "phrase": "Реле инжекцион"
+    "phrase": "Интериорна пластмаса ключ светлини",
+    "description": ""
   },
   {
-    "phrase": "Реле климатик"
+    "phrase": "Интериорна пластмаса под таблото",
+    "description": ""
   },
   {
-    "phrase": "Реле за мигачи"
+    "phrase": "Капак акумулатор",
+    "description": ""
   },
   {
-    "phrase": "Реле осветление"
+    "phrase": "Конзола лентов кабел волан",
+    "description": ""
   },
   {
-    "phrase": "Реле парно"
+    "phrase": "Кора двигател",
+    "description": ""
   },
   {
-    "phrase": "Реле перка"
+    "phrase": "Кора над радиатор",
+    "description": ""
   },
   {
-    "phrase": "Реле за перка охлаждане"
+    "phrase": "Кора под двигател",
+    "description": ""
   },
   {
-    "phrase": "Реле подгрев"
+    "phrase": "Кора под купе",
+    "description": ""
   },
   {
-    "phrase": "Реле подгрев седалки"
+    "phrase": "Кора под радиатор",
+    "description": ""
   },
   {
-    "phrase": "Реле подгревни свещи"
+    "phrase": "Кора под скорости",
+    "description": ""
   },
   {
-    "phrase": "Реле пренапрежение"
+    "phrase": "Кора под чистачки",
+    "description": "Панел под предно стъкло"
   },
   {
-    "phrase": "Реле за стартер"
+    "phrase": "Корпус парно",
+    "description": ""
   },
   {
-    "phrase": "Реле за централно заключване"
+    "phrase": "Кутия акумулатор",
+    "description": ""
   },
   {
-    "phrase": "Реле чистачки"
+    "phrase": "Метална кора под двигател",
+    "description": ""
   },
   {
-    "phrase": "Реле шибедах"
+    "phrase": "Мокет",
+    "description": ""
   },
   {
-    "phrase": "Релета"
+    "phrase": "Мокет в багажник",
+    "description": ""
   },
   {
-    "phrase": "Релета с букса"
+    "phrase": "Моторче щора",
+    "description": ""
   },
   {
-    "phrase": "Релета с букси"
+    "phrase": "Основа лентов кабел",
+    "description": ""
   },
   {
-    "phrase": "Стойка компютър"
+    "phrase": "Планка багажник",
+    "description": ""
   },
   {
-    "phrase": "Стойка модули"
+    "phrase": "Пластмасов капак",
+    "description": ""
   },
   {
-    "phrase": "Щора задна врата"
+    "phrase": "Пластмасова кора",
+    "description": ""
   },
   {
-    "phrase": "Кутия компютър"
+    "phrase": "Стойка акумулатор",
+    "description": ""
   },
   {
-    "phrase": "Интериорна пластмаса багажник"
+    "phrase": "Уплътнение",
+    "description": "Уплътнение за врата, уплътнение"
   },
   {
-    "phrase": "Лайсна (облицовка) на праг"
+    "phrase": "Уплътнение за багажник",
+    "description": ""
   },
   {
-    "phrase": "Щора задно стъкло"
+    "phrase": "Уплътнение за врата",
+    "description": ""
   },
   {
-    "phrase": "Основа кора врата"
+    "phrase": "Уплътнение за преден капак",
+    "description": ""
   },
   {
-    "phrase": "Кора врата"
+    "phrase": "Кутия филтър купе",
+    "description": ""
   },
   {
-    "phrase": "Релса щора багажник"
+    "phrase": "Централна конзола",
+    "description": ""
   },
   {
-    "phrase": "Стойка навигация"
+    "phrase": "Централна конзола долна част",
+    "description": ""
   },
   {
-    "phrase": "Мрежа багажник"
+    "phrase": "Щора багажник",
+    "description": ""
   },
   {
-    "phrase": "Елемент от броня"
+    "phrase": "Щора шибедах",
+    "description": ""
   },
   {
-    "phrase": "Кора под броня"
+    "phrase": "Тръба интеркулер",
+    "description": ""
   },
   {
-    "phrase": "Конзола скоростен лост"
+    "phrase": "Въздуховод всмукателен колектор",
+    "description": ""
   },
   {
-    "phrase": "Кора багажник"
+    "phrase": "Маркуч турбо",
+    "description": ""
   },
   {
-    "phrase": "Кора заден капак"
+    "phrase": "Тръба турбо",
+    "description": ""
   },
   {
-    "phrase": "Барче"
+    "phrase": "Въздухозаборник",
+    "description": ""
   },
   {
-    "phrase": "Вътрешен праг"
+    "phrase": "EGR тръба",
+    "description": ""
   },
   {
-    "phrase": "Декоративен капак"
+    "phrase": "Вакуум маркуч",
+    "description": ""
   },
   {
-    "phrase": "Декоративен капак двигател"
+    "phrase": "Вакуум маркучи",
+    "description": ""
   },
   {
-    "phrase": "Декоративна капачка"
+    "phrase": "Воден маркуч",
+    "description": ""
   },
   {
-    "phrase": "Декоративна капачка високоговорител"
+    "phrase": "Тръба за охладителна течност",
+    "description": ""
   },
   {
-    "phrase": "Декоративна лайсна"
+    "phrase": "Водни маркучи",
+    "description": ""
   },
   {
-    "phrase": "Духалка парно"
+    "phrase": "Водни тръби",
+    "description": ""
   },
   {
-    "phrase": "Духалка стъкло"
+    "phrase": "Водно съединение",
+    "description": ""
   },
   {
-    "phrase": "Духалки парно"
+    "phrase": "Всмукателен колектор",
+    "description": ""
   },
   {
-    "phrase": "Ел. щора"
+    "phrase": "Всмукателна тръба",
+    "description": ""
   },
   {
-    "phrase": "Изолираща кора"
+    "phrase": "Въздуховод",
+    "description": ""
   },
   {
-    "phrase": "Интериорна кора"
+    "phrase": "Въздуховод парно",
+    "description": ""
   },
   {
-    "phrase": "Интериорна лайсна"
+    "phrase": "Въздуховоди",
+    "description": ""
   },
   {
-    "phrase": "Интериорна пластмаса"
+    "phrase": "Горивен маркуч",
+    "description": ""
   },
   {
-    "phrase": "Интериорна пластмаса волан"
+    "phrase": "Горивна тръба",
+    "description": ""
   },
   {
-    "phrase": "Интериорна пластмаса километраж"
+    "phrase": "Горивни тръби",
+    "description": ""
   },
   {
-    "phrase": "Интериорна пластмаса ключ светлини"
+    "phrase": "Гофриран маркуч",
+    "description": ""
   },
   {
-    "phrase": "Интериорна пластмаса под таблото"
+    "phrase": "Изпускателен колектор",
+    "description": ""
   },
   {
-    "phrase": "Капак акумулатор"
+    "phrase": "Климатичен маркуч",
+    "description": ""
   },
   {
-    "phrase": "Конзола лентов кабел волан"
+    "phrase": "Климатична тръба",
+    "description": ""
   },
   {
-    "phrase": "Кора двигател"
+    "phrase": "Климатични маркучи",
+    "description": ""
   },
   {
-    "phrase": "Кора над радиатор"
+    "phrase": "Климатични тръби",
+    "description": ""
   },
   {
-    "phrase": "Кора под двигател"
+    "phrase": "Компенсаторен съд вакуум",
+    "description": ""
   },
   {
-    "phrase": "Кора под купе"
+    "phrase": "Компенсаторен съд въздух",
+    "description": ""
   },
   {
-    "phrase": "Кора под радиатор"
+    "phrase": "Маркуч всмукателен колектор",
+    "description": ""
   },
   {
-    "phrase": "Кора под седалка"
+    "phrase": "Маркуч картерни газове",
+    "description": ""
   },
   {
-    "phrase": "Кора под скорости"
+    "phrase": "Маслена тръба",
+    "description": ""
   },
   {
-    "phrase": "Кора под табло"
+    "phrase": "Маслени тръби",
+    "description": ""
   },
   {
-    "phrase": "Кора под чистачки"
+    "phrase": "Тръба изпускателен колектор",
+    "description": ""
   },
   {
-    "phrase": "Кора товарна врата"
+    "phrase": "Тръба колектор",
+    "description": ""
   },
   {
-    "phrase": "Корпус парно"
+    "phrase": "Тръба маслени пари",
+    "description": ""
   },
   {
-    "phrase": "Кутия акумулатор"
+    "phrase": "Тръбa парно",
+    "description": ""
   },
   {
-    "phrase": "Метална кора под двигател"
+    "phrase": "Турбопът",
+    "description": ""
   },
   {
-    "phrase": "Метална планка багажник"
+    "phrase": "Турбопътища",
+    "description": ""
   },
   {
-    "phrase": "Мокет"
+    "phrase": "Хидравличен маркуч",
+    "description": ""
   },
   {
-    "phrase": "Мокет в багажник"
+    "phrase": "Хидравлична тръба",
+    "description": ""
   },
   {
-    "phrase": "Моторче щора"
+    "phrase": "Хидравлични маркучи",
+    "description": ""
   },
   {
-    "phrase": "Основа лентов кабел"
+    "phrase": "Хидравлични тръби",
+    "description": ""
   },
   {
-    "phrase": "Планка багажник"
+    "phrase": "Механизъм предни чистачки",
+    "description": ""
   },
   {
-    "phrase": "Пластмасов капак"
+    "phrase": "Моторче задно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Пластмасова кора"
+    "phrase": "Моторче фикс",
+    "description": ""
   },
   {
-    "phrase": "Пластмасова кора жабка"
+    "phrase": "Вентилатор парно",
+    "description": ""
   },
   {
-    "phrase": "Пластмасова кора под волана"
+    "phrase": "Водач стъкло",
+    "description": ""
   },
   {
-    "phrase": "Стойка акумулатор"
+    "phrase": "Машинка ел. стъкло",
+    "description": "Комплект механизъм и моторче за стъклоповдигач. Ако на снимката има заедно релса/механизъм и мотор, това е машинка за ел. стъкло. Част от механизма за повдигане на стъклото."
   },
   {
-    "phrase": "Уплътнение"
+    "phrase": "Механизъм ел. стъкло",
+    "description": "Релса/механизъм за стъклоповдигач без моторче. Ако липсва мотор, това е отделен механизъм."
   },
   {
-    "phrase": "Уплътнение за багажник"
+    "phrase": "Механизъм ръчна спирачка",
+    "description": ""
   },
   {
-    "phrase": "Уплътнение за врата"
+    "phrase": "Мотор електрическа рейка",
+    "description": ""
   },
   {
-    "phrase": "Уплътнение за преден капак"
+    "phrase": "Ел. мотор за чистачките",
+    "description": ""
   },
   {
-    "phrase": "Кутия филтър купе"
+    "phrase": "Електромотор за стъклоподемник",
+    "description": "Само моторче за стъклоповдигач без механизъм и релса. Ако частта е само мотор, това е моторче."
   },
   {
-    "phrase": "Централна конзола"
+    "phrase": "Помпичка за чистачки",
+    "description": ""
   },
   {
-    "phrase": "Централна конзола долна част"
+    "phrase": "Ръчна машинка стъклоповдигач",
+    "description": ""
   },
   {
-    "phrase": "Щора багажник"
+    "phrase": "Клапани Dynamic Drive",
+    "description": ""
   },
   {
-    "phrase": "Щора шибедах"
+    "phrase": "Въздушен компресор",
+    "description": ""
   },
   {
-    "phrase": "Висящ лагер за кардан"
+    "phrase": "Електрическа рейка без мотор",
+    "description": ""
   },
   {
-    "phrase": "Комплект лагер за главина"
+    "phrase": "Хидравлична помпа окачване",
+    "description": ""
   },
   {
-    "phrase": "Тръба интеркулер"
+    "phrase": "Клапан въздушно окачване",
+    "description": ""
   },
   {
-    "phrase": "Маркуч масло"
+    "phrase": "Преден мост",
+    "description": ""
   },
   {
-    "phrase": "Въздуховод всмукателен колектор"
+    "phrase": "Амортисьор",
+    "description": ""
   },
   {
-    "phrase": "Маркуч турбо"
+    "phrase": "Биалетка",
+    "description": ""
   },
   {
-    "phrase": "Тръба турбо"
+    "phrase": "Бутилка въздух",
+    "description": ""
   },
   {
-    "phrase": "Въздухозаборник"
+    "phrase": "Бутилка въздушно окачване",
+    "description": ""
   },
   {
-    "phrase": "EGR тръба"
+    "phrase": "Въздушен амортисьор",
+    "description": ""
   },
   {
-    "phrase": "Вакуум маркуч"
+    "phrase": "Въздушна възглавница за окачване",
+    "description": ""
   },
   {
-    "phrase": "Вакуум маркучи"
+    "phrase": "Електрическа рейка",
+    "description": ""
   },
   {
-    "phrase": "Воден маркуч"
+    "phrase": "Заден мост",
+    "description": ""
   },
   {
-    "phrase": "Тръба за охладителна течност"
+    "phrase": "Каре на волана",
+    "description": ""
   },
   {
-    "phrase": "Водни маркучи"
+    "phrase": "Компресор въздушно окачване",
+    "description": ""
   },
   {
-    "phrase": "Водни тръби"
+    "phrase": "Кормилен прът",
+    "description": ""
   },
   {
-    "phrase": "Водно съединение"
+    "phrase": "Кормилна щанга",
+    "description": ""
   },
   {
-    "phrase": "Всмукателен колектор"
+    "phrase": "Макферсон",
+    "description": ""
   },
   {
-    "phrase": "Всмукателна тръба"
+    "phrase": "Механична рейка",
+    "description": ""
   },
   {
-    "phrase": "Въздуховод"
+    "phrase": "Носач / щанга",
+    "description": ""
   },
   {
-    "phrase": "Въздуховод парно"
+    "phrase": "Носачи",
+    "description": ""
   },
   {
-    "phrase": "Въздуховоди"
+    "phrase": "Пружина за ходова част",
+    "description": ""
   },
   {
-    "phrase": "Горивен маркуч"
+    "phrase": "Разпределител въздух",
+    "description": ""
   },
   {
-    "phrase": "Горивна тръба"
+    "phrase": "Разпределител въздушно окачване",
+    "description": ""
   },
   {
-    "phrase": "Горивни тръби"
+    "phrase": "Ресори",
+    "description": ""
   },
   {
-    "phrase": "Гофриран маркуч"
+    "phrase": "Секторна кутия",
+    "description": ""
   },
   {
-    "phrase": "Изпускателен колектор"
+    "phrase": "Соленоиден вакуумен блок",
+    "description": ""
   },
   {
-    "phrase": "Климатичен маркуч"
+    "phrase": "Стабилизираща щанга",
+    "description": ""
   },
   {
-    "phrase": "Климатична тръба"
+    "phrase": "Стабилизираща щанга с Dynamic Drive",
+    "description": ""
   },
   {
-    "phrase": "Климатични маркучи"
+    "phrase": "Стойка компресор въздушно окачване",
+    "description": ""
   },
   {
-    "phrase": "Климатични тръби"
+    "phrase": "Сфера",
+    "description": ""
   },
   {
-    "phrase": "Компенсаторен съд вакуум"
+    "phrase": "Сфера въздушно окачване",
+    "description": ""
   },
   {
-    "phrase": "Компенсаторен съд въздух"
+    "phrase": "Сфера хидравлично окачване",
+    "description": ""
   },
   {
-    "phrase": "Маркуч всмукателен колектор"
+    "phrase": "Хидравличен повдигач окачване",
+    "description": ""
   },
   {
-    "phrase": "Маркуч картерни газове"
+    "phrase": "Хидравличен разпределител",
+    "description": ""
   },
   {
-    "phrase": "Маслена тръба"
+    "phrase": "Хидравлична рейка",
+    "description": ""
   },
   {
-    "phrase": "Маслени тръби"
+    "phrase": "Хидроцилиндър",
+    "description": ""
   },
   {
-    "phrase": "Спирачни тръби"
+    "phrase": "Хъб",
+    "description": ""
   },
   {
-    "phrase": "Тръба изпускателен колектор"
+    "phrase": "Шенкел главина",
+    "description": ""
   },
   {
-    "phrase": "Тръба колектор"
+    "phrase": "Охладител батерия",
+    "description": ""
   },
   {
-    "phrase": "Тръба маслени пари"
+    "phrase": "Ауспух печка",
+    "description": ""
   },
   {
-    "phrase": "Тръба парно"
+    "phrase": "Охладител за модули",
+    "description": ""
   },
   {
-    "phrase": "Тръби парно"
+    "phrase": "Перки охлаждане",
+    "description": ""
   },
   {
-    "phrase": "Турбопът"
+    "phrase": "Виско съединител",
+    "description": ""
   },
   {
-    "phrase": "Турбопътища"
+    "phrase": "Вътрешен радиатор климатик",
+    "description": ""
   },
   {
-    "phrase": "Хидравличен маркуч"
+    "phrase": "Воден радиатор",
+    "description": ""
   },
   {
-    "phrase": "Хидравлична тръба"
+    "phrase": "Водна помпа",
+    "description": ""
   },
   {
-    "phrase": "Хидравлични маркучи"
+    "phrase": "Дифузьор",
+    "description": ""
   },
   {
-    "phrase": "Хидравлични тръби"
+    "phrase": "Ел. радиатор парно",
+    "description": ""
   },
   {
-    "phrase": "Електромотор вентилатор парно"
+    "phrase": "Интеркулер",
+    "description": ""
   },
   {
-    "phrase": "Механизъм задна чистачка"
+    "phrase": "Клапа парно",
+    "description": ""
   },
   {
-    "phrase": "Механизъм предни чистачки"
+    "phrase": "Клапи парно",
+    "description": ""
   },
   {
-    "phrase": "Моторче задно стъкло"
+    "phrase": "Компресор климатик",
+    "description": ""
   },
   {
-    "phrase": "Моторче фикс"
+    "phrase": "Конзола антифриз",
+    "description": ""
   },
   {
-    "phrase": "Вентилатор парно"
+    "phrase": "Корпус на термостат",
+    "description": ""
   },
   {
-    "phrase": "Водач стъкло"
+    "phrase": "Маслен радиатор",
+    "description": ""
   },
   {
-    "phrase": "Машинка ел. стъкло"
+    "phrase": "Моторче антифриз",
+    "description": ""
   },
   {
-    "phrase": "Механизъм ел. стъкло"
+    "phrase": "Моторче клапа парно",
+    "description": ""
   },
   {
-    "phrase": "Механизъм паркинг спирачка"
+    "phrase": "Перка охлаждане",
+    "description": ""
   },
   {
-    "phrase": "Механизъм ръчна спирачка"
+    "phrase": "Печка",
+    "description": ""
   },
   {
-    "phrase": "Мотор електрическа рейка"
+    "phrase": "Климатичен радиатор",
+    "description": ""
   },
   {
-    "phrase": "Ел. мотор за чистачките"
+    "phrase": "Радиатор парно",
+    "description": ""
   },
   {
-    "phrase": "Електромотор за стъклоподемник"
+    "phrase": "Реостат",
+    "description": ""
   },
   {
-    "phrase": "Помпичка за чистачки"
+    "phrase": "Рециркулационна помпа",
+    "description": ""
   },
   {
-    "phrase": "Ръчна машинка стъклоповдигач"
+    "phrase": "Стойка компресор климатик",
+    "description": ""
   },
   {
-    "phrase": "Шарнир"
+    "phrase": "Стойка на радиатора",
+    "description": ""
   },
   {
-    "phrase": "Торсион кабина"
+    "phrase": "Стойка радиатори",
+    "description": ""
   },
   {
-    "phrase": "Скоба"
+    "phrase": "Термостат",
+    "description": ""
   },
   {
-    "phrase": "Клапани Dynamic Drive"
+    "phrase": "Светлоотразители",
+    "description": ""
   },
   {
-    "phrase": "Въздушен компресор"
+    "phrase": "Светлина за заден ход",
+    "description": ""
   },
   {
-    "phrase": "Електрическа рейка без мотор"
+    "phrase": "Светлина мъгла",
+    "description": ""
   },
   {
-    "phrase": "Хидравлична помпа окачване"
+    "phrase": "Светлини мъгла",
+    "description": ""
   },
   {
-    "phrase": "Тампон за заден мост"
+    "phrase": "Стъкло фар",
+    "description": ""
   },
   {
-    "phrase": "Клапан въздушно окачване"
+    "phrase": "Плафон заден номер",
+    "description": ""
   },
   {
-    "phrase": "Преден мост"
+    "phrase": "Плафони заден номер",
+    "description": ""
   },
   {
-    "phrase": "Амортисьор"
+    "phrase": "Xenon баласт",
+    "description": ""
   },
   {
-    "phrase": "Биалетка"
+    "phrase": "Xenon крушка",
+    "description": ""
   },
   {
-    "phrase": "Бутилка въздух"
+    "phrase": "Вътрешен стоп",
+    "description": ""
   },
   {
-    "phrase": "Бутилка въздушно окачване"
+    "phrase": "Мигач",
+    "description": ""
   },
   {
-    "phrase": "Въздушен амортисьор"
+    "phrase": "Светлоотразител",
+    "description": ""
   },
   {
-    "phrase": "Въздушна възглавница за окачване"
+    "phrase": "Стоп",
+    "description": "Заден стоп"
   },
   {
-    "phrase": "Горен носач"
+    "phrase": "Стоп в броня",
+    "description": ""
   },
   {
-    "phrase": "Долен носач"
+    "phrase": "Стопове",
+    "description": ""
   },
   {
-    "phrase": "Електрическа рейка"
+    "phrase": "Трети стоп",
+    "description": ""
   },
   {
-    "phrase": "Заден мост"
+    "phrase": "Фар",
+    "description": "Предна фарова лампа"
   },
   {
-    "phrase": "Каре на волана"
+    "phrase": "Фар Xenon",
+    "description": ""
   },
   {
-    "phrase": "Компресор въздушно окачване"
+    "phrase": "Халоген",
+    "description": ""
   },
   {
-    "phrase": "Кормилен прът"
+    "phrase": "Диференциал",
+    "description": ""
   },
   {
-    "phrase": "Кормилен лост (хебел)"
+    "phrase": "Ръчна скоростна кутия",
+    "description": ""
   },
   {
-    "phrase": "Кормилна щанга"
+    "phrase": "Капак диференциал",
+    "description": ""
   },
   {
-    "phrase": "Кормилни щанги"
+    "phrase": "Пиньон диференциал",
+    "description": ""
   },
   {
-    "phrase": "Макферсон"
+    "phrase": "Блок управление скорости",
+    "description": ""
   },
   {
-    "phrase": "Механична рейка"
+    "phrase": "Каре",
+    "description": ""
   },
   {
-    "phrase": "Носач / щанга"
+    "phrase": "Каре кардан",
+    "description": ""
   },
   {
-    "phrase": "Носачи"
+    "phrase": "Актуатор диференциал",
+    "description": ""
   },
   {
-    "phrase": "Пружина за ходова част"
+    "phrase": "Автоматична скоростна кутия",
+    "description": ""
   },
   {
-    "phrase": "Разпределител въздух"
+    "phrase": "Актуатор раздатка",
+    "description": ""
   },
   {
-    "phrase": "Разпределител въздушно окачване"
+    "phrase": "Актуатор скорости",
+    "description": ""
   },
   {
-    "phrase": "Ресори"
+    "phrase": "Горна помпа на съединител",
+    "description": ""
   },
   {
-    "phrase": "Секторна кутия"
+    "phrase": "Демпферен маховик",
+    "description": ""
   },
   {
-    "phrase": "Соленоиден вакуумен блок"
+    "phrase": "Долна помпа за съединител",
+    "description": ""
   },
   {
-    "phrase": "Стабилизираща щанга"
+    "phrase": "Жило за съединител",
+    "description": ""
   },
   {
-    "phrase": "Стабилизираща щанга с Dynamic Drive"
+    "phrase": "Избирач скорости",
+    "description": ""
   },
   {
-    "phrase": "Стойка компресор въздушно окачване"
+    "phrase": "Кардан",
+    "description": ""
   },
   {
-    "phrase": "Сфера"
+    "phrase": "Маховик",
+    "description": ""
   },
   {
-    "phrase": "Сфера въздушно окачване"
+    "phrase": "Планка скоростна кутия",
+    "description": ""
   },
   {
-    "phrase": "Сфера хидравлично окачване"
+    "phrase": "Полуавтоматична скоростна кутия",
+    "description": ""
   },
   {
-    "phrase": "Хидравличен повдигач окачване"
+    "phrase": "Полуоска",
+    "description": ""
   },
   {
-    "phrase": "Хидравличен разпределител"
+    "phrase": "Полуоска външна част",
+    "description": ""
   },
   {
-    "phrase": "Хидравлична рейка"
+    "phrase": "Полуоска вътрешна част",
+    "description": ""
   },
   {
-    "phrase": "Хидроцилиндър"
+    "phrase": "Притискателен диск на съединителя",
+    "description": ""
   },
   {
-    "phrase": "Хъб"
+    "phrase": "Раздатъчна кутия",
+    "description": ""
   },
   {
-    "phrase": "Шенкел главина"
+    "phrase": "Скоростна и раздатъчна кутия",
+    "description": ""
   },
   {
-    "phrase": "Охладител батерия"
+    "phrase": "Скоростна кутия с диференциал",
+    "description": ""
   },
   {
-    "phrase": "Актуатор дифузьор"
+    "phrase": "Стойка висящ лагер",
+    "description": ""
   },
   {
-    "phrase": "Ауспух печка"
+    "phrase": "Феродов диск",
+    "description": ""
   },
   {
-    "phrase": "Охладител за модули"
+    "phrase": "Хидротрансформатор",
+    "description": ""
   },
   {
-    "phrase": "Перки охлаждане"
+    "phrase": "Щанга скоростен лост",
+    "description": ""
   },
   {
-    "phrase": "Електромагнит перка"
+    "phrase": "Спирачен барабан",
+    "description": ""
   },
   {
-    "phrase": "Стойка перка охлаждане"
+    "phrase": "Спирачна камера",
+    "description": ""
   },
   {
-    "phrase": "Виско съединител"
+    "phrase": "Помпа ABS/DSC",
+    "description": ""
   },
   {
-    "phrase": "Вътрешен радиатор климатик"
+    "phrase": "Помпа ABS",
+    "description": ""
   },
   {
-    "phrase": "Вакуум клапа парно"
+    "phrase": "Моторче паркинг спирачка",
+    "description": ""
   },
   {
-    "phrase": "Воден радиатор"
+    "phrase": "Серво усилвател",
+    "description": ""
   },
   {
-    "phrase": "Водна помпа"
+    "phrase": "Спирачен апарат",
+    "description": ""
   },
   {
-    "phrase": "Дифузьор"
+    "phrase": "Спирачен диск",
+    "description": ""
   },
   {
-    "phrase": "Ел. радиатор парно"
+    "phrase": "Спирачен кран",
+    "description": ""
   },
   {
-    "phrase": "Интеркулер"
+    "phrase": "Спирачен разпределител",
+    "description": ""
   },
   {
-    "phrase": "Клапа парно"
+    "phrase": "Спирачна помпа",
+    "description": ""
   },
   {
-    "phrase": "Клапан климатик"
+    "phrase": "Гумено каре",
+    "description": ""
   },
   {
-    "phrase": "Клапи парно"
+    "phrase": "Алуминиева конзола",
+    "description": ""
   },
   {
-    "phrase": "Компресор климатик"
+    "phrase": "Греда под скоростна кутия",
+    "description": ""
   },
   {
-    "phrase": "Конзола антифриз"
+    "phrase": "Лапа двигател",
+    "description": ""
   },
   {
-    "phrase": "Корпус на термостат"
+    "phrase": "Лапа скоростна кутия",
+    "description": ""
   },
   {
-    "phrase": "Маслен радиатор"
+    "phrase": "Планка двигател",
+    "description": ""
   },
   {
-    "phrase": "Моторче антифриз"
+    "phrase": "Тампон за двигател",
+    "description": ""
   },
   {
-    "phrase": "Моторче клапа парно"
+    "phrase": "Тампон за преден мост",
+    "description": ""
   },
   {
-    "phrase": "Перка охлаждане"
+    "phrase": "Тампон скоростна кутия",
+    "description": ""
   },
   {
-    "phrase": "Печка"
+    "phrase": "Горивен филтър",
+    "description": ""
   },
   {
-    "phrase": "Климатичен радиатор"
+    "phrase": "Маслен филтър",
+    "description": ""
   },
   {
-    "phrase": "Радиатор парно"
+    "phrase": "Филтър бензинови пари",
+    "description": ""
   },
   {
-    "phrase": "Разпределител климатик"
+    "phrase": "Филтър горивни пари",
+    "description": ""
   },
   {
-    "phrase": "Реостат"
+    "phrase": "Филтър маслени пари",
+    "description": ""
   },
   {
-    "phrase": "Рециркулационна помпа"
+    "phrase": "Падащ хидравличен борд",
+    "description": ""
   },
   {
-    "phrase": "Стойка компресор климатик"
+    "phrase": "Щека преден капак",
+    "description": ""
   },
   {
-    "phrase": "Стойка на радиатора"
+    "phrase": "Елемент заден капак",
+    "description": ""
   },
   {
-    "phrase": "Стойка радиатори"
+    "phrase": "Каросерия",
+    "description": ""
   },
   {
-    "phrase": "Термостат"
+    "phrase": "Елемент задна броня",
+    "description": ""
   },
   {
-    "phrase": "Светлоотразители"
+    "phrase": "Елемент предна броня",
+    "description": ""
   },
   {
-    "phrase": "Светлина за заден ход"
+    "phrase": "Предна броня",
+    "description": ""
   },
   {
-    "phrase": "Светлина мъгла"
+    "phrase": "Задна броня",
+    "description": ""
   },
   {
-    "phrase": "Светлини мъгла"
+    "phrase": "Ограничител заден капак",
+    "description": ""
   },
   {
-    "phrase": "Стъкло фар"
+    "phrase": "Платформа за пътна помощ",
+    "description": ""
   },
   {
-    "phrase": "Основа халоген"
+    "phrase": "Стойка преден номер",
+    "description": ""
   },
   {
-    "phrase": "Плафон заден номер"
+    "phrase": "Елемент маска",
+    "description": ""
   },
   {
-    "phrase": "Плафони заден номер"
+    "phrase": "Декоративна маска",
+    "description": ""
   },
   {
-    "phrase": "Xenon баласт"
+    "phrase": "Маска горна част",
+    "description": ""
   },
   {
-    "phrase": "Xenon крушка"
+    "phrase": "Маска",
+    "description": ""
   },
   {
-    "phrase": "Вътрешен стоп"
+    "phrase": "Решетка стоп",
+    "description": ""
   },
   {
-    "phrase": "Габаритни светлини"
+    "phrase": "Мотор заден капак",
+    "description": ""
   },
   {
-    "phrase": "Мигач"
+    "phrase": "Решетка преден капак",
+    "description": "Предна решетка на"
   },
   {
-    "phrase": "Светлоотразител"
+    "phrase": "Алуминиев капак",
+    "description": ""
   },
   {
-    "phrase": "Стоп"
+    "phrase": "Преден капак",
+    "description": ""
   },
   {
-    "phrase": "Стоп в броня"
+    "phrase": "Фикс врата",
+    "description": ""
   },
   {
-    "phrase": "Стопове"
+    "phrase": "Основа фар",
+    "description": ""
   },
   {
-    "phrase": "Трети стоп"
+    "phrase": "Буфер задна броня",
+    "description": ""
   },
   {
-    "phrase": "Фар"
+    "phrase": "Моторче гюрук",
+    "description": ""
   },
   {
-    "phrase": "Фар Xenon"
+    "phrase": "Стойка заден номер",
+    "description": ""
   },
   {
-    "phrase": "Халоген"
+    "phrase": "Алуминиева греда",
+    "description": ""
   },
   {
-    "phrase": "Халогени"
+    "phrase": "Алуминиева планка",
+    "description": ""
   },
   {
-    "phrase": "Диференциал"
+    "phrase": "Багажник за тавана",
+    "description": ""
   },
   {
-    "phrase": "Ръчна скоростна кутия"
+    "phrase": "Буфер предна броня",
+    "description": ""
   },
   {
-    "phrase": "Капак диференциал"
+    "phrase": "Врата",
+    "description": ""
   },
   {
-    "phrase": "Пиньон диференциал"
+    "phrase": "Греда над радиатор",
+    "description": ""
   },
   {
-    "phrase": "Блок управление скорости"
+    "phrase": "Греда под двигател",
+    "description": ""
   },
   {
-    "phrase": "Каре"
+    "phrase": "Греда под  радиатор",
+    "description": ""
   },
   {
-    "phrase": "Каре кардан"
+    "phrase": "Гюрук",
+    "description": ""
   },
   {
-    "phrase": "Актуатор диференциал"
+    "phrase": "Държач броня",
+    "description": ""
   },
   {
-    "phrase": "Автоматична скоростна кутия"
+    "phrase": "Заден капак",
+    "description": "Заден капак на багажник"
   },
   {
-    "phrase": "Актуатор раздатка"
+    "phrase": "Задно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Актуатор скорости"
+    "phrase": "Задно стъкло с моторче",
+    "description": ""
   },
   {
-    "phrase": "Горна помпа на съединител"
+    "phrase": "Калник",
+    "description": ""
   },
   {
-    "phrase": "Демпферен маховик"
+    "phrase": "Калобран",
+    "description": ""
   },
   {
-    "phrase": "Долна помпа за съединител"
+    "phrase": "Метална греда",
+    "description": ""
   },
   {
-    "phrase": "Жило за съединител"
+    "phrase": "Механизъм гюрук",
+    "description": ""
   },
   {
-    "phrase": "Избирач скорости"
+    "phrase": "Механизъм шибедах",
+    "description": ""
   },
   {
-    "phrase": "Кардан"
+    "phrase": "Мотор шибедах",
+    "description": ""
   },
   {
-    "phrase": "Маховик"
+    "phrase": "Основа броня",
+    "description": ""
   },
   {
-    "phrase": "Планка маховик"
+    "phrase": "Панорамен покрив",
+    "description": ""
   },
   {
-    "phrase": "Планка скоростна кутия"
+    "phrase": "Подкалник",
+    "description": ""
   },
   {
-    "phrase": "Полуавтоматична скоростна кутия"
+    "phrase": "Помпа гюрук",
+    "description": ""
   },
   {
-    "phrase": "Полуоска"
+    "phrase": "Релса багажник",
+    "description": ""
   },
   {
-    "phrase": "Полуоска външна част"
+    "phrase": "Релса товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Полуоска вътрешна част"
+    "phrase": "Решетка",
+    "description": ""
   },
   {
-    "phrase": "Полуоска с висящ лагер"
+    "phrase": "Решетка в броня",
+    "description": ""
   },
   {
-    "phrase": "Притискателен диск на съединителя"
+    "phrase": "Ролбар",
+    "description": ""
   },
   {
-    "phrase": "Раздатъчна кутия"
+    "phrase": "Спойлер",
+    "description": ""
   },
   {
-    "phrase": "Скоростен лост с жило и щанга"
+    "phrase": "Странично стъкло",
+    "description": ""
   },
   {
-    "phrase": "Скоростен лост с щанга"
+    "phrase": "Стъкло шибедах",
+    "description": ""
   },
   {
-    "phrase": "Скоростен лост с щанги"
+    "phrase": "Теглич",
+    "description": ""
   },
   {
-    "phrase": "Скоростна и раздатъчна кутия"
+    "phrase": "Врата на багажно/товарно пространство",
+    "description": ""
   },
   {
-    "phrase": "Скоростна кутия с диференциал"
+    "phrase": "Фикс",
+    "description": ""
   },
   {
-    "phrase": "Стойка висящ лагер"
+    "phrase": "Фикс товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Феродов диск"
+    "phrase": "Хардтоп",
+    "description": ""
   },
   {
-    "phrase": "Хидротрансформатор"
+    "phrase": "Челно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Цилиндър блокаж диференциал"
+    "phrase": "Шибедах",
+    "description": ""
   },
   {
-    "phrase": "Щанга скоростен лост"
+    "phrase": "Компресор за гуми",
+    "description": ""
   },
   {
-    "phrase": "Щанги скорости"
+    "phrase": "Механизъм реглаж фар",
+    "description": ""
   },
   {
-    "phrase": "Спирачен барабан"
+    "phrase": "Лайсна преден капак",
+    "description": ""
   },
   {
-    "phrase": "Въздушен спирачен релеен клапан"
+    "phrase": "Мигач в огледало",
+    "description": ""
   },
   {
-    "phrase": "Спирачна камера"
+    "phrase": "Капачки за джанти",
+    "description": ""
   },
   {
-    "phrase": "Гърловина спирачна помпа"
+    "phrase": "Ръкохватка резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Помпа ASR"
+    "phrase": "Брава резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Помпа ABS/DSC"
+    "phrase": "Стъкло огледало",
+    "description": ""
   },
   {
-    "phrase": "Помпа ABS"
+    "phrase": "Мотор реглаж огледало",
+    "description": ""
   },
   {
-    "phrase": "Кантар спирачна система"
+    "phrase": "Калъф резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Моторче паркинг спирачка"
+    "phrase": "Амортисьорче за врата",
+    "description": ""
   },
   {
-    "phrase": "Серво усилвател"
+    "phrase": "Кука теглене",
+    "description": ""
   },
   {
-    "phrase": "Спирачен апарат"
+    "phrase": "Външна лайсна врата",
+    "description": "Лайсна за врата"
   },
   {
-    "phrase": "Спирачен диск"
+    "phrase": "Рамо чистачка фар",
+    "description": ""
   },
   {
-    "phrase": "Спирачен кантар"
+    "phrase": "Панта на врата",
+    "description": ""
   },
   {
-    "phrase": "Спирачен кран"
+    "phrase": "Моторче фар",
+    "description": ""
   },
   {
-    "phrase": "Спирачен маркуч"
+    "phrase": "Лайсна задно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Спирачен разпределител"
+    "phrase": "Лайсна заден капак",
+    "description": ""
   },
   {
-    "phrase": "Спирачна помпа"
+    "phrase": "Капачка за външно огледало",
+    "description": ""
   },
   {
-    "phrase": "Спирачна тръба"
+    "phrase": "Пружина заден капак",
+    "description": ""
   },
   {
-    "phrase": "Гумено каре"
+    "phrase": "Лайсна под фарове",
+    "description": ""
   },
   {
-    "phrase": "Алуминиева конзола"
+    "phrase": "Панта заден капак",
+    "description": ""
   },
   {
-    "phrase": "Греда под скоростна кутия"
+    "phrase": "GPS антена",
+    "description": ""
   },
   {
-    "phrase": "Лапа двигател"
+    "phrase": "Газов амортисьор за жабка",
+    "description": ""
   },
   {
-    "phrase": "Лапа скоростна кутия"
+    "phrase": "Амортисьор преден капак",
+    "description": ""
   },
   {
-    "phrase": "Планка двигател"
+    "phrase": "Амортисьор за багажник/товарно пространство",
+    "description": ""
   },
   {
-    "phrase": "Планка макферсон"
+    "phrase": "Антена",
+    "description": ""
   },
   {
-    "phrase": "Тампон за двигател"
+    "phrase": "Антена безключово палене",
+    "description": ""
   },
   {
-    "phrase": "Тампон за преден мост"
+    "phrase": "Вежда калник",
+    "description": ""
   },
   {
-    "phrase": "Тампон скоростна кутия"
+    "phrase": "Винт резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Горивен филтър"
+    "phrase": "Вратичка резервоар",
+    "description": ""
   },
   {
-    "phrase": "Маслен филтър"
+    "phrase": "Праг",
+    "description": ""
   },
   {
-    "phrase": "Филтър бензинови пари"
+    "phrase": "Външни лайсни",
+    "description": ""
   },
   {
-    "phrase": "Филтър горивни пари"
+    "phrase": "Външна лайсна колонка",
+    "description": ""
   },
   {
-    "phrase": "Филтър маслени пари"
+    "phrase": "Декоративна капачка броня",
+    "description": ""
   },
   {
-    "phrase": "Падащ хидравличен борд"
+    "phrase": "Ел. антена",
+    "description": ""
   },
   {
-    "phrase": "Щека преден капак"
+    "phrase": "Емблема",
+    "description": ""
   },
   {
-    "phrase": "Елемент заден капак"
+    "phrase": "Зумер",
+    "description": ""
   },
   {
-    "phrase": "Каросерия"
+    "phrase": "Капак резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Елемент задна броня"
+    "phrase": "Капачка халоген",
+    "description": ""
   },
   {
-    "phrase": "Елемент предна броня"
+    "phrase": "Клаксон",
+    "description": ""
   },
   {
-    "phrase": "Предна броня"
+    "phrase": "Клаксони",
+    "description": ""
   },
   {
-    "phrase": "Задна броня"
+    "phrase": "Лайсна",
+    "description": ""
   },
   {
-    "phrase": "Ограничител заден капак"
+    "phrase": "Лайсна под стоп",
+    "description": ""
   },
   {
-    "phrase": "Платформа за пътна помощ"
+    "phrase": "Лайсна под фар",
+    "description": ""
   },
   {
-    "phrase": "Стойка преден номер"
+    "phrase": "Лайсна броня",
+    "description": ""
   },
   {
-    "phrase": "Елемент маска"
+    "phrase": "Лайсна челно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Декоративна маска"
+    "phrase": "Лайсна таван",
+    "description": ""
   },
   {
-    "phrase": "Маска горна част"
+    "phrase": "Моторче реглаж светлини",
+    "description": ""
   },
   {
-    "phrase": "Маска"
+    "phrase": "Моторче чистачка фар",
+    "description": ""
   },
   {
-    "phrase": "Решетка стоп"
+    "phrase": "Огледало",
+    "description": ""
   },
   {
-    "phrase": "Мотор заден капак"
+    "phrase": "Ограничител врата",
+    "description": ""
   },
   {
-    "phrase": "Решетка преден капак"
+    "phrase": "Панта преден капак",
+    "description": ""
   },
   {
-    "phrase": "Алуминиев капак"
+    "phrase": "Панта фикс",
+    "description": ""
   },
   {
-    "phrase": "Преден капак"
+    "phrase": "Парктроник",
+    "description": ""
   },
   {
-    "phrase": "Фикс врата"
+    "phrase": "Планка",
+    "description": ""
   },
   {
-    "phrase": "Основа фар"
+    "phrase": "Пръскалка фар",
+    "description": ""
   },
   {
-    "phrase": "Буфер задна броня"
+    "phrase": "Пръскалка чистачки",
+    "description": ""
   },
   {
-    "phrase": "Моторче гюрук"
+    "phrase": "Пръскалки",
+    "description": ""
   },
   {
-    "phrase": "Стойка заден номер"
+    "phrase": "Рамо на чистачка",
+    "description": "Рамо за чистачка"
   },
   {
-    "phrase": "Алуминиева греда"
+    "phrase": "Рамо задна чистачка",
+    "description": ""
   },
   {
-    "phrase": "Алуминиева планка"
+    "phrase": "Релса плъзгаща врата",
+    "description": ""
   },
   {
-    "phrase": "Багажник за тавана"
+    "phrase": "Ролка плъзгаща врата",
+    "description": ""
   },
   {
-    "phrase": "Буфер предна броня"
+    "phrase": "Сирена",
+    "description": ""
   },
   {
-    "phrase": "Врата"
+    "phrase": "Сирена парктроник",
+    "description": ""
   },
   {
-    "phrase": "Греда над радиатор"
+    "phrase": "Степенка",
+    "description": ""
   },
   {
-    "phrase": "Греда под двигател"
+    "phrase": "Стойка резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Греда под  радиатор"
+    "phrase": "Тасове",
+    "description": ""
   },
   {
-    "phrase": "Гюрук"
+    "phrase": "Гюрук",
+    "description": ""
   },
   {
-    "phrase": "Държач броня"
+    "phrase": "Държач броня",
+    "description": ""
   },
   {
-    "phrase": "Заден капак"
+    "phrase": "Заден капак",
+    "description": ""
   },
   {
-    "phrase": "Задно стъкло"
+    "phrase": "Задно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Задно стъкло с моторче"
+    "phrase": "Задно стъкло с моторче",
+    "description": ""
   },
   {
-    "phrase": "Калник"
+    "phrase": "Калник",
+    "description": ""
   },
   {
-    "phrase": "Калобран"
+    "phrase": "Калобран",
+    "description": ""
   },
   {
-    "phrase": "Метална греда"
+    "phrase": "Метална греда",
+    "description": ""
   },
   {
-    "phrase": "Механизъм гюрук"
+    "phrase": "Механизъм гюрук",
+    "description": ""
   },
   {
-    "phrase": "Механизъм покрив"
+    "phrase": "Механизъм покрив",
+    "description": ""
   },
   {
-    "phrase": "Механизъм шибедах"
+    "phrase": "Механизъм шибедах",
+    "description": ""
   },
   {
-    "phrase": "Мотор шибедах"
+    "phrase": "Мотор шибедах",
+    "description": ""
   },
   {
-    "phrase": "Основа броня"
+    "phrase": "Основа броня",
+    "description": ""
   },
   {
-    "phrase": "Панорамен покрив"
+    "phrase": "Панорамен покрив",
+    "description": ""
   },
   {
-    "phrase": "Подкалник"
+    "phrase": "Подкалник",
+    "description": ""
   },
   {
-    "phrase": "Помпа гюрук"
+    "phrase": "Помпа гюрук",
+    "description": ""
   },
   {
-    "phrase": "Релса багажник"
+    "phrase": "Релса багажник",
+    "description": ""
   },
   {
-    "phrase": "Релса товарна врата"
+    "phrase": "Релса товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Решетка"
+    "phrase": "Решетка",
+    "description": ""
   },
   {
-    "phrase": "Решетка в броня"
+    "phrase": "Решетка в броня",
+    "description": ""
   },
   {
-    "phrase": "Ролбар"
+    "phrase": "Ролбар",
+    "description": ""
   },
   {
-    "phrase": "Спойлер"
+    "phrase": "Спойлер",
+    "description": ""
   },
   {
-    "phrase": "Странично стъкло"
+    "phrase": "Странично стъкло",
+    "description": ""
   },
   {
-    "phrase": "Стъкло с GPS антена"
+    "phrase": "Стъкло с GPS антена",
+    "description": ""
   },
   {
-    "phrase": "Стъкло шибедах"
+    "phrase": "Стъкло шибедах",
+    "description": ""
   },
   {
-    "phrase": "Теглич"
+    "phrase": "Теглич",
+    "description": ""
   },
   {
-    "phrase": "Врата на багажно/товарно пространство"
+    "phrase": "Врата на багажно/товарно пространство",
+    "description": ""
   },
   {
-    "phrase": "Фикс"
+    "phrase": "Фикс",
+    "description": ""
   },
   {
-    "phrase": "Фикс товарна врата"
+    "phrase": "Фикс товарна врата",
+    "description": ""
   },
   {
-    "phrase": "Хардтоп"
+    "phrase": "Хардтоп",
+    "description": ""
   },
   {
-    "phrase": "Челно стъкло"
+    "phrase": "Челно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Шибедах"
+    "phrase": "Шибедах",
+    "description": ""
   },
   {
-    "phrase": "Компресор за гуми"
+    "phrase": "Компресор за гуми",
+    "description": ""
   },
   {
-    "phrase": "Механизъм реглаж фар"
+    "phrase": "Механизъм реглаж фар",
+    "description": ""
   },
   {
-    "phrase": "Лайсна преден капак"
+    "phrase": "Лайсна преден капак",
+    "description": ""
   },
   {
-    "phrase": "Мигач в огледало"
+    "phrase": "Мигач в огледало",
+    "description": ""
   },
   {
-    "phrase": "Капачки за джанти"
+    "phrase": "Капачки за джанти",
+    "description": ""
   },
   {
-    "phrase": "Ръкохватка резервна гума"
+    "phrase": "Ръкохватка резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Брава резервна гума"
+    "phrase": "Брава резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Стъкло огледало"
+    "phrase": "Стъкло огледало",
+    "description": "Стъкло за странично огледало"
   },
   {
-    "phrase": "Мотор реглаж огледало"
+    "phrase": "Мотор реглаж огледало",
+    "description": ""
   },
   {
-    "phrase": "Калъф резервна гума"
+    "phrase": "Калъф резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Амортисьорче за врата"
+    "phrase": "Амортисьорче за врата",
+    "description": ""
   },
   {
-    "phrase": "Кука теглене"
+    "phrase": "Кука теглене",
+    "description": ""
   },
   {
-    "phrase": "Външна лайсна врата"
+    "phrase": "Външна лайсна врата",
+    "description": ""
   },
   {
-    "phrase": "Рамо чистачка фар"
+    "phrase": "Рамо чистачка фар",
+    "description": ""
   },
   {
-    "phrase": "Панта на врата"
+    "phrase": "Панта на врата",
+    "description": ""
   },
   {
-    "phrase": "Моторче фар"
+    "phrase": "Моторче фар",
+    "description": ""
   },
   {
-    "phrase": "Лайсна задно стъкло"
+    "phrase": "Лайсна задно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Лайсна заден капак"
+    "phrase": "Лайсна заден капак",
+    "description": ""
   },
   {
-    "phrase": "Капачка за външно огледало"
+    "phrase": "Капачка за външно огледало",
+    "description": ""
   },
   {
-    "phrase": "Пружина заден капак"
+    "phrase": "Пружина заден капак",
+    "description": ""
   },
   {
-    "phrase": "Лайсна под фарове"
+    "phrase": "Лайсна под фарове",
+    "description": ""
   },
   {
-    "phrase": "Панта заден капак"
+    "phrase": "Панта заден капак",
+    "description": ""
   },
   {
-    "phrase": "GPS антена"
+    "phrase": "GPS антена",
+    "description": ""
   },
   {
-    "phrase": "Газов амортисьор за жабка"
+    "phrase": "Газов амортисьор за жабка",
+    "description": ""
   },
   {
-    "phrase": "Амортисьор преден капак"
+    "phrase": "Амортисьор преден капак",
+    "description": ""
   },
   {
-    "phrase": "Амортисьор за багажник/товарно пространство"
+    "phrase": "Амортисьор за багажник/товарно пространство",
+    "description": ""
   },
   {
-    "phrase": "Антена"
+    "phrase": "Антена",
+    "description": ""
   },
   {
-    "phrase": "Антена безключово палене"
+    "phrase": "Антена безключово палене",
+    "description": ""
   },
   {
-    "phrase": "Антена налягане гуми"
+    "phrase": "Антена налягане гуми",
+    "description": ""
   },
   {
-    "phrase": "Вежда калник"
+    "phrase": "Вежда калник",
+    "description": ""
   },
   {
-    "phrase": "Винт резервна гума"
+    "phrase": "Винт резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Вратичка резервоар"
+    "phrase": "Вратичка резервоар",
+    "description": ""
   },
   {
-    "phrase": "Праг"
+    "phrase": "Праг",
+    "description": ""
   },
   {
-    "phrase": "Външни лайсни"
+    "phrase": "Външни лайсни",
+    "description": ""
   },
   {
-    "phrase": "Външна лайсна колонка"
+    "phrase": "Външна лайсна колонка",
+    "description": ""
   },
   {
-    "phrase": "Декоративна капачка броня"
+    "phrase": "Декоративна капачка броня",
+    "description": ""
   },
   {
-    "phrase": "Държач резервна гума"
+    "phrase": "Държач резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Ел. антена"
+    "phrase": "Ел. антена",
+    "description": ""
   },
   {
-    "phrase": "Емблема"
+    "phrase": "Емблема",
+    "description": ""
   },
   {
-    "phrase": "Зумер"
+    "phrase": "Зумер",
+    "description": ""
   },
   {
-    "phrase": "Капак резервна гума"
+    "phrase": "Капак резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Капачка халоген"
+    "phrase": "Капачка халоген",
+    "description": ""
   },
   {
-    "phrase": "Клаксон"
+    "phrase": "Клаксон",
+    "description": ""
   },
   {
-    "phrase": "Клаксони"
+    "phrase": "Клаксони",
+    "description": ""
   },
   {
-    "phrase": "Лайсна"
+    "phrase": "Лайсна",
+    "description": ""
   },
   {
-    "phrase": "Лайсна за калник"
+    "phrase": "Лайсна за калник",
+    "description": ""
   },
   {
-    "phrase": "Лайсна под стоп"
+    "phrase": "Лайсна под стоп",
+    "description": ""
   },
   {
-    "phrase": "Лайсна под фар"
+    "phrase": "Лайсна под фар",
+    "description": ""
   },
   {
-    "phrase": "Лайсна броня"
+    "phrase": "Лайсна броня",
+    "description": ""
   },
   {
-    "phrase": "Лайсна челно стъкло"
+    "phrase": "Лайсна челно стъкло",
+    "description": ""
   },
   {
-    "phrase": "Лайсна таван"
+    "phrase": "Лайсна таван",
+    "description": ""
   },
   {
-    "phrase": "Моторче реглаж светлини"
+    "phrase": "Моторче реглаж светлини",
+    "description": ""
   },
   {
-    "phrase": "Моторче чистачка фар"
+    "phrase": "Моторче чистачка фар",
+    "description": ""
   },
   {
-    "phrase": "Огледало"
+    "phrase": "Огледало",
+    "description": ""
   },
   {
-    "phrase": "Огледало върху калник"
+    "phrase": "Огледало върху калник",
+    "description": ""
   },
   {
-    "phrase": "Ограничител врата"
+    "phrase": "Ограничител врата",
+    "description": ""
   },
   {
-    "phrase": "Панта преден капак"
+    "phrase": "Панта преден капак",
+    "description": ""
   },
   {
-    "phrase": "Панта фикс"
+    "phrase": "Панта фикс",
+    "description": ""
   },
   {
-    "phrase": "Парктроник | variants: Парктроници"
+    "phrase": "Парктроник | variants: Парктроници",
+    "description": ""
   },
   {
-    "phrase": "Планка"
+    "phrase": "Планка",
+    "description": ""
   },
   {
-    "phrase": "Пръскалка с подгрев"
+    "phrase": "Пръскалка с подгрев",
+    "description": ""
   },
   {
-    "phrase": "Пръскалка фар"
+    "phrase": "Пръскалка фар",
+    "description": ""
   },
   {
-    "phrase": "Пръскалка чистачки"
+    "phrase": "Пръскалка чистачки",
+    "description": ""
   },
   {
-    "phrase": "Пръскалки"
+    "phrase": "Пръскалки",
+    "description": ""
   },
   {
-    "phrase": "Рамо на чистачка"
+    "phrase": "Рамо на чистачка",
+    "description": ""
   },
   {
-    "phrase": "Рамо задна чистачка"
+    "phrase": "Рамо задна чистачка",
+    "description": ""
   },
   {
-    "phrase": "Релса плъзгаща врата"
+    "phrase": "Релса плъзгаща врата",
+    "description": ""
   },
   {
-    "phrase": "Ролка плъзгаща врата"
+    "phrase": "Ролка плъзгаща врата",
+    "description": ""
   },
   {
-    "phrase": "Сирена"
+    "phrase": "Сирена",
+    "description": ""
   },
   {
-    "phrase": "Сирена парктроник"
+    "phrase": "Сирена парктроник",
+    "description": ""
   },
   {
-    "phrase": "Степенка"
+    "phrase": "Степенка",
+    "description": ""
   },
   {
-    "phrase": "Стойка резервна гума"
+    "phrase": "Стойка резервна гума",
+    "description": ""
   },
   {
-    "phrase": "Тасове"
+    "phrase": "Тасове",
+    "description": ""
   }
 ]
