@@ -97,7 +97,7 @@ export default {
     async getPhrases(items) {
 
         const results = [];
-        const THRESHOLD = 0.85;
+        const THRESHOLD = 0.40;
 
         for (const { id, imageUrl, detailsUrl } of items) {
             const r1 = await client.responses.create({
@@ -142,12 +142,14 @@ export default {
 
             let bestPhrase = "";
             let bestScore = -1;
+            let bestDescription = ''
 
             for (const p of CATALOG) {
                 const score = cosine(q, p.embedding);
                 if (score > bestScore) {
                     bestScore = score;
                     bestPhrase = p.phrase;
+                    bestDescription = p.description
                 }
             }
 
@@ -155,7 +157,7 @@ export default {
                 id,
                 detailsUrl,
                 phrase: bestScore >= THRESHOLD ? bestPhrase : "",
-                debug: { label, cleanedLabel, score: bestScore }
+                debug: { label, cleanedLabel, score: bestScore, description: bestDescription }
             });
         }
 
