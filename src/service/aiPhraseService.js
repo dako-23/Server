@@ -82,6 +82,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { cleanLabel, cosine } from "../utils/phraseUtils.js";
 import OpenAI from "openai";
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -92,29 +93,11 @@ const __dirname = path.dirname(__filename);
 const CATALOG_PATH = path.join(__dirname, "../embeddings/phrases.embedded.json");
 const CATALOG = JSON.parse(fs.readFileSync(CATALOG_PATH, "utf8"));
 
-function cosine(a, b) {
-    let dot = 0, na = 0, nb = 0;
-    for (let i = 0; i < a.length; i++) {
-        dot += a[i] * b[i];
-        na += a[i] * a[i];
-        nb += b[i] * b[i];
-    }
-    return dot / (Math.sqrt(na) * Math.sqrt(nb) + 1e-12);
-}
-
-function cleanLabel(s) {
-    return (s || "")
-        .toLowerCase()
-        .replace(/\b(за|на|към|от|с|и|автомобил|автомобилен|автомобилна|автомобилно)\b/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-}
-
 export default {
     async getPhrases(items) {
 
         const results = [];
-        const THRESHOLD = 0.75;
+        const THRESHOLD = 0.85;
 
         for (const { id, imageUrl, detailsUrl } of items) {
             const r1 = await client.responses.create({
