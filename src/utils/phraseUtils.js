@@ -13,7 +13,6 @@ export const classifyItems = (items) => {
         const response = await client.responses.create({
             model: "gpt-4.1",
             temperature: 0,
-            response_format: { type: "json_object" },
             tool_choice: { type: "file_search" },
             tools: [
                 {
@@ -31,22 +30,22 @@ export const classifyItems = (items) => {
                             text: `
                                 Каталогът (vector store) съдържа JSON записи:
                                 {"phrase":"...", "description":"..."}
-                                
+
                                 Задача:
                                 - избери ТОЧНО ЕДНА фраза от каталога,
                                 - която най-точно описва основната част на изображението.
-                                
+
                                 Забрани:
                                 - не измисляй нови фрази
                                 - не променяй текста (число, добавки, редакции)
                                 - винаги връщай фраза (никога празен стринг)
-                                
+
                                 Правила:
                                 - ако е ясно видима една авточаст → избери най-конкретната фраза
                                 - ако е комплект/сглобка → избери основната част, не аксесоарите
                                 - ако има близки фрази → ориентирай се по "description"
                                 - ако има разлика единствено/множествено → избери тази, която съответства видимо на изображението
-                                
+
                                 Изход (само валиден JSON):
                                 {"phrase":"<фраза от каталога>"}
                                 `,
@@ -59,6 +58,9 @@ export const classifyItems = (items) => {
                 },
             ],
             max_output_tokens: 50,
+            text: {
+                format: "json",
+            },
         });
 
         let rawText = "";
@@ -78,11 +80,10 @@ export const classifyItems = (items) => {
             }
         }
 
-        console.log("RAW TEXT:", rawText);
-
         let phrase = "";
         try {
-            const parsed = typeof rawText === "string" ? JSON.parse(rawText) : rawText;
+            const parsed =
+                typeof rawText === "string" ? JSON.parse(rawText) : rawText;
             phrase = parsed?.phrase || "";
         } catch (err) {
             console.error("Грешка при JSON.parse:", err, "RAW:", rawText);
