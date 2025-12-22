@@ -73,7 +73,7 @@ export const classifyItems = (items) => {
         try {
             const parsed = JSON.parse(rawText);
             phrase = parsed.phrase
-        } catch {
+        } catch(err) {
             console.error("JSON PARSE ERROR >>>", err);
             phrase = "";
         }
