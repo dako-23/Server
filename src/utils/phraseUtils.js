@@ -30,7 +30,7 @@ export const classifyItems = (items) => {
         const { id, imageUrl, detailsUrl } = item;
 
         const response = await client.responses.create({
-            model: "gpt-4.1-mini",
+            model: "gpt-4.1",
             temperature: 0,
             tool_choice: { type: "file_search" },
             tools: [
