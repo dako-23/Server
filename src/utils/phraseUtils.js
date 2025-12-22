@@ -4,25 +4,6 @@ const client = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
-export const cleanLabel = (ph) => {
-    return (ph || "")
-        .toLowerCase()
-        .replace(/\b(за|на|към|от|с|и|автомобил|автомобилен|автомобилна|автомобилно)\b/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-}
-
-
-export const cosine = (a, b) => {
-    let dot = 0, na = 0, nb = 0;
-    for (let i = 0; i < a.length; i++) {
-        dot += a[i] * b[i];
-        na += a[i] * a[i];
-        nb += b[i] * b[i];
-    }
-    return dot / (Math.sqrt(na) * Math.sqrt(nb) + 1e-12);
-}
-
 export const classifyItems = (items) => {
     const vectorStoreId = process.env.VECTOR_STORE_ID;
 
@@ -32,6 +13,7 @@ export const classifyItems = (items) => {
         const response = await client.responses.create({
             model: "gpt-4.1",
             temperature: 0,
+            response_format: { type: "json_object" },
             tool_choice: { type: "file_search" },
             tools: [
                 {
@@ -76,19 +58,34 @@ export const classifyItems = (items) => {
                     ],
                 },
             ],
-            max_output_tokens: 30
+            max_output_tokens: 50,
         });
 
-        const rawText =
-            response.output_text ||
-            response.output?.[0]?.content?.[0]?.text ||
-            "";
+        let rawText = "";
+
+        if (response.output_text) {
+            rawText = response.output_text;
+        } else if (response.output?.[0]?.content) {
+            const content = response.output[0].content;
+            const textPart = content.find(
+                (c) => c.type === "output_text" || c.type === "text"
+            );
+
+            if (textPart?.output_text?.text) {
+                rawText = textPart.output_text.text;
+            } else if (textPart?.text) {
+                rawText = textPart.text;
+            }
+        }
+
+        console.log("RAW TEXT:", rawText);
 
         let phrase = "";
         try {
-            const parsed = JSON.parse(rawText);
-            phrase = parsed.phrase || "";
-        } catch {
+            const parsed = typeof rawText === "string" ? JSON.parse(rawText) : rawText;
+            phrase = parsed?.phrase || "";
+        } catch (err) {
+            console.error("Грешка при JSON.parse:", err, "RAW:", rawText);
             phrase = "";
         }
 
@@ -98,4 +95,4 @@ export const classifyItems = (items) => {
             detailsUrl,
         };
     });
-}
+};
