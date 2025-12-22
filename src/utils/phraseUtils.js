@@ -1,4 +1,3 @@
-import { raw } from "express";
 import OpenAI from "openai";
 
 const client = new OpenAI({
@@ -66,14 +65,19 @@ export const classifyItems = (items) => {
             response.output?.[0]?.content?.[0]?.text ||
             "";
 
-        console.log(rawText);
-
+        console.log("RAW TEXT >>>", rawText);
 
         let phrase = "";
+
         try {
-            const parsed = JSON.parse(rawText);
-            phrase = parsed.phrase
-        } catch(err) {
+            const match = rawText.match(/\{[\s\S]*?\}/);
+            if (match) {
+                const parsed = JSON.parse(match[0]);
+                phrase = parsed.phrase || "";
+            } else {
+                phrase = "";
+            }
+        } catch (err) {
             console.error("JSON PARSE ERROR >>>", err);
             phrase = "";
         }
