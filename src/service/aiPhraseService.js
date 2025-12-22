@@ -13,19 +13,20 @@ export default {
             const { id, imageUrl, detailsUrl } = item;
 
             const response = await client.responses.create({
-                model: "gpt-4.1",
+                model: "gpt-4.1-mini",
                 temperature: 0,
                 tool_choice: { type: "file_search" },
                 tools: [
                     {
                         type: "file_search",
                         vector_store_ids: [vectorStoreId],
-                        max_num_results: 25,
+                        max_num_results: 15,
                     },
                 ],
                 text: {
                     format: {type: "json_object"},
                 },
+                max_output_tokens: 15,
                 input: [
                     {
                         role: "user",
@@ -35,21 +36,17 @@ export default {
                                 text: `
                                 Каталогът (vector store) съдържа JSON записи:
                                 {"phrase":"...", "description":"..."}
-                                
                                 Задача:
                                 Виж изображението и определи коя е основната авточаст. 
                                 След това намери фраза от каталога, чийто description най-добре съвпада със значението на частта на снимката.
-                                
                                 Не измисляй нови фрази.
                                 Не редактирай фразите или текста им.
                                 Винаги връщай фраза от каталога.
-                                
                                 Правила:
                                 - първо се ориентирай визуално каква част е
                                 - използвай description, за да различиш близки или сходни фрази
                                 - ако се вижда комплект → избери основната част, не аксесоарите
                                 - ако има избор между ед. и мн. число → избери формата, която съответства на броя части на изображението
-                                
                                 Изход (само валиден JSON, без обяснения):
                                 {"phrase":"<фраза от каталога>"}
                                 `,
