@@ -1,3 +1,4 @@
+import { raw } from "express";
 import OpenAI from "openai";
 
 const client = new OpenAI({
@@ -60,42 +61,19 @@ export const classifyItems = (items) => {
             max_output_tokens: 50,
         });
 
-        let rawText = "";
+        const rawText =
+            response.output_text ||
+            response.output?.[0]?.content?.[0]?.text ||
+            "";
 
-        if (typeof response.output_text === "string") {
-            rawText = response.output_text;
-        } else if (Array.isArray(response.output) && response.output.length > 0) {
-            const contents = response.output[0].content || [];
-
-            const chunks = contents
-                .map((c) => {
-                    if (typeof c.text === "string") return c.text;
-
-                    if (c.output_text && typeof c.output_text.text === "string") {
-                        return c.output_text.text;
-                    }
-
-                    return "";
-                })
-                .filter(Boolean);
-
-            rawText = chunks.join("\n");
-        }
-
-        console.log("RAW TEXT:", rawText);
+            console.log(rawText);
+            
 
         let phrase = "";
         try {
-            let jsonStr = rawText;
-            const match = rawText.match(/\{[\s\S]*\}/);
-            if (match) {
-                jsonStr = match[0];
-            }
-
-            const parsed = JSON.parse(jsonStr);
-            phrase = parsed?.phrase || "";
-        } catch (err) {
-            console.error("Грешка при JSON.parse:", err, "RAW:", rawText);
+            const parsed = JSON.parse(rawText);
+            phrase = parsed.phrase || "";
+        } catch {
             phrase = "";
         }
 
