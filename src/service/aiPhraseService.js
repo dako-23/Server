@@ -1,3 +1,4 @@
+import { text } from "express";
 import OpenAI from "openai";
 
 const client = new OpenAI({
@@ -22,6 +23,9 @@ export default {
                         max_num_results: 25,
                     },
                 ],
+                text: {
+                    format: {type: "json_object"},
+                },
                 input: [
                     {
                         role: "user",
@@ -47,7 +51,7 @@ export default {
                                 - ако има близки фрази → ориентирай се по "description"
                                 - ако има разлика единствено/множествено → избери тази, която съответства видимо на изображението
                                 
-                                Изход (само валиден JSON):
+                                Изход (САМО валиден JSON):
                                 {"phrase":"<фраза от каталога>"}
                                 `,
                             },
@@ -60,10 +64,15 @@ export default {
                 ],
             });
 
-            const rawText =
+            let rawText =
                 response.output_text ||
                 response.output?.[0]?.content?.[0]?.text ||
                 "";
+
+            rawText = rawText
+                .replace(/```json\s*/gi, "")
+                .replace(/```/g, "")
+                .trim();
 
                 console.log('raw text =>', rawText);
 
