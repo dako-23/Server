@@ -1,4 +1,3 @@
-import { text } from "express";
 import OpenAI from "openai";
 
 const client = new OpenAI({
@@ -26,7 +25,7 @@ export default {
                 text: {
                     format: {type: "json_object"},
                 },
-                max_output_tokens: 16,
+                // max_output_tokens: 16,
                 input: [
                     {
                         role: "user",
