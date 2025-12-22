@@ -58,32 +58,41 @@ export const classifyItems = (items) => {
                 },
             ],
             max_output_tokens: 50,
-            text: {
-                format: "json",
-            },
         });
 
         let rawText = "";
 
-        if (response.output_text) {
+        if (typeof response.output_text === "string") {
             rawText = response.output_text;
-        } else if (response.output?.[0]?.content) {
-            const content = response.output[0].content;
-            const textPart = content.find(
-                (c) => c.type === "output_text" || c.type === "text"
-            );
+        } else if (Array.isArray(response.output) && response.output.length > 0) {
+            const contents = response.output[0].content || [];
 
-            if (textPart?.output_text?.text) {
-                rawText = textPart.output_text.text;
-            } else if (textPart?.text) {
-                rawText = textPart.text;
-            }
+            const chunks = contents
+                .map((c) => {
+                    if (typeof c.text === "string") return c.text;
+
+                    if (c.output_text && typeof c.output_text.text === "string") {
+                        return c.output_text.text;
+                    }
+
+                    return "";
+                })
+                .filter(Boolean);
+
+            rawText = chunks.join("\n");
         }
+
+        console.log("RAW TEXT:", rawText);
 
         let phrase = "";
         try {
-            const parsed =
-                typeof rawText === "string" ? JSON.parse(rawText) : rawText;
+            let jsonStr = rawText;
+            const match = rawText.match(/\{[\s\S]*\}/);
+            if (match) {
+                jsonStr = match[0];
+            }
+
+            const parsed = JSON.parse(jsonStr);
             phrase = parsed?.phrase || "";
         } catch (err) {
             console.error("Грешка при JSON.parse:", err, "RAW:", rawText);
