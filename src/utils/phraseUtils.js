@@ -60,10 +60,7 @@ export const classifyItems = (items) => {
             max_output_tokens: 30,
         });
 
-        const rawText =
-            response.output_text ||
-            response.output?.[0]?.content?.[0]?.text ||
-            "";
+        const rawText = getRawText(response)
 
         console.log("RAW TEXT >>>", rawText);
 
@@ -88,4 +85,28 @@ export const classifyItems = (items) => {
             detailsUrl,
         };
     });
+};
+
+const getRawText = (response) => {
+    if (typeof response.output_text === "string") {
+        return response.output_text;
+    }
+
+    if (Array.isArray(response.output) && response.output.length > 0) {
+        const content = response.output[0].content || [];
+
+        const textPart = content.find(
+            (c) => c.type === "output_text" || c.type === "text"
+        );
+
+        if (textPart?.output_text?.text) {
+            return textPart.output_text.text;
+        }
+
+        if (typeof textPart?.text === "string") {
+            return textPart.text;
+        }
+    }
+
+    return "";
 };
