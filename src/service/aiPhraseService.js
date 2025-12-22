@@ -2,12 +2,28 @@ import { classifyItems } from "../utils/phraseUtils.js";
 
 export default {
     async getPhrases(items) {
-        
-        const promises = classifyItems(items)
-        const results = await Promise.all(promises);
+
+        const batchSize = 6;
+        const batches = [];
+
+        for (let i = 0; i < items.length; i += batchSize) {
+            batches.push(items.slice(i, i + batchSize));
+        }
+
+        const results = [];
+
+        for (const batch of batches) {
+            const tasks = classifyItems(batch);
+            const batchResults = await Promise.all(tasks);
+            results.push(...batchResults);
+
+            await new Promise((r) => setTimeout(r, 500));
+        }
+
         return results;
     },
 };
+
 
 // import fs from "node:fs";
 // import path from "node:path";

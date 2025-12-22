@@ -19,7 +19,7 @@ export const classifyItems = (items) => {
                 {
                     type: "file_search",
                     vector_store_ids: [vectorStoreId],
-                    max_num_results: 8,
+                    max_num_results: 10,
                 },
             ],
             input: [
@@ -58,7 +58,7 @@ export const classifyItems = (items) => {
                     ],
                 },
             ],
-            max_output_tokens: 50,
+            max_output_tokens: 30,
         });
 
         const rawText =
@@ -66,14 +66,15 @@ export const classifyItems = (items) => {
             response.output?.[0]?.content?.[0]?.text ||
             "";
 
-            console.log(rawText);
-            
+        console.log(rawText);
+
 
         let phrase = "";
         try {
             const parsed = JSON.parse(rawText);
-            phrase = parsed.phrase || "";
+            phrase = parsed.phrase
         } catch {
+            console.error("JSON PARSE ERROR >>>", err);
             phrase = "";
         }
 
