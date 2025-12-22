@@ -26,7 +26,7 @@ export default {
                 text: {
                     format: {type: "json_object"},
                 },
-                max_output_tokens: 15,
+                max_output_tokens: 16,
                 input: [
                     {
                         role: "user",
