@@ -12,7 +12,7 @@ export default {
             const { id, imageUrl, detailsUrl } = item;
 
             const response = await client.responses.create({
-                model: "gpt-4.1-mini",
+                model: "gpt-4.1",
                 temperature: 0,
                 tool_choice: { type: "file_search" },
                 tools: [
@@ -25,7 +25,6 @@ export default {
                 text: {
                     format: {type: "json_object"},
                 },
-                // max_output_tokens: 16,
                 input: [
                     {
                         role: "user",
