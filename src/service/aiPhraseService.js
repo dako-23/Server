@@ -1,104 +1,13 @@
-import OpenAI from "openai";
-
-const client = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-});
+import { classifyItems } from "../utils/phraseUtils.js";
 
 export default {
     async getPhrases(items) {
-        const vectorStoreId = process.env.VECTOR_STORE_ID
-
-        const results = [];
-
-        for (const item of items) {
-            const { id, imageUrl, detailsUrl } = item;
-
-            const response = await client.responses.create({
-                model: "gpt-4.1-mini",
-                temperature: 0,
-                tool_choice: { type: "file_search" },
-                tools: [
-                    {
-                        type: "file_search",
-                        vector_store_ids: [vectorStoreId],
-                        max_num_results: 25,
-                    },
-                ],
-                input: [
-                    {
-                        role: "user",
-                        content: [
-                            {
-                                type: "input_text",
-                                text: 
-                                `
-                                Каталогът (vector store) съдържа записи в JSON формат, по един на ред, със структура:
-                                {"phrase": "<фраза>", "description": "<кратко описание на частта>"}
-
-                                Твоята задача е:
-                                - Да избереш ТОЧНО ЕДНА фраза от каталога,
-                                - която НАЙ-ТОЧНО описва основната част на изображението.
-
-                                МНОГО ВАЖНО:
-                                - НЯМАШ право да измисляш нови фрази.
-                                - НЕ МОЖЕШ да променяш фразите (не сменяй число, не добавяй думи, не поправяй правопис).
-                                - Върни фразата ТОЧНО така, както е записана в полето "phrase" в каталога.
-                                - ВИНАГИ ТРЯБВА ДА ВЪРНЕШ ФРАЗА, НИКОГА ПРАЗЕН СТРИНГ.
-                                
-                                Правила за избор:
-                                - Ако на изображението ясно се вижда ЕДНА основна авточаст,
-                                  избери най-конкретната фраза за тази част.
-                                - Ако на изображението се вижда КОМПЛЕКТ или сглобка от няколко части,
-                                  които обичайно се продават заедно (кабели, лентов кабел, букси, крепежи),
-                                  избери фразата за ОСНОВНАТА част, а не за аксесоарите.
-                                - Ако няколко фрази са много близки, избери тази,
-                                  чиято "description" най-добре съвпада с изображението.
-                                - Ако не си сигурен между единствено и множествено число,
-                                  избери тази фраза, чиято форма НАЙ-ДОБРЕ съответства на това,
-                                  което реално се вижда (една част vs. няколко части),
-                                  но винаги копирай фразата ТОЧНО от каталога.
-                                
-                                Пример:
-                                - На изображението има лостчета за светлини и чистачки + лентов кабел → избираш
-                                  "Лостчета за светлини и чистачки", а НЕ "Лентов кабел".
-                                
-                                Изход:
-                                Върни САМО валиден JSON с точно копирана фраза от каталога:
-                                {"phrase": "<фраза от каталога>"}
-                                Без допълнителен текст преди или след JSON-а.
-                                `
-                            },
-                            {
-                                type: "input_image",
-                                image_url: imageUrl,
-                            },
-                        ],
-                    },
-                ],
-            });
-
-            const rawText =
-                response.output_text ||
-                response.output?.[0]?.content?.[0]?.text ||
-                "";
-
-            let phrase = "";
-            try {
-                const parsed = JSON.parse(rawText);
-                phrase = parsed.phrase || "";
-            } catch {
-                phrase = "";
-            }
-
-            results.push({
-                id,
-                phrase,
-                detailsUrl,
-            });
-        }
+        
+        const promises = classifyItems(items)
+        const results = await Promise.all(promises);
         return results;
-    }
-}
+    },
+};
 
 // import fs from "node:fs";
 // import path from "node:path";
