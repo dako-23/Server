@@ -12,7 +12,7 @@ export default {
             const { id, imageUrl, detailsUrl } = item;
 
             const response = await client.responses.create({
-                model: "gpt-4o-mini",
+                model: "gpt-4o",
                 temperature: 0,
                 tool_choice: { type: "file_search" },
                 tools: [
